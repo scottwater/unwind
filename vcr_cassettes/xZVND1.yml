@@ -1,0 +1,307 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://j.mp:80/xZVND1
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 301
+      message: Moved
+    headers:
+      server:
+      - nginx
+      date:
+      - Fri, 10 Feb 2012 19:55:23 GMT
+      content-type:
+      - text/html; charset=utf-8
+      connection:
+      - keep-alive
+      set-cookie:
+      - _bit=4f35762b-0027a-064c6-291cf10a;domain=.j.mp;expires=Wed Aug  8 19:55:23
+        2012;path=/; HttpOnly
+      cache-control:
+      - private; max-age=90
+      location:
+      - http://t.co/8AEDlX2P
+      mime-version:
+      - '1.0'
+      content-length:
+      - '112'
+    body: ! '<html>
+
+      <head>
+
+      <title>bit.ly</title>
+
+      </head>
+
+      <body>
+
+      <a href="http://t.co/8AEDlX2P">moved here</a>
+
+      </body>
+
+      </html>'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://t.co:80/8AEDlX2P
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 301
+      message: Moved Permanently
+    headers:
+      date:
+      - Fri, 10 Feb 2012 19:55:23 GMT
+      server:
+      - hi
+      location:
+      - http://ow.ly/i/s1O0
+      cache-control:
+      - private,max-age=300
+      expires:
+      - Fri, 10 Feb 2012 20:00:23 GMT
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=UTF-8
+    body: 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ow.ly:80/i/s1O0
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 10 Feb 2012 19:55:23 GMT
+      server:
+      - Apache
+      x-powered-by:
+      - PHP/5.2.4-2ubuntu5.6
+      set-cookie:
+      - OWLYSID=2e79d8c33771b4237e7a88b2471e56a79358edfa; path=/
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      x-gridnum:
+      - '3'
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      content-type:
+      - text/html
+    body: ! "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html
+      xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\r\n<head>\r\n\t<meta
+      http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\r\n\t<title>Ow.ly
+      - image uploaded by @JZJewelry </title>\r\n\t<meta name=\"keywords\" content=\"Ow.ly,
+      Shorten urls, share files, track visits, twitter file sharing, twitter image
+      sharing, tweet comments\" />\r\n\t\t\t<meta name=\"description\" content=\"View
+      and share this image from @JZJewelry  and hosted by Ow.ly\" />\r\n\t\t\t\t\t\t\t<link
+      href=\"http://static.ow.ly/4-9-19/css/owly.css\" type=\"text/css\" rel=\"stylesheet\"
+      />\r\n\t\t\t\t<!--[if lt IE 7]>\r\n\t<link rel=\"stylesheet\" type=\"text/css\"
+      href=\"http://static.ow.ly/4-9-19/css/ie6.css\" />\r\n\t<![endif]-->\r\n\r\n\t<script
+      type=\"text/javascript\">\n\tvar owly = new Object();\n\towly.c = new Object();\n\towly.c.rootUrl
+      = \"http://ow.ly\";\n\towly.c.photoRootUrl = \"http://static.ow.ly/photos\";\n\towly.c.swfUrl
+      = \"http://static.ow.ly/4-9-19/swf\";\n</script>\n\n\t\t\t<script type=\"text/javascript\"
+      src=\"http://static.ow.ly/4-9-19/js/owly.js\"></script>\n\t\r\n\t<link rel=\"shortcut
+      icon\" href=\"http://static.ow.ly/4-9-19/images/favicon.ico\" />\r\n\t<link
+      rel=\"apple-touch-icon\" href=\"http://static.ow.ly/4-9-19/images/apple-touch-icon.png\"/>\r\n</head>\r\n\r\n\r\n<body>\r\n<div
+      id=\"statusContainer\" style=\"display: none;\">\r\n\t<div class=\"y-n\">\r\n
+      \   \t<span class=\"cn-3\">\r\n            <span class=\"tl\"><!--  --></span>\r\n
+      \           <span class=\"tc\"><!--  --></span>\r\n            <span class=\"tr\"><!--
+      \ --></span>\r\n            <span class=\"ml\"><!--  --></span>\r\n            <span
+      class=\"mr\"><!--  --></span>\r\n            <span class=\"bl\"><!--  --></span>\r\n
+      \           <span class=\"bc\"><!--  --></span>\r\n            <span class=\"br\"><!--
+      \ --></span>\r\n        </span>\r\n        <span class=\"_statusMsgContent\"></span>\r\n
+      \   </div>\r\n</div>\r\n        \r\n<div id=\"wrapper\">\r\n\t<div id=\"header\">\r\n\t\t<h1
+      class=\"logo\"><a href=\"http://ow.ly\">Owly</a></h1>\r\n\t\t<div id=\"globalNav\">\r\n
+      \       \t\t\t\t\t\t\t\t<a href=\"#\" id=\"btnLogin\"><span class=\"hidden\">Sign
+      in with Twitter</span></a>\r\n\t\t\t\t<input type=\"hidden\" id=\"loggedIn\"
+      value=\"0\" />\r\n\t\t\t\t<input type=\"hidden\" id=\"loggedInTwitterAccountId\"
+      value=\"-1\" />\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n\r\n\t<div id=\"page\">\r\n\t\t<div
+      id=\"primary\">\r\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"box mediaBox last\">\r\n\t\t\t<div
+      id=\"bar\">\r\n\t<div id=\"tools\">\r\n\t<!--<img src=\"http://static.ow.ly/4-9-19/images/load.gif\"
+      id=\"throbber\" />-->\r\n\t\t<span class=\"_actionbarComment\">\r\n\t\t\t<a
+      href=\"#comments\" class=\"_localScroll icon-plus comments\">\r\n\t\t\t<span
+      class=\"icon-19\"></span><strong>Comments</strong></a> (<span class=\"_actionbarCommentCount\">...</span>)\r\n\t\t</span>\r\n\t\t<span
+      class=\"spc\"></span>\r\n\t\t<a class=\"icon-plus tweet\" href=\"#\" onclick=\"expandBar('photo',
+      'panel-retweet',291); return false;\">\r\n\t\t\t<span class=\"icon-19\"></span><strong>Tweet</strong>\r\n\t\t</a>\r\n\t\t<span
+      class=\"spc\"></span>\r\n\t\t<a class=\"icon-plus share\" href=\"#\" title=\"Bookmark
+      and Share\" onclick=\"expandBar('photo', 'panel-share',291); return false;\">\r\n\t\t\t<span
+      class=\"icon-19\"></span><strong>Share</strong>\r\n\t\t</a>\r\n\t\t<span class=\"spc\"></span>\r\n\t\t<span
+      class=\"rate\"><a class=\"icon rateUp\" href=\"#\" onclick=\"fileScoreClick('photo',
+      '6680128', 'up');return false;\"><span class=\"icon-19\"></span></a><a class=\"icon
+      rateDown\" href=\"#\" onclick=\"fileScoreClick('photo', '6680128', 'down');return
+      false;\"><span class=\"icon-19\"></span></a>\r\n\t\t\t<strong>Rate </strong><span
+      class=\"score\" id=\"fileScoreRatingNumber\">(<em>+1</em>)</span>\r\n\t\t</span>\r\n\t\t\t\t\t\t\t<span
+      class=\"spc\"></span>\r\n\t\t\t\t<!-- View Original is Photo only -->\r\n\t\t\t\t<a
+      class=\"icon-plus magnify\" href=\"http://ow.ly/i/s1O0/original\" title=\"View
+      Original Size\"><span class=\"icon-19\"></span><strong>Original Size</strong></a>\r\n\t\t\t\t</div>\r\n</div>\r\n\r\n<input
+      id=\"shortUrl\" type=\"hidden\" value=\"http://ow.ly/i/s1O0\" />\r\n<input id=\"hash\"
+      type=\"hidden\" value=\"s1O0\" />\r\n<input id=\"defaultContent\" type=\"hidden\"
+      value=\"RT @JZJewelry: Screen shot 2012-02-09 at 4.54.43 AM.png http://ow.ly/i/s1O0\"
+      />\r\n<input id=\"username\" type=\"hidden\" value=\"JZJewelry\" />\r\n\r\n<div
+      id=\"panels\"></div>\r\n\r\n<script src=\"http://cdn.gigya.com/wildfire/js/wfapiv2.js\"></script>
+      \       <div class=\"imageWrapper\">\r\n        \t<a href=\"http://ow.ly/i/s1O0/original\"
+      title=\"View original size\">\r\n            <img src=\"http://static.ow.ly/photos/normal/s1O0.jpg\"
+      alt=\"Screen shot 2012-02-09 at 4.54.43 AM.png\" />\r\n            </a>\r\n
+      \       </div>\r\n        <div class=\"caption _tweetContent\">\r\n\t\t\t\t\t\t
+      \       </div>\r\n    </div>\r\n<div class=\"mediaCredit\">\r\n    <span class=\"icon
+      arrow-down\"><span class=\"icon-19\"></span></span>\r\n\t<a class=\"icon-plus
+      flag _flagPhoto\" href=\"#flagPhoto\">&nbsp;<span class=\"icon-12\"></span>Report
+      Abuse</a>\r\n    <div class=\"avatar-48\">\r\n    \t<a class=\"border\" href=\"http://ow.ly/user/JZJewelry\"
+      title=\"JZJewelry\">\r\n        \t<img src=\"http://a0.twimg.com/profile_images/1791733662/jzj-logo-01_TWITTER_4___2__normal.jpg\"
+      onerror=\"doAvatarSearch(this, 'JZJewelry')\" alt=\"JZJewelry\" />\r\n        </a>\r\n
+      \   </div>\r\n    <h3 class=\"username\"><a href=\"http://ow.ly/user/JZJewelry\"
+      title=\"JZJewelry\">JZJewelry</a></h3>\r\n    <h4 class=\"postdate\">Posted
+      1 day ago</h4>\r\n    \r\n    </div>\r\n\r\n\t\t<div class=\"listWrapper\">\r\n\t<a
+      name=\"comments\"></a>\r\n\t<div class=\"listTabs\">\r\n\t\t<div class=\"tab
+      active\">\r\n\t\t\t<a href=\"#\">Comments (<span class=\"_commentTabCount\">...</span>)</a>\r\n\t\t</div>\r\n\t\t\t</div>\r\n\t\r\n\t<div
+      class=\"listBoxes\">\r\n\t\t<div id=\"_comments\" class=\"listBox box\"> \r\n\t\t\t\t\t\t<div
+      class=\"item\"> \r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"avatar-48\">\r\n\t\t\t\t\t\t<a
+      class=\"border\">\r\n\t\t\t\t\t\t\t<img src=\"../images/avatar_icon.jpg\" alt=\"Default
+      Avatar\" />\r\n\t\t\t\t\t\t</a>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<input type=\"button\"
+      id=\"btnLoginComment\" value=\"Login to Comment\" style=\"display:none\" />\r\n\t\t\t\t\t\t\t\t<div
+      class=\"comment new-comment\">\r\n\t\t\t\t\t<span class=\"arrow-left\"><span
+      class=\"icon-19\"></span></span>\r\n\t\t\t\t\t<div class=\"message\"> \r\n\t\t\t\t\t\t<form
+      id=\"formComment\" class=\"retweet _commentForm\" action=\"\" method=\"get\"
+      target=\"_blank\" onsubmit=\"return submitComment();\">\r\n\t\t\t\t\t\t\t<strong>Tweet
+      a comment:</strong> <span class=\"disclaimer\">(Note: This will post to your
+      Twitter account as a reply to @JZJewelry)</span>\r\n\t\t\t\t\t\t\t<div class=\"txa
+      c-u\" onclick=\"$('._commentForm #commentContent').focus(); $(this).addClass('focus');\">\r\n\t\t\t\t\t\t\t\t@JZJewelry&#0133\t\t\t\t\t\t\t\t<textarea
+      name=\"comment[content]\" id=\"commentContent\" onblur=\"$('._commentForm .txa').removeClass('focus');\"></textarea>\r\n\t\t\t\t\t\t\t\t&#0133http://ow.ly/i/s1O0\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t<div
+      id=\"commentUploadSwf\" class=\"_commentUploader\"> \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+      \r\n\t\t\t\t\t\t\t\t<a href=\"#\" class=\"_signInToUpload\"><strong>Sign in</strong></a>
+      \ to attach an image or document to your comment\r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<span
+      id=\"retweet-error\"></span>\r\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"comment[modelType]\"
+      value=\"photo\" />\r\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"comment[modelId]\"
+      value=\"6680128\" />\r\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"comment[modelTwitterAccountId]\"
+      value=\"3658446\" />\r\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"comment[modelUsername]\"
+      value=\"JZJewelry\" />\r\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"comment[modelAvatar]\"
+      value=\"http://a0.twimg.com/profile_images/1791733662/jzj-logo-01_TWITTER_4___2__normal.jpg\"
+      />\r\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"comment[modelTweetId]\" value=\"\"
+      />\r\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"comment[replyModelType]\"
+      />\r\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"comment[replyModelId]\" />\r\n\t\t\t\t\t\t\t<input
+      type=\"hidden\" name=\"comment[replyItemInfo]\" />\r\n\t\t\t\t\t\t\t<input type=\"hidden\"
+      name=\"comment[modelItemInfo]\" value='http://static.ow.ly/photos/thumb/s1O0.jpg'
+      />\r\n\t\t\t\t\t\t\t<div class=\"sbt\">\r\n\t\t\t\t\t\t\t\t<input type=\"submit\"
+      value=\"Send Tweet\" />\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"clear\"></div>\r\n\t\t\t\t\t\t</form>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t</div>\r\n\t\t\r\n\t\t<div
+      class=\"_commentList\">\r\n\t\t\tLoading comments...<img src=\"../images/load.gif\"
+      alt=\"loading\" />\r\n\t\t</div>\r\n\t\t<a name=\"latestcomment\"></a>\r\n\t</div>\r\n\t</div>\r\n</div>\r\n<script
+      type=\"text/javascript\">\r\n\t$(document).ready(function() {\r\n\t\tif ($(\"._signInToUpload\").size()
+      > 0) {\r\n\t\t\t$(\"._signInToUpload\").click(function(e){\r\n\t\t\t\t$(\"#btnLogin\").click();\r\n\t\t\t\te.preventDefault();\r\n\t\t\t});\r\n\t\t}\r\n\t\tgetComments();\r\n\t});\r\n</script>\r\r\n\r\n\r\n<script
+      type=\"text/javascript\">\r\n\t$(document).ready(function(){\r\n\t\t$(\"a._flagPhoto\").bind(\"click\",
+      function(event) {\r\n\t\t\tflagFile('photo', 6680128, this);\r\n\t\t\tevent.preventDefault();\r\n\t\t});\r\n\t\t\r\n\t\t\t\t\t/*\r\n\t\t\tvar
+      searchTerm = \"http://ow.ly/i/s1O0\";\r\n\t\t\tvar hash = searchTerm.substring(searchTerm.lastIndexOf(\"/\")+1);\r\n\t\t\tgetTweetContentBySearch('JZJewelry',
+      owly.c.rootUrl +'/i ' + hash, true, $(\"._tweetContent\"), 'Screen shot 2012-02-09
+      at 4.54.43 AM.png');\r\n\t\t\t*/\r\n\t\t\tsearchOriginalTweet('photo', '6680128',
+      $(\"._tweetContent\"), 'Screen shot 2012-02-09 at 4.54.43 AM.png');\r\n\t\t\t\r\n\r\n\t\t$('.imageWrapper').bind(\"contextmenu\",function(e){\r\n\t\t\treturn
+      false;\r\n\t\t});\r\n\r\n\t});\r\n\t\r\n\t\r\n</script>\t\t</div>\r\n\t\t<!--
+      only show sidebar if not viewing original size -->\r\n\t\t\t\t\t<div id=\"secondary\">\r\n\t\t\t\t<div
+      class=\"adbox\">\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a
+      href=\"http://hootsuite.com/c/pro-ow?utm_source=owly&utm_medium=banner&utm_content=schedule&utm_campaign=pro\"
+      target=\"_blank\" onclick=\"owly.trackEvent({category: 'BannerClick', action:
+      'click_schedule_ad'});\"><img src=\"http://static.ow.ly/4-9-19/images/ads/schedule_ad.jpg\"
+      /></a>\r\n\r\n\t\t\t\t\t<!--<script>\r\n\t\t\t\t\t\tvar ve_publisher = \"Owly\";\r\n\t\t\t\t\t\tvar
+      ve_site = \"OW_LY\";\r\n\t\t\t\t\t\tvar ve_area = \"OW_LY\";\r\n\t\t\t\t\t\tvar
+      ve_location = \"OW_LY_PHOTO_300X250\";\r\n\t\t\t\t\t\tvar ve_placement = \"OTHER_photo\";\r\n\t\t\t\t\t\tvar
+      ve_width = 300;\r\n\t\t\t\t\t\tvar ve_height = 250;\r\n\t\t\t\t\t\tvar ve_alternate
+      = \"\";\r\n\t\t\t\t\t\tdocument.write(\"<script src='http://core.videoegg.com/eap/html/js/init.js?\"+Math.random()+\"'></sc\"+\"ript>\");\r\n\t\t\t\t\t</script>\r\n\r\n\t\t\t\t--></div>\r\n\t\t\t\t\t\t\t\t\t<!--
+      embed info -->\r\n\t\t\t\t\t<div id=\"embed\">\r\n\t\t\t\t\t\t<div class=\"box\">\r\n\t\t\t\t\t\t\t<div
+      class=\"innerBorder\">\r\n\t\t\t\t\t\t\t<label class=\"title\"><strong>Direct
+      Link:</strong></label>\r\n\t\t\t\t\t\t\t\t<div class=\"ipt\">\r\n\t\t\t\t\t\t\t\t<input
+      type=\"text\" onclick=\"this.focus(); this.select();\" value=\"http://ow.ly/i/s1O0\"
+      />\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+      class=\"listWrapper\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"listTabs\">\r\n\t\t\t\t\t\t\t\t\t<div
+      class=\"tab active\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"#\" rel=\"_smallThumb\">Thumbnail</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div
+      class=\"tab\">\r\n\t\t\t\t\t\t\t\t\t\t<a href=\"#\" rel=\"_fullThumb\">Full
+      Image</a>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+      class=\"listBoxes\">\r\n\t\t\t\t\t\t\t\t\t<div id=\"_smallThumb\" class=\"listBox
+      box\">\r\n\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"innerBorder\">\r\n\t\t\t\t\t\t\t\t\t\t\t<div
+      class=\"ipt\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" onclick=\"this.focus();
+      this.select();\" value='<a href=\"http://ow.ly/i/s1O0\" target=\"_blank\"><img
+      src=\"http://static.ow.ly/photos/thumb/s1O0.jpg\" alt=\"Owly Images\" /></a>'
+      />\r\n\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div
+      id=\"_fullThumb\" class=\"listBox box\" style=\"display: none;\">\r\n\r\n\t\t\t\t\t\t\t\t\t\t<div
+      class=\"innerBorder\">\r\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"ipt\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<input
+      type=\"text\" onclick=\"this.focus(); this.select();\" value='<a href=\"http://ow.ly/i/s1O0\"
+      target=\"_blank\"><img src=\"http://static.ow.ly/photos/normal/s1O0.jpg\" alt=\"Owly
+      Images\" /></a>' />\r\n\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<!--
+      photo info -->\r\n\t\t\t\t\t\t\t\t\t\t\t<!-- no photo info -->\r\n\t\t\t\t\t\t\t\t\t\t<!--
+      more-by-this-user info -->\r\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"thumbs box\">\r\n\t\t\t\t\t\t<div
+      class=\"innerBorder\">\r\n\t\t\t\t\t\t\t<p class=\"title\">\r\n\t\t\t\t\t\t\t\t<a
+      class=\"more\" href=\"http://ow.ly/user/JZJewelry\"><strong>See All &raquo;</strong></a>\r\n\t\t\t\t\t\t\t\t<strong>More
+      photos from JZJewelry</strong>\r\n\t\t\t\t\t\t\t</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+      class=\"thumb-77\">\r\n\t\t\t\t\t\t\t\t<a class=\"border\" href=\"http://ow.ly/i/s1ND\"
+      title=\"Screen shot 2012-02-09 at 4.53.01 AM.png\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img
+      src=\"http://static.ow.ly/photos/thumb/s1ND.jpg\" alt=\"Screen shot 2012-02-09
+      at 4.53.01 AM.png\" />\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+      class=\"thumb-77\">\r\n\t\t\t\t\t\t\t\t<a class=\"border\" href=\"http://ow.ly/i/rZji\"
+      title=\"Screen shot 2012-02-08 at 4.48.33 PM.png\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img
+      src=\"http://static.ow.ly/photos/thumb/rZji.jpg\" alt=\"Screen shot 2012-02-08
+      at 4.48.33 PM.png\" />\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+      class=\"thumb-77\">\r\n\t\t\t\t\t\t\t\t<a class=\"border\" href=\"http://ow.ly/i/rOXn\"
+      title=\"Screen shot 2012-02-07 at 5.13.21 AM.png\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img
+      src=\"http://static.ow.ly/photos/thumb/rOXn.jpg\" alt=\"Screen shot 2012-02-07
+      at 5.13.21 AM.png\" />\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+      style=\"margin-bottom:10px;\">\r\n\t\t\t\t\t<a href=\"http://hootsuite.com\"
+      target=\"_blank\"><img src=\"http://static.ow.ly/4-9-19/images/hootsuite_promo.jpg\"
+      alt=\"HootSuite\" title=\"HootSuite\" /></a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+      class=\"advertisment last\">\r\n\t\t\t\t\t<!--  VideoEgg tag --><!--\r\n\t\t\t\t\t<script>\r\n\t\t\t\t\t\tvar
+      ve_publisher = \"Owly\";\r\n\t\t\t\t\t\tvar ve_site = \"OW_LY\";\r\n\t\t\t\t\t\tvar
+      ve_area = \"OW_LY\";\r\n\t\t\t\t\t\tvar ve_location = \"OW_LY_PICTURE_300X600\";\r\n\t\t\t\t\t\tvar
+      ve_placement = \"OTHER_picture\";\r\n\t\t\t\t\t\tvar ve_width = 300;\r\n\t\t\t\t\t\tvar
+      ve_height = 600;\r\n\t\t\t\t\t\tvar ve_alternate = \"collapse\";\r\n\t\t\t\t\t\tdocument.write(\"<script
+      src='http://core.videoegg.com/eap/html/js/init.js?\"+Math.random()+\"'></sc\"+\"ript>\");\r\n\t\t\t\t\t</script>\r\n\t\t\t\t\t--><!--
+      end VideoEgg tag -->\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t<div
+      id=\"footer\">\r\n\t\t&copy; 2009 ow.ly - <a href=\"http://ow.ly/terms\">Terms
+      of Service</a> | <a class=\"fdbk\" target=\"_blank\" href=\"http://getsatisfaction.com/hootsuite/products/hootsuite_owly\">Feedback</a>\r\n\t</div>\r\n\r\n\t<div
+      id=\"userMessage\">\r\n\t</div>\r\n\r\n</div>\r\n\r\n\r\n<script type=\"text/javascript\">\r\n
+      \   $(document).ready(function() {\r\n        // convert all relative dates\r\n
+      \       $(\"._relativeDate\").each(function() {\r\n            this.innerHTML
+      = getRelativeTime(this.innerHTML);\r\n            $(this).css(\"visibility\",
+      \"visible\");\r\n        });\r\n\r\n        // bind url \"copy to clipboard\"
+      textboxes\r\n        $(\"input._copyUrl\").bind(\"click\", function() {\r\n\t\t\tthis.focus();\r\n
+      \           this.select();\r\n        });\r\n\r\n        // bind all local scroll
+      links\r\n        $(\"._localScroll\").live(\"click\", function(e) {\r\n            var
+      href = $(this).attr(\"href\");\r\n            var name = href.substring(href.indexOf(\"#\")+1);\r\n
+      \       \tscrollToAnchor(name);\r\n        \te.preventDefault();\r\n        });\r\n\r\n\r\n
+      \       \t        // popauth\r\n\t        var p = new popauth(\"twitter\", '/ajax/twitter/get-auth-url',
+      function(e, ot, ov) { \r\n\t\t        $.getJSON('/ajax/twitter/get-access-token?ot='+ot+'&ov='+ov,
+      function(data) {\r\n\t\t\t\t\tif (data.success) {\r\n\t\t\t\t\t\tsetTimeout(function(){
+      window.location = window.location; }, 0.1);\t// refresh\r\n\t\t\t\t\t} else
+      {\r\n\t\t\t\t\t\tdisplayUserMessage(\"Login failed, please try again\");\r\n\t\t\t\t\t}\r\n\t\t
+      \       }); \r\n\t\t\t});\r\n\t\t\t// bind button\r\n\t\t\t$(\"#btnLogin\").bind(\"click\",
+      function(e) {\r\n\t\t\t\te.preventDefault();\r\n\t\t\t\tp.start();\t// start
+      auth\r\n\t\t\t});\r\n\t        \r\n        \r\n        $('.listTabs .tab a').click(function(e)
+      {\r\n            if (!$(this).closest('.listTabs').hasClass('_nonAjax')) {\r\n\t\t\t\tif($(this).attr('rel')
+      && $('#'+$(this).attr('rel')).length) {\r\n\t\t\t\t$(this).closest('.listTabs').find('.active').removeClass('active');\r\n\t\t\t\t$(this).parent().addClass('active');\r\n\t\t\t\t$(this).closest('.listWrapper').find('.listBoxes
+      .listBox').hide();\r\n\t\t\t\t\tvar target = $(this).attr('rel');\r\n\t\t\t\t\t$('#'+target).show();\r\n\t\t\t\t}\r\n\t\t\t\te.preventDefault();\r\n
+      \           }\r\n\t\t});\r\n\r\n\t\t$.preloadImages = function() {\r\n\t\t\tfor
+      (var i = 0; i<arguments.length; i++) {\r\n\t\t\t\timg = new Image();\r\n\t\t\t\timg.src
+      = arguments[i];\r\n\t\t\t}\r\n\t\t}\r\n\t\t$.preloadImages(\r\n\t\t\t'http://static.ow.ly/4-9-19/images/new/maps/map-12-hover.png',\r\n\t\t\t'http://static.ow.ly/4-9-19/images/new/maps/map-12-active.png',\r\n\t\t\t'http://static.ow.ly/4-9-19/images/new/maps/map-19-hover.png',\r\n\t\t\t'http://static.ow.ly/4-9-19/images/new/maps/map-19-active.png',\r\n\t\t\t'http://static.ow.ly/4-9-19/images/new/maps/map-73-hover.png',\r\n\t\t\t'http://static.ow.ly/4-9-19/images/new/maps/map-73-active.png'\r\n\t\t);\r\n
+      \   });\r\n</script>\r\n\r\n\t<script type=\"text/javascript\">\r\n\t\tvar _gaq
+      = _gaq || [];\r\n\t\t_gaq.push(['_setAccount', 'UA-51223-22']);\r\n\t\t_gaq.push(['_trackPageview']);\r\n\t\r\n\t\t(function()
+      {\r\n\t\t\tvar ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;\r\n\t\t\tga.src = ('https:' == document.location.protocol ?
+      'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\r\n\t\t\tvar
+      s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+      s);\r\n\t\t})();\r\n\t</script>\r\n\t<script type=\"text/javascript\">\r\n\t\ttry
+      {\r\n\t\t\tvar pageTracker = _gat._getTracker(\"UA-51223-22\");\r\n\t\t\tpageTracker._trackPageview();\r\n\t\t}
+      catch(err) {}\r\n\t</script>\r\n</body>\r\n</html>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r"
+    http_version: '1.1'
