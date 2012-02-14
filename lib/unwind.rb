@@ -28,7 +28,7 @@ module Unwind
 			if [301, 302, 307].include?(response.status)
 				@redirects << current_url.to_s
 				@redirect_limit -= 1
-				resolve redirect_url(response, current_url) 
+				resolve redirect_url(response) 
 			else
 				@final_url = current_url.to_s
 				@response = response
@@ -47,12 +47,12 @@ module Unwind
 			raise TooManyRedirects if redirect_limit < 0
 		end
 
-		def redirect_url(response, current_url)
+		def redirect_url(response)
 			if response['location'].nil?
 				response.body.match(/<a href=\"([^>]+)\">/i)[1]
 			else
 				redirect_uri = URI.parse(response['location'])
-				redirect_uri.relative? ? URI.parse(current_url).merge(redirect_uri) : redirect_uri
+				redirect_uri.relative? ? response.env[:url].join(response['location']) : redirect_uri
 			end
 		end
 		

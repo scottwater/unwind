@@ -27,6 +27,14 @@ describe 'Tests :)' do
 		end
 	end
 
+	it 'should still handine relative redirects' do 
+		# http://bit.ly/A4H3a2
+		VCR.use_cassette('relative stackoverflow 2') do 
+			follower = Unwind::RedirectFollower.resolve('http://bit.ly/A4H3a2')
+			assert follower.redirected?
+		end
+	end
+
 	it 'should handle redirects to pdfs' do 
 		VCR.use_cassette('pdf') do 
 			follower = Unwind::RedirectFollower.resolve('http://binged.it/wVSFs5')
