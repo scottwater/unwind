@@ -1,5 +1,5 @@
 require "unwind/version"
-require 'net/http'
+require 'faraday'
 
 module Unwind
 
@@ -23,12 +23,9 @@ module Unwind
 			ok_to_continue?
 
 			current_url ||= self.original_url
+			response = Faraday.get(current_url)
 
-			current_url = URI.parse(current_url) unless current_url.kind_of?(URI)
-
-			response = Net::HTTP.get_response(current_url)
-
-			if response.kind_of?(Net::HTTPRedirection)
+			if [301, 302, 307].include?(response.status)
 				@redirects << current_url.to_s
 				@redirect_limit -= 1
 				resolve redirect_url(response, current_url) 
@@ -50,7 +47,7 @@ module Unwind
 				response.body.match(/<a href=\"([^>]+)\">/i)[1]
 			else
 				redirect_uri = URI.parse(response['location'])
-				redirect_uri.relative? ? current_url.merge(redirect_uri) : redirect_uri
+				redirect_uri.relative? ? URI.parse(current_url).merge(redirect_uri) : redirect_uri
 			end
 		end
 		
