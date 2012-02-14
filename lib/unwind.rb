@@ -36,6 +36,11 @@ module Unwind
 			end
 		end
 
+
+		def self.resolve(original_url, limit=5)
+			new(original_url, limit).resolve
+		end
+
 	private
 
 		def ok_to_continue?

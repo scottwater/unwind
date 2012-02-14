@@ -11,7 +11,7 @@ describe 'Tests :)' do
 
 	it 'should resolve the url' do 
 		VCR.use_cassette('xZVND1') do 
-			follower = Unwind::RedirectFollower.new('http://j.mp/xZVND1').resolve
+			follower = Unwind::RedirectFollower.resolve('http://j.mp/xZVND1')
 			assert_equal 'http://ow.ly/i/s1O0', follower.final_url 
 			assert_equal 'http://j.mp/xZVND1', follower.original_url
 			assert_equal 2, follower.redirects.count
@@ -21,7 +21,7 @@ describe 'Tests :)' do
 
 	it 'should handle relative redirects' do 
 		VCR.use_cassette('relative stackoverflow') do 
-			follower = Unwind::RedirectFollower.new('http://stackoverflow.com/q/9277007/871617?stw=1').resolve
+			follower = Unwind::RedirectFollower.resolve('http://stackoverflow.com/q/9277007/871617?stw=1')
 			assert follower.redirected?
 			assert_equal 'http://stackoverflow.com/questions/9277007/gitlabhq-w-denied-for-rails', follower.final_url
 		end
@@ -29,7 +29,7 @@ describe 'Tests :)' do
 
 	it 'should handle redirects to pdfs' do 
 		VCR.use_cassette('pdf') do 
-			follower = Unwind::RedirectFollower.new('http://binged.it/wVSFs5').resolve
+			follower = Unwind::RedirectFollower.resolve('http://binged.it/wVSFs5')
 			assert follower.redirected? 
 			assert_equal 'https://microsoft.promo.eprize.com/bingtwitter/public/fulfillment/rules.pdf', follower.final_url
 		end
@@ -37,7 +37,7 @@ describe 'Tests :)' do
 
 	it 'should not be redirected' do 
 		VCR.use_cassette('no redirect') do 
-			follower  = Unwind::RedirectFollower.new('http://www.scottw.com').resolve
+			follower  = Unwind::RedirectFollower.resolve('http://www.scottw.com')
 			assert !follower.redirected?
 		end	
 	end
