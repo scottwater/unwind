@@ -14,6 +14,10 @@ module Unwind
 		 @redirects = []
 		end
 
+		def redirected? 
+			!(self.final_url == self.original_url)
+		end
+
 		def resolve(current_url=nil)
 
 			ok_to_continue?

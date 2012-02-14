@@ -16,7 +16,15 @@ describe 'Tests :)' do
 			assert_equal 'http://ow.ly/i/s1O0', follower.final_url 
 			assert_equal 'http://j.mp/xZVND1', follower.original_url
 			assert_equal 2, follower.redirects.count
+			assert follower.redirected?
 		end
+	end
+
+	it 'should not be redirected' do 
+		VCR.use_cassette('no redirect') do 
+			follower  = Unwind::RedirectFollower.new('http://www.scottw.com').resolve
+			assert !follower.redirected?
+		end	
 	end
 
 	it 'should raise TooManyRedirects' do 

@@ -1,0 +1,230 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.scottw.com:80/
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 14 Feb 2012 16:55:15 GMT
+      content-type:
+      - text/html;charset=utf-8
+      connection:
+      - keep-alive
+      x-frame-options:
+      - sameorigin
+      x-xss-protection:
+      - 1; mode=block
+      last-modified:
+      - Wed, 01 Feb 2012 16:03:28 GMT
+      content-length:
+      - '15677'
+      x-varnish:
+      - '1407065053'
+      age:
+      - '0'
+      via:
+      - 1.1 varnish
+    body: ! "\n<!DOCTYPE html>\n<!--[if IEMobile 7 ]><html class=\"no-js iem7\"><![endif]-->\n<!--[if
+      lt IE 9]><html class=\"no-js lte-ie8\"><![endif]-->\n<!--[if (gt IE 8)|(gt IEMobile
+      7)|!(IEMobile)|!(IE)]><!--><html class=\"no-js\" lang=\"en\"><!--<![endif]-->\n<head>\n
+      \ <meta charset=\"utf-8\">\n  <title>Scott Watermasysk</title>\n  <meta name=\"author\"
+      content=\"Scott Watermasysk\">\n\n  \n  <meta name=\"description\" content=\"Why
+      is this important? It means no more committing the public directory into git.
+      Even with just 200 or so posts, my git history felt like it was &hellip;\">\n
+      \ \n\n  <!-- http://t.co/dKP3o1e -->\n  <meta name=\"HandheldFriendly\" content=\"True\">\n
+      \ <meta name=\"MobileOptimized\" content=\"320\">\n  <meta name=\"viewport\"
+      content=\"width=device-width, initial-scale=1\">\n\n  \n  <link rel=\"canonical\"
+      href=\"http://www.scottw.com\">\n  <link href=\"/favicon.png\" rel=\"icon\">\n
+      \ <link href=\"/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\"
+      type=\"text/css\">\n  <script src=\"/javascripts/modernizr-2.0.js\"></script>\n
+      \ <script src=\"/javascripts/ender.js\"></script>\n  <script src=\"/javascripts/octopress.js\"
+      type=\"text/javascript\"></script>\n  <link href=\"http://feeds.simpable.com/simpable\"
+      rel=\"alternate\" title=\"Scott Watermasysk\" type=\"application/atom+xml\">\n
+      \ <!--Fonts from Google's Web font directory at http://google.com/webfonts -->\n<link
+      href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic'
+      rel='stylesheet' type='text/css'>\n<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic'
+      rel='stylesheet' type='text/css'>\n\n  \n  <script type=\"text/javascript\">\n
+      \   var _gaq = _gaq || [];\n    _gaq.push(['_setAccount', 'UA-65729-10']);\n
+      \   _gaq.push(['_trackPageview']);\n\n    (function() {\n      var ga = document.createElement('script');
+      ga.type = 'text/javascript'; ga.async = true;\n      ga.src = ('https:' == document.location.protocol
+      ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n      var
+      s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+      s);\n    })();\n  </script>\n\n\n</head>\n\n<body   >\n  <header role=\"banner\"><hgroup>\n
+      \ <h1><a href=\"/\">Scott Watermasysk</a></h1>\n  \n    <h2>Still Learning</h2>\n
+      \ \n</hgroup>\n\n</header>\n  <nav role=\"navigation\"><ul class=\"subscription\"
+      data-subscription=\"rss\">\n  <li><a href=\"http://feeds.simpable.com/simpable\"
+      rel=\"subscribe-rss\" title=\"subscribe via RSS\">RSS</a></li>\n  \n</ul>\n
+      \ \n<form action=\"http://google.com/search\" method=\"get\">\n  <fieldset role=\"search\">\n
+      \   <input type=\"hidden\" name=\"q\" value=\"site:www.scottw.com\" />\n    <input
+      class=\"search\" type=\"text\" name=\"q\" results=\"0\" placeholder=\"Search\"/>\n
+      \ </fieldset>\n</form>\n  \n<ul role=main-navigation>\n  <li><a href=\"/\">Home</a></li>\n
+      \ <li><a href=\"/about\">About</a></li>\n  <li><a href=\"/archives\">Archives</a></li>\n
+      \ <li><a href=\"/links\">Links</a></li>\n  <li><a href=\"http://twitter.com/scottw\">@ScottW</a></li>\n</ul>\n\n</nav>\n
+      \ <div id=\"main\">\n    <div id=\"content\">\n      <div class=\"blog-index\">\n
+      \ \n  \n  \n    <article>\n      \n  <header>\n\t\t\n\t\t\t<!-- This defines
+      how Octopress will use posts with external-url. -->\n\t\t\t\t<h1 class=\"entry-title\"><a
+      class=\"external-link\" href=\"http://jasongarber.com/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack/\">Deploying
+      Octopress to Heroku With a Custom Buildpack</a></h1>\n\t\t\t \t\n\t\t  \t\n
+      \   \n      <p class=\"meta\">\n        \n\n\n\n\n\n\n\n\n  \n\n\n<time datetime=\"2012-02-01T10:09:00+00:00\"
+      pubdate data-updated=\"true\">Feb 1<span>st</span>, 2012</time>\n        \n
+      \     </p>\n    \n  </header>\n\n\n  <div class=\"entry-content\"><p>Why is
+      this important? It means no more committing the public directory into git.</p>\n\n<p>Even
+      with just 200 or so posts, my git history felt like it was exploding every time
+      I wrote a new post.</p>\n\n<p>I went ahead and nuked my old blog repo and <a
+      href=\"http://github.com/scottwater/scottw.com\">recommitted this cleaner</a>
+      (and leaner) version if you need a starting place.</p>\n\n<p>Jason&#8217;s steps
+      were great, but I did run into two snags:</p>\n\n<ol>\n<li>I could not set the
+      buildpack directly when creating the app. I had to add the heroku config var
+      for it instead.</li>\n<li>I got an error about a missing daemon gem. Heroku&#8217;s
+      cedar stack is still in beta and running a RC version of bundler (as of today).
+      I haven&#8217;t dug any further, but nuking my gem vendor folder and starting
+      over seemed to do the trick.</li>\n</ol>\n\n</div>\n  \n  \n\n\n\n\t<div class=\"entry-content\"></div>\n\t<footer><a
+      rel=\"full-article\" href=\"/deploying-octopress-to-heroku\">Permalink</a></footer>\n\n\n
+      \   </article>\n  \n  \n    <article>\n      \n  <header>\n\t\t\n\t\t\t<!--
+      This defines how Octopress will use posts with external-url. -->\n\t\t\t\t<h1
+      class=\"entry-title\"><a class=\"external-link\" href=\"http://www.candlerblog.com/2012/01/30/octopress-linked-list/\">Octopress
+      Linked List</a></h1>\n\t\t\t \t\n\t\t  \t\n    \n      <p class=\"meta\">\n
+      \       \n\n\n\n\n\n\n\n\n  \n\n\n<time datetime=\"2012-02-01T06:39:00+00:00\"
+      pubdate data-updated=\"true\">Feb 1<span>st</span>, 2012</time>\n        \n
+      \     </p>\n    \n  </header>\n\n\n  <div class=\"entry-content\"><p>I have
+      been meaning to implement this on my own for a while.</p>\n\n<p>I did make one
+      minor adjustment David&#8217;s example. Instead of inlining the glyph, I am
+      adding it via CSS:</p>\n\n<figure class='code'><figcaption><span></span></figcaption><div
+      class=\"highlight\"><table><tr><td class=\"gutter\"><pre class=\"line-numbers\"><span
+      class='line-number'>1</span>\n<span class='line-number'>2</span>\n<span class='line-number'>3</span>\n</pre></td><td
+      class='code'><pre><code class='css'><span class='line'><span class=\"nt\">a</span><span
+      class=\"nc\">.external-link</span><span class=\"nd\">:after</span> <span class=\"p\">{</span>\n</span><span
+      class='line'>  <span class=\"k\">content</span><span class=\"o\">:</span> <span
+      class=\"s2\">&quot; \\27A6&quot;</span><span class=\"p\">;</span>\n</span><span
+      class='line'><span class=\"p\">}</span>\n</span></code></pre></td></tr></table></div></figure>\n\n</div>\n
+      \ \n  \n\n\n\n\t<div class=\"entry-content\"></div>\n\t<footer><a rel=\"full-article\"
+      href=\"/octopress-linked-list\">Permalink</a></footer>\n\n\n    </article>\n
+      \ \n  \n    <article>\n      \n  <header>\n\t\t\n\t\t\t<!-- Now we're back to
+      normal posts. Note the links used under href in both headers.-->\n\t\t\t \t<h1
+      class=\"entry-title\"><a href=\"/async-emails-with-sorcery\">Async Emails With
+      Sorcery</a></h1>\n\t\t\t\t\n\t\t  \t\n    \n      <p class=\"meta\">\n        \n\n\n\n\n\n\n\n\n
+      \ \n\n\n<time datetime=\"2011-11-28T12:27:00+00:00\" pubdate data-updated=\"true\">Nov
+      28<span>th</span>, 2011</time>\n        \n      </p>\n    \n  </header>\n\n\n
+      \ <div class=\"entry-content\"><p>For <a href=\"http://www.kickofflabs.com\">KickoffLabs</a>,
+      we rolled our own authentication. This worked really well, but doing it (even
+      if we packaged it up) for future projects is less than appealing.</p>\n\n<p>I
+      have used/tried Devise, Clearance, and AuthLogic but none of them seemed to
+      fit.</p>\n\n<p>Enter <a href=\"https://github.com/NoamB/sorcery\">Sorcery</a>.
+      Sorcery is a relatively new player in the rails authentication arms race.</p>\n\n</div>\n
+      \ \n  \n    <footer>\n      <a rel=\"full-article\" href=\"/async-emails-with-sorcery\">Read
+      on &rarr;</a>\n    </footer>\n  \n\n\n\n\n    </article>\n  \n  \n    <article>\n
+      \     \n  <header>\n\t\t\n\t\t\t<!-- Now we're back to normal posts. Note the
+      links used under href in both headers.-->\n\t\t\t \t<h1 class=\"entry-title\"><a
+      href=\"/heroku-ssl-and-dnsimple\">Heroku SSL via DNSimple</a></h1>\n\t\t\t\t\n\t\t
+      \ \t\n    \n      <p class=\"meta\">\n        \n\n\n\n\n\n\n\n\n  \n\n\n<time
+      datetime=\"2011-11-22T09:56:00+00:00\" pubdate data-updated=\"true\">Nov 22<span>nd</span>,
+      2011</time>\n        \n      </p>\n    \n  </header>\n\n\n  <div class=\"entry-content\"><p>If
+      you google for Heroku SSL you will find a surprisingly long list of blog posts
+      usually with many steps.</p>\n\n<p>However, it is actually much easier than
+      what most of them list, especially if you are using <a href=\"https://dnsimple.com/r/a2fb5da9458e27\">DNSimple</a>
+      (note: affiliate link).</p>\n\n<p>Here is how to setup a <strong>Hostname Based</strong>
+      certificate on Heroku:</p>\n\n</div>\n  \n  \n    <footer>\n      <a rel=\"full-article\"
+      href=\"/heroku-ssl-and-dnsimple\">Read on &rarr;</a>\n    </footer>\n  \n\n\n\n\n
+      \   </article>\n  \n  \n    <article>\n      \n  <header>\n\t\t\n\t\t\t<!--
+      Now we're back to normal posts. Note the links used under href in both headers.-->\n\t\t\t
+      \t<h1 class=\"entry-title\"><a href=\"/sinatra-public-heroku\">Static Files
+      Using Sinatra::Base on Heroku</a></h1>\n\t\t\t\t\n\t\t  \t\n    \n      <p class=\"meta\">\n
+      \       \n\n\n\n\n\n\n\n\n  \n\n\n<time datetime=\"2011-11-01T10:11:00+00:00\"
+      pubdate data-updated=\"true\">Nov 1<span>st</span>, 2011</time>\n        \n
+      \     </p>\n    \n  </header>\n\n\n  <div class=\"entry-content\"><p>I deployed
+      a small <a href=\"http://www.sinatrarb.com/\">Sinatra</a> app last night to
+      <a href=\"http://www.heroku.com\">Heroku</a> for the new <a href=\"http://api.kickofflabs.com\">KickoffLabs
+      API</a>.</p>\n\n<p>Most of the Sinatra apps I have deployed in the past have
+      been small prototypes and used the inline Sinatra app style.</p>\n\n<p>However,
+      in this case, I made the decision early on to use the Sinatra::Base class style
+      since we plan on growing the API codebase (ie, we are going to keep it around
+      for a long time).</p>\n\n</div>\n  \n  \n    <footer>\n      <a rel=\"full-article\"
+      href=\"/sinatra-public-heroku\">Read on &rarr;</a>\n    </footer>\n  \n\n\n\n\n
+      \   </article>\n  \n  \n    <article>\n      \n  <header>\n\t\t\n\t\t\t<!--
+      Now we're back to normal posts. Note the links used under href in both headers.-->\n\t\t\t
+      \t<h1 class=\"entry-title\"><a href=\"/simple-dev-tools\">My Favorite Tools
+      for a Simple Development Environment</a></h1>\n\t\t\t\t\n\t\t  \t\n    \n      <p
+      class=\"meta\">\n        \n\n\n\n\n\n\n\n\n  \n\n\n<time datetime=\"2011-09-13T10:41:00+00:00\"
+      pubdate data-updated=\"true\">Sep 13<span>th</span>, 2011</time>\n        \n
+      \     </p>\n    \n  </header>\n\n\n  <div class=\"entry-content\"><p>Here is
+      an updated list of the tools I use daily to try and make development both simple
+      and enjoyable.</p>\n\n</div>\n  \n  \n    <footer>\n      <a rel=\"full-article\"
+      href=\"/simple-dev-tools\">Read on &rarr;</a>\n    </footer>\n  \n\n\n\n\n    </article>\n
+      \ \n  \n    <article>\n      \n  <header>\n\t\t\n\t\t\t<!-- Now we're back to
+      normal posts. Note the links used under href in both headers.-->\n\t\t\t \t<h1
+      class=\"entry-title\"><a href=\"/my-favorite-podcasts\">My Favorite Startup
+      and Ruby Podcasts</a></h1>\n\t\t\t\t\n\t\t  \t\n    \n      <p class=\"meta\">\n
+      \       \n\n\n\n\n\n\n\n\n  \n\n\n<time datetime=\"2011-09-08T19:18:00+00:00\"
+      pubdate data-updated=\"true\">Sep 8<span>th</span>, 2011</time>\n        \n
+      \     </p>\n    \n  </header>\n\n\n  <div class=\"entry-content\"><p>My taste
+      in podcasts varies by what is actually going on in my life. Right now it is
+      mostly startups (<a href=\"http://www.kickofflabs.com\">KickoffLabs</a>) and
+      Ruby.</p>\n\n<p>Here are my current favorites:</p>\n\n</div>\n  \n  \n    <footer>\n
+      \     <a rel=\"full-article\" href=\"/my-favorite-podcasts\">Read on &rarr;</a>\n
+      \   </footer>\n  \n\n\n\n\n    </article>\n  \n  \n    <article>\n      \n  <header>\n\t\t\n\t\t\t<!--
+      Now we're back to normal posts. Note the links used under href in both headers.-->\n\t\t\t
+      \t<h1 class=\"entry-title\"><a href=\"/resque-mail-queue-gem\">Resque Mail Queue
+      Gem</a></h1>\n\t\t\t\t\n\t\t  \t\n    \n      <p class=\"meta\">\n        \n\n\n\n\n\n\n\n\n
+      \ \n\n\n<time datetime=\"2011-09-07T07:29:00+00:00\" pubdate data-updated=\"true\">Sep
+      7<span>th</span>, 2011</time>\n        \n      </p>\n    \n  </header>\n\n\n
+      \ <div class=\"entry-content\"><p>I have written two times (<a href=\"http://www.scottw.com/simple-resque-mail-queue\">Simple
+      Resque Mail Queue</a> and <a href=\"http://www.scottw.com/simple-resque-mail-queue-ii\">Simple
+      Resque Mail Queue II</a>) before about a simple module <em>MailQueue</em> which
+      can be used to easily send email asynchronously with <a href=\"http://github.com/defunkt/resque\">Resque</a>.</p>\n\n</div>\n
+      \ \n  \n    <footer>\n      <a rel=\"full-article\" href=\"/resque-mail-queue-gem\">Read
+      on &rarr;</a>\n    </footer>\n  \n\n\n\n\n    </article>\n  \n  \n    <article>\n
+      \     \n  <header>\n\t\t\n\t\t\t<!-- Now we're back to normal posts. Note the
+      links used under href in both headers.-->\n\t\t\t \t<h1 class=\"entry-title\"><a
+      href=\"/automated-timezone-detection\">Improving Automated Timezone Detection</a></h1>\n\t\t\t\t\n\t\t
+      \ \t\n    \n      <p class=\"meta\">\n        \n\n\n\n\n\n\n\n\n  \n\n\n<time
+      datetime=\"2011-09-06T08:30:00+00:00\" pubdate data-updated=\"true\">Sep 6<span>th</span>,
+      2011</time>\n        \n      </p>\n    \n  </header>\n\n\n  <div class=\"entry-content\"><p>tl;dr
+      - Just using the Javascript getTimezoneOffset to auto-detect timezone information
+      will not work properly during daylight savings and has a couple of other minor
+      gotchas. Check out the <a href=\"https://bitbucket.org/pellepim/jstimezonedetect/wiki/Home\">jsTimezoneDetect</a>
+      and my simple <a href=\"https://github.com/scottwater/jquery.detect_timezone\">jQuery
+      detect_timezone plugin</a> for more accurate timezone information. I also put
+      together a gem, <a href=\"https://github.com/scottwater/detect_timezone_rails\">detect_timezone_rails</a>,
+      to automate the process in Rails.</p>\n\n</div>\n  \n  \n    <footer>\n      <a
+      rel=\"full-article\" href=\"/automated-timezone-detection\">Read on &rarr;</a>\n
+      \   </footer>\n  \n\n\n\n\n    </article>\n  \n  \n    <article>\n      \n  <header>\n\t\t\n\t\t\t<!--
+      Now we're back to normal posts. Note the links used under href in both headers.-->\n\t\t\t
+      \t<h1 class=\"entry-title\"><a href=\"/multiple-smtp-servers-with-action-mailer\">Multiple
+      Smtp Servers With Action Mailer</a></h1>\n\t\t\t\t\n\t\t  \t\n    \n      <p
+      class=\"meta\">\n        \n\n\n\n\n\n\n\n\n  \n\n\n<time datetime=\"2011-09-04T09:25:00+00:00\"
+      pubdate data-updated=\"true\">Sep 4<span>th</span>, 2011</time>\n        \n
+      \     </p>\n    \n  </header>\n\n\n  <div class=\"entry-content\"><p>We recently
+      started using <a href=\"http://postmarkapp.com\">PostMark</a> on <a href=\"http://www.kickofflabs.com\">KickoffLabs</a>.
+      So far the service has been excellent. Unfortunately, not all of our emails
+      fit their terms of service. I looked around for how configure an addition SMTP
+      server via Action Mailer (and Mail gem). Surprisingly, this is not supported.</p>\n\n</div>\n
+      \ \n  \n    <footer>\n      <a rel=\"full-article\" href=\"/multiple-smtp-servers-with-action-mailer\">Read
+      on &rarr;</a>\n    </footer>\n  \n\n\n\n\n    </article>\n  \n  <div class=\"pagination\">\n
+      \   \n      <a class=\"prev\" href=\"/page/2/\">&larr; Older</a>\n    \n    <a
+      href=\"/blog/archives\">Blog Archives</a>\n    \n  </div>\n</div>\n    </div>\n
+      \ </div>\n  <footer role=\"contentinfo\"><p>\n  Copyright &copy; 2012 - Scott
+      Watermasysk -\n  <span class=\"credit\">Powered by <a href=\"http://octopress.org\">Octopress</a>
+      and <a href=\"http://heroku.com\">Heroku</a></span>\n</p>\n\n</footer>\n  \n\n<script
+      type=\"text/javascript\">\n      var disqus_shortname = 'wwwscottw';\n      \n
+      \       \n        var disqus_script = 'count.js';\n      \n    (function ()
+      {\n      var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+      dsq.async = true;\n      dsq.src = 'http://' + disqus_shortname + '.disqus.com/'
+      + disqus_script;\n      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);\n
+      \   }());\n</script>\n\n\n\n\n\n  <script type=\"text/javascript\">\n    (function()
+      {\n      var script = document.createElement('script'); script.type = 'text/javascript';
+      script.async = true;\n      script.src = 'https://apis.google.com/js/plusone.js';\n
+      \     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script,
+      s);\n    })();\n  </script>\n\n\n\n  <script type=\"text/javascript\">\n    (function(){\n
+      \     var twitterWidgets = document.createElement('script');\n      twitterWidgets.type
+      = 'text/javascript';\n      twitterWidgets.async = true;\n      twitterWidgets.src
+      = 'http://platform.twitter.com/widgets.js';\n      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);\n
+      \   })();\n  </script>\n\n\n\n\n\n</body>\n</html>\n"
+    http_version: '1.1'
