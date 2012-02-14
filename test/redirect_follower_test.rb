@@ -75,4 +75,12 @@ describe 'Tests :)' do
 		end
 	end
 
+	it 'should raise MissingRedirectLocation' do 
+		VCR.use_cassette('missing redirect') do 
+			follower = Unwind::RedirectFollower.new('http://tinyurl.com/6oqzkff')
+			missing_redirect_location = lambda{follower.resolve}
+			missing_redirect_location.must_raise Unwind::MissingRedirectLocation
+		end
+	end
+
 end

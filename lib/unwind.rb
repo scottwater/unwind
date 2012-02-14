@@ -4,6 +4,7 @@ require 'faraday'
 module Unwind
 
 	class TooManyRedirects < StandardError; end
+	class MissingRedirectLocation < StandardError; end
 
 	class RedirectFollower
 
@@ -28,7 +29,7 @@ module Unwind
 			if [301, 302, 307].include?(response.status)
 				@redirects << current_url.to_s
 				@redirect_limit -= 1
-				resolve redirect_url(response) 
+				resolve redirect_url(response).normalize
 			else
 				@final_url = current_url.to_s
 				@response = response
@@ -49,10 +50,12 @@ module Unwind
 
 		def redirect_url(response)
 			if response['location'].nil?
-				response.body.match(/<a href=\"([^>]+)\">/i)[1]
+				body_match = response.body.match(/<a href=\"([^>]+)\">/i)
+				raise MissingRedirectLocation unless body_match
+				Addressable::URI.parse(body_match[0])
 			else
 				redirect_uri = Addressable::URI.parse(response['location'])
-				redirect_uri.relative? ? response.env[:url].join(response['location']).normalize : redirect_uri.normalize
+				redirect_uri.relative? ? response.env[:url].join(response['location']) : redirect_uri
 			end
 		end
 		
