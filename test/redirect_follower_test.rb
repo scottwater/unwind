@@ -11,8 +11,7 @@ describe 'Tests :)' do
 
 	it 'should resolve the url' do 
 		VCR.use_cassette('xZVND1') do 
-			follower = Unwind::RedirectFollower.new('http://j.mp/xZVND1')
-			follower.resolve
+			follower = Unwind::RedirectFollower.new('http://j.mp/xZVND1').resolve
 			assert_equal 'http://ow.ly/i/s1O0', follower.final_url 
 			assert_equal 'http://j.mp/xZVND1', follower.original_url
 			assert_equal 2, follower.redirects.count
