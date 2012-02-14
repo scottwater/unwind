@@ -43,6 +43,15 @@ describe 'Tests :)' do
 		end
 	end
 
+	it 'should handle the lame amazon spaces' do 
+		VCR.use_cassette('amazon') do 
+			follower = Unwind::RedirectFollower.resolve('http://amzn.to/xrHQWS')
+			assert follower.redirected? 
+		end
+	end
+
+	#http://amzn.to/xrHQWS
+
 	it 'should handle a https redirect' do 
 		VCR.use_cassette('ssl tpope') do 
 			follower = Unwind::RedirectFollower.resolve('http://github.com/tpope/vim-rails')

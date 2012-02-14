@@ -51,8 +51,8 @@ module Unwind
 			if response['location'].nil?
 				response.body.match(/<a href=\"([^>]+)\">/i)[1]
 			else
-				redirect_uri = URI.parse(response['location'])
-				redirect_uri.relative? ? response.env[:url].join(response['location']) : redirect_uri
+				redirect_uri = Addressable::URI.parse(response['location'])
+				redirect_uri.relative? ? response.env[:url].join(response['location']).normalize : redirect_uri.normalize
 			end
 		end
 		
