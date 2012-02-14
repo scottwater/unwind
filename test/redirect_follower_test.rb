@@ -27,6 +27,14 @@ describe 'Tests :)' do
 		end
 	end
 
+	it 'should handle redirects to pdfs' do 
+		VCR.use_cassette('pdf') do 
+			follower = Unwind::RedirectFollower.new('http://binged.it/wVSFs5').resolve
+			assert follower.redirected? 
+			assert_equal 'https://microsoft.promo.eprize.com/bingtwitter/public/fulfillment/rules.pdf', follower.final_url
+		end
+	end
+
 	it 'should not be redirected' do 
 		VCR.use_cassette('no redirect') do 
 			follower  = Unwind::RedirectFollower.new('http://www.scottw.com').resolve
