@@ -19,6 +19,14 @@ describe 'Tests :)' do
 		end
 	end
 
+	it 'should handle relative redirects' do 
+		VCR.use_cassette('relative stackoverflow') do 
+			follower = Unwind::RedirectFollower.new('http://stackoverflow.com/q/9277007/871617?stw=1').resolve
+			assert follower.redirected?
+			assert_equal 'http://stackoverflow.com/questions/9277007/gitlabhq-w-denied-for-rails', follower.final_url
+		end
+	end
+
 	it 'should not be redirected' do 
 		VCR.use_cassette('no redirect') do 
 			follower  = Unwind::RedirectFollower.new('http://www.scottw.com').resolve

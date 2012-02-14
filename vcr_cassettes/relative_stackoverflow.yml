@@ -1,0 +1,471 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://stackoverflow.com:80/q/9277007/871617?stw=1
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 301
+      message: Moved Permanently
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - text/html; charset=utf-8
+      location:
+      - /questions/9277007/gitlabhq-w-denied-for-rails
+      date:
+      - Tue, 14 Feb 2012 19:05:09 GMT
+      content-length:
+      - '163'
+    body: ! "<html><head><title>Object moved</title></head><body>\r\n<h2>Object moved
+      to <a href=\"/questions/9277007/gitlabhq-w-denied-for-rails\">here</a>.</h2>\r\n</body></html>\r\n"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://stackoverflow.com:80/questions/9277007/gitlabhq-w-denied-for-rails
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - public, max-age=29
+      content-type:
+      - text/html; charset=utf-8
+      expires:
+      - Tue, 14 Feb 2012 19:05:40 GMT
+      last-modified:
+      - Tue, 14 Feb 2012 19:04:40 GMT
+      vary:
+      - ! '*'
+      date:
+      - Tue, 14 Feb 2012 19:05:09 GMT
+      content-length:
+      - '37224'
+    body: ! "<!DOCTYPE html>\r\n<html>\r\n\r\n\r\n\r\n<head>\r\n    \r\n    <title>git
+      - GitlabHQ - W denied for rails - Stack Overflow</title>\r\n    <link rel=\"shortcut
+      icon\" href=\"http://cdn.sstatic.net/stackoverflow/img/favicon.ico\">\r\n    <link
+      rel=\"apple-touch-icon\" href=\"http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png\">\r\n
+      \   <link rel=\"search\" type=\"application/opensearchdescription+xml\" title=\"Stack
+      Overflow\" href=\"/opensearch.xml\">\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+      href=\"http://cdn.sstatic.net/stackoverflow/all.css?v=db93772d4f8e\">\r\n    <script
+      type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>\r\n
+      \   <script type=\"text/javascript\" src=\"http://cdn.sstatic.net/js/stub.js?v=c014461b9109\"></script>\r\n
+      \   \r\n    <link rel=\"canonical\" href=\"http://stackoverflow.com/questions/9277007/gitlabhq-w-denied-for-rails\">\r\n
+      \   <link rel=\"alternate\" type=\"application/atom+xml\" title=\"Feed for question
+      'GitlabHQ - W denied for rails'\" href=\"/feeds/question/9277007\">\r\n    <meta
+      name=\"title\" content=\"git - GitlabHQ - W denied for rails - Stack Overflow\">\r\n
+      \   <link rel=\"image_src\" href=\"http://sstatic.net/stackoverflow/img/apple-touch-icon.png\">\r\n
+      \   <script type=\"text/javascript\">\r\n        \r\n        StackExchange.ready(function
+      () {\r\n\r\n            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:6,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:9277007});\r\n\r\n
+      \           styleCode();\r\n        });\r\n    </script>\r\n\r\n\r\n\r\n    <script
+      type=\"text/javascript\">\r\n        StackExchange.init({\"stackAuthUrl\":\"https://stackauth.com\",\"serverTime\":1329246280,\"styleCode\":true,\"enableUserHovercards\":true,\"site\":{\"name\":\"Stack
+      Overflow\",\"description\":\"Q&A for professional and enthusiast programmers\"},\"user\":{\"isAnonymous\":true,\"fkey\":\"985f2bb97b67624c07a43fe74d612fe7\",\"inboxUnviewedCount\":-1}});\r\n
+      \       StackExchange.using.setCacheBreakers({\"js/prettify-full.js\":\"4ed9aa4b8d0e\",\"js/moderator.js\":\"adde5b27c625\",\"js/full-anon.js\":\"b9f3de7298ff\",\"js/full.js\":\"a56a3c2dc16e\",\"js/wmd.js\":\"5cbec09a1d44\",\"js/third-party/jquery.autocomplete.min.js\":\"e5f01e97f7c3\",\"js/mobile.js\":\"9e820382dd06\",\"js/help.js\":\"fc9fb0517db2\",\"js/tageditor.js\":\"c1ba807b32aa\",\"js/tageditornew.js\":\"ab523171ddc9\",\"js/inline-tag-editing.js\":\"b19f6e3b50a5\",\"js/revisions.js\":\"8c6bcd93b7fe\",\"js/suggested-edits.js\":\"92144b1c12be\"});\r\n
+      \       \r\n    </script>\r\n\r\n</head>\r\n<body class=\"question-page\">\r\n
+      \   <noscript><div id=\"noscript-padding\"></div></noscript>\r\n    <div id=\"notify-container\"></div>\r\n
+      \   <div id=\"overlay-header\"></div>\r\n    <div id=\"custom-header\"></div>\r\n\r\n
+      \   <div class=\"container\">\r\n        <div id=\"header\">\r\n            <div
+      id=\"portalLink\">\r\n                <a class=\"genu\" href=\"http://stackexchange.com\"
+      onclick=\"StackExchange.ready(function(){genuwine.click();});return false;\">Stack
+      Exchange</a>\r\n            </div>\r\n            <div id=\"topbar\">\r\n                <div
+      id=\"hlinks\">\r\n                    <span id=\"hlinks-user\">\r\n                  \r\n
+      \                 </span>\r\n                  <span id=\"hlinks-nav\">\r\n
+      \                 <a href=\"/users/login?returnurl=%2fquestions%2f9277007%2fgitlabhq-w-denied-for-rails\">log
+      in</a>\r\n <span class=\"lsep\">|</span>\r\n<a href=\"http://careers.stackoverflow.com\">careers</a>\r\n
+      <span class=\"lsep\">|</span>\r\n\r\n                  </span>\r\n                  <span
+      id=\"hlinks-custom\">\r\n                  <a href=\"http://chat.stackoverflow.com\">chat</a>\r\n
+      <span class=\"lsep\">|</span>\r\n<a href=\"http://meta.stackoverflow.com\">meta</a>\r\n
+      <span class=\"lsep\">|</span>\r\n<a href=\"/about\">about</a>\r\n <span class=\"lsep\">|</span>\r\n<a
+      href=\"/faq\">faq</a>\r\n                  </span>\r\n                </div>\r\n
+      \               <div id=\"hsearch\">\r\n                    <form id=\"search\"
+      action=\"/search\" method=\"get\" autocomplete=\"off\">\r\n                    <div>\r\n
+      \                       <input autocomplete=\"off\" name=\"q\" class=\"textbox\"
+      placeholder=\"search\" tabindex=\"1\" type=\"text\" maxlength=\"140\" size=\"28\"
+      value=\"\">\r\n                    </div>\r\n                    </form>\r\n
+      \               </div>\r\n            </div>\r\n            <br class=\"cbt\">\r\n
+      \           <div id=\"hlogo\">\r\n                <a href=\"/\" >Stack Overflow</a>\r\n
+      \           </div>\r\n            <div id=\"hmenus\">\r\n                <div
+      class=\"nav mainnavs\">\r\n                    <ul>\r\n                        <li
+      class=\"youarehere\"><a id=\"nav-questions\" href=\"/questions\">Questions</a></li>\r\n
+      \                       <li><a id=\"nav-tags\" href=\"/tags\">Tags</a></li>\r\n
+      \                       <li><a id=\"nav-users\" href=\"/users\">Users</a></li>\r\n
+      \                       <li><a id=\"nav-badges\" href=\"/badges\">Badges</a></li>\r\n
+      \                       <li><a id=\"nav-unanswered\" href=\"/unanswered\">Unanswered</a></li>\r\n
+      \                   </ul>\r\n                </div>\r\n                <div
+      class=\"nav askquestion\">\r\n                    <ul>\r\n                        <li>\r\n
+      \                           <a id=\"nav-askquestion\"  href=\"/questions/ask\">Ask
+      Question</a>\r\n                        </li>\r\n                    </ul>\r\n
+      \               </div>\r\n            </div>\r\n        </div>\r\n\r\n        \r\n\r\n\r\n
+      \       <div id=\"content\">\r\n            \r\n\r\n\r\n<div itemscope itemtype=\"http://schema.org/Article\">\r\n<link
+      itemprop=\"image\" href=\"http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png\">\r\n<div
+      id=\"question-header\">\r\n    <h1 itemprop=\"name\"><a href=\"/questions/9277007/gitlabhq-w-denied-for-rails\"
+      class=\"question-hyperlink\">GitlabHQ - W denied for rails</a></h1>\r\n</div>\r\n<div
+      id=\"mainbar\">\r\n\r\n\r\n<div class=\"question\" id=\"question\" data-questionid=\"9277007\">\r\n\r\n
+      \   <div class=\"everyonelovesstackoverflow\" id=\"adzerk1\">\r\n    </div>\r\n\r\n
+      \   \r\n    <table>\r\n    <tr>\r\n    <td class=\"votecell\">\r\n        \r\n\r\n<div
+      class=\"vote\">\r\n    <input type=\"hidden\" value=\"9277007\">\r\n    <a class=\"vote-up-off\"
+      title=\"This question shows research effort; it is useful and clear (click again
+      to undo)\">up vote</a>\r\n    <span class=\"vote-count-post\">0</span>\r\n    <a
+      class=\"vote-down-off\" title=\"This question does not show any research effort;
+      it is unclear or not useful (click again to undo)\">down vote</a>\r\n    <a
+      class=\"star-off\" href=\"#\" title=\"This is a favorite question (click again
+      to undo)\">favorite</a>\r\n    <div class=\"favoritecount\"><b></b></div>   \r\n
+      \r\n    <script type=\"text/javascript\">\r\n        StackExchange.ready(function
+      () {\r\n            var shareUrl = 'http%3a%2f%2fstackoverflow.com%2fq%2f9277007';\r\n
+      \           var shareMsg = 'GitlabHQ+-+W+denied+for+rails';\r\n            \r\n
+      \           StackExchange.share.gplus($('#gp-share-9277007'), shareUrl, shareMsg)
+      ;\r\n            StackExchange.share.facebook($('#fb-share-9277007'), shareUrl,
+      shareMsg);\r\n            StackExchange.share.twitter($('#twitter-share-9277007'),
+      shareUrl, shareMsg);\r\n        });\r\n    </script>\r\n    <a id=\"gp-share-9277007\"
+      class=\"gp-share\" title=\"share link to this question on Google+\">share [g+]</a>\r\n
+      \   <a id=\"fb-share-9277007\" class=\"fb-share\" title=\"share link to this
+      question on Facebook\">share [fb]</a>\r\n    <a id=\"twitter-share-9277007\"
+      class=\"twitter-share\" title=\"share link to this question on Twitter\">share
+      [tw]</a>    \r\n</div>\r\n\r\n    </td>\r\n<td class=\"postcell\">\r\n<div>
+      \         \r\n    <div class=\"post-text\" itemprop=\"description\">\r\n        <p>At
+      work I've been tasked with setting up out GIT server with a front end and I
+      found GitlabHQ which looks amazing.</p>\n\n<p>I've installed it all semi-successfully
+      but I cannot push my repos at all as it says I need to push them.</p>\n\n<p>Since
+      I've never used GitLabHQ before first is:</p>\n\n<pre><code>You should push
+      repository to proceed.\nAfter push you will be able to browse code, commits
+      etc.\n</code></pre>\n\n<p>Normal when adding projects?</p>\n\n<p>and every-time
+      I run</p>\n\n<pre><code>git push -u origin master\n</code></pre>\n\n<p>I get
+      this,</p>\n\n<pre><code>W access for focus DENIED to rails\n(Or there may be
+      no repository at the given path. Did you spell it correctly?)\nfatal: The remote
+      end hung up unexpectedly\n</code></pre>\n\n<p>is anyone able to help since I
+      can't expect the team to keep SSH'ing?</p>\n\n<p>Thanks.</p>\n\n<p>EDIT:</p>\n\n<p>Server
+      = Ubuntu Server 11.10 fully updated and I followed these instructions: <a href=\"https://github.com/gitlabhq/gitlabhq/wiki/V2.0-easy-setup-for-ubuntu\"
+      rel=\"nofollow\">https://github.com/gitlabhq/gitlabhq/wiki/V2.0-easy-setup-for-ubuntu</a></p>\n\r\n
+      \   </div>            \r\n    <div class=\"post-taglist\">\r\n        <a href=\"/questions/tagged/ruby-on-rails\"
+      class=\"post-tag\" title=\"show questions tagged 'ruby-on-rails'\" rel=\"tag\">ruby-on-rails</a>
+      <a href=\"/questions/tagged/git\" class=\"post-tag\" title=\"show questions
+      tagged 'git'\" rel=\"tag\">git</a> <a href=\"/questions/tagged/version-control\"
+      class=\"post-tag\" title=\"show questions tagged 'version-control'\" rel=\"tag\">version-control</a>
+      \r\n    </div>\r\n    <table class=\"fw\">\r\n    <tr>\r\n    <td class=\"vt\">\r\n
+      \       <div class=\"post-menu\"><a href=\"/q/9277007\" title=\"short permalink
+      to this question\" id=\"link-post-9277007\">link</a><span class=\"lsep\">|</span><a
+      href=\"/posts/9277007/edit\" >improve this question</a></div>\r\n    </td>\r\n
+      \   <td align=\"right\" class=\"post-signature\">\r\n<div class=\"user-info\"><div
+      class=\"user-action-time\">edited <a href=\"/posts/9277007/revisions\" title=\"show
+      all edits to this post\"><span title=\"2012-02-14 13:51:18Z\" class=\"relativetime\">5
+      hours ago</span></a></div><div class=\"user-gravatar32\"></div><div class=\"user-details\"><br></div></div>
+      \   </td>\r\n    <td class=\"post-signature owner\">\r\n    <div class=\"user-info\"><div
+      class=\"user-action-time\">asked <span title=\"2012-02-14 12:39:12Z\" class=\"relativetime\">6
+      hours ago</span></div><div class=\"user-gravatar32\"><a href=\"/users/871617/dave-mackintosh\"><div
+      class=\"\"><img src=\"http://www.gravatar.com/avatar/148f5af1651e6fcc41860fbf766bb33f?s=32&amp;d=identicon&amp;r=PG\"
+      alt=\"\"></div></a></div><div class=\"user-details\"><a href=\"/users/871617/dave-mackintosh\">Dave
+      Mackintosh</a><br><span class=\"reputation-score\" title=\"reputation score\"
+      dir=\"ltr\">211</span><span title=\"10 bronze badges\"><span class=\"badge3\"></span><span
+      class=\"badgecount\">10</span></span></div></div>\r\n        <br class=\"cbt\">\r\n
+      \       <div class=\"accept-rate accept-answer-link\" title=\"this user has
+      accepted an answer for 6 of 7 eligible questions\">86% accept rate</div>\r\n
+      \   </td>\r\n    </tr>\r\n    </table>\r\n</div>\r\n</td>    </tr>\r\n\r\n\r\n<tr>\r\n<td
+      class=\"votecell\"></td>\r\n<td>\r\n    <div id=\"comments-9277007\" class=\"comments\">\r\n
+      \       <table>\r\n        <tbody>\r\n                    \r\n    <tr id=\"comment-11697992\"
+      class=\"comment\">\r\n        <td></td>\r\n        <td class=\"comment-text\"><div><span
+      class=\"comment-copy\">Sounds like you may be trying to push to a non existant
+      repository.  Did you create a repository to push to?  It&#39;s also possible
+      you may not have added the repository as a remote to your project?  You also
+      must add it as a remote to your project using <code>git remote add origin git:&#47;&#47;repo_location.git</code>.
+      \ <a href=\"http://help.github.com/remotes/\" rel=\"nofollow\">Read this for
+      more info on how to use the git remote command.</a></span> &ndash;&nbsp;<a href=\"/users/995874/batkins\"
+      title=\"1067 reputation\" class=\"comment-user\">Batkins</a> <span class=\"comment-date\"
+      dir=\"ltr\"><span title=\"2012-02-14 14:46:55Z\">4 hours ago</span></span><span
+      class=\"edited-yes\" title=\"this comment was edited 3 times\"></span></div></td>\r\n
+      \   </tr>\r\n            \r\n    <tr id=\"comment-11698650\" class=\"comment\">\r\n
+      \       <td></td>\r\n        <td class=\"comment-text\"><div><span class=\"comment-copy\">It
+      keeps telling me remote origin already exists?</span> &ndash;&nbsp;<a href=\"/users/871617/dave-mackintosh\"
+      title=\"211 reputation\" class=\"comment-user owner\">Dave Mackintosh</a> <span
+      class=\"comment-date\" dir=\"ltr\"><span title=\"2012-02-14 15:12:45Z\">3 hours
+      ago</span></span></div></td>\r\n    </tr>\r\n            \r\n    <tr id=\"comment-11699025\"
+      class=\"comment\">\r\n        <td></td>\r\n        <td class=\"comment-text\"><div><span
+      class=\"comment-copy\">What happens when you execute <code>git remote show origin</code>?</span>
+      &ndash;&nbsp;<a href=\"/users/995874/batkins\" title=\"1067 reputation\" class=\"comment-user\">Batkins</a>
+      <span class=\"comment-date\" dir=\"ltr\"><span title=\"2012-02-14 15:27:54Z\">3
+      hours ago</span></span></div></td>\r\n    </tr>\r\n            \r\n    <tr id=\"comment-11699551\"
+      class=\"comment\">\r\n        <td></td>\r\n        <td class=\"comment-text\"><div><span
+      class=\"comment-copy\">It just gives me the original error &quot;R access for
+      focus DENIED to rails&quot;</span> &ndash;&nbsp;<a href=\"/users/871617/dave-mackintosh\"
+      title=\"211 reputation\" class=\"comment-user owner\">Dave Mackintosh</a> <span
+      class=\"comment-date\" dir=\"ltr\"><span title=\"2012-02-14 15:49:16Z\">3 hours
+      ago</span></span></div></td>\r\n    </tr>\r\n            \r\n    <tr id=\"comment-11699871\"
+      class=\"comment\">\r\n        <td></td>\r\n        <td class=\"comment-text\"><div><span
+      class=\"comment-copy\">Sorry mate, I&#39;ve never used that system.  I&#39;m
+      as lost as you are.  Maybe you need to change the access permissions for the
+      user that the server is being run under or something so it can actually read/write
+      to the directories where the repo&#39;s are?  You may want to take a look at
+      <a href=\"http://www.github.com/\" rel=\"nofollow\">github</a>.  It&#39;s nice
+      and simple, and truly a pleasure to use.</span> &ndash;&nbsp;<a href=\"/users/995874/batkins\"
+      title=\"1067 reputation\" class=\"comment-user\">Batkins</a> <span class=\"comment-date\"
+      dir=\"ltr\"><span title=\"2012-02-14 16:00:10Z\">3 hours ago</span></span><span
+      class=\"edited-yes\" title=\"this comment was edited\"></span></div></td>\r\n
+      \   </tr>\r\n\r\n        </tbody>\r\n    \r\n        </table>\r\n    </div>\r\n
+      \   <a id=\"comments-link-9277007\" class=\"comments-link\" title=\"expand to
+      show all comments on this post\">show <b>1</b> more comment</a>\r\n    \r\n
+      \   <div class=\"was-this-helpful\">\r\n        feedback\r\n    </div>\r\n    \r\n</td>\r\n</tr>
+      \   </table>    \r\n</div>\r\n\r\n\r\n\r\n<div id=\"answers\" class=\"no-answers\">\r\n\r\n
+      \   <a name=\"tab-top\"></a>\r\n    <div id=\"answers-header\">\r\n        <div
+      class=\"subheader answers-subheader\">\r\n            <h2></h2>\r\n            <div
+      id=\"tabs\">\r\n                \r\n            </div>\r\n        </div>    \r\n
+      \   </div>    \r\n\r\n        <h2 class=\"bottom-notice\" style=\"padding-top:8px;
+      margin-bottom:-8px;\">\r\n            Know someone who can answer? \r\n            Share
+      a <a href=\"/q/9277007\">link</a> to this question via \r\n            <a href=\"mailto:?subject=Stack%20Overflow%20Question&amp;body=GitlabHQ%20-%20W%20denied%20for%20rails%0Ahttp%3a%2f%2fstackoverflow.com%2fq%2f9277007%3fsem%3d2\">email</a>,
+      \r\n            <a href=\"https://plus.google.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f9277007%3fsgp%3d2\">Google+</a>,\r\n
+      \           <a href=\"http://twitter.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f9277007%3fstw%3d2&amp;text=GitlabHQ%20-%20W%20denied%20for%20rails\">Twitter</a>,
+      or\r\n            <a href=\"http://www.facebook.com/sharer.php?u=http%3a%2f%2fstackoverflow.com%2fq%2f9277007%3fsfb%3d2&amp;t=GitlabHQ%20-%20W%20denied%20for%20rails\">Facebook</a>.\r\n
+      \       </h2>\r\n    <a name='new-answer'></a>\r\n    <form id=\"post-form\"
+      action=\"/questions/9277007/answer/submit\" method=\"post\"  class=\"post-form\">\r\n
+      \       <h2 class=\"space\">Your Answer</h2>\r\n\r\n\r\n<script type=\"text/javascript\">\r\n
+      \   StackExchange.ready(function() {\r\n    \r\n        initTagRenderer(\"\".split(\"
+      \"), \"\".split(\" \"));\r\n\r\n              \r\n            prepareEditor({\r\n
+      \               heartbeatType: 'answer',\r\n                bindNavPrevention:
+      true,\r\n                postfix: \"\",\r\n                onDemand: true\r\n
+      \               ,immediatelyShowMarkdownHelp:true\r\n            });\r\n            \r\n
+      \   });  \r\n</script>\r\n\r\n\r\n<div id=\"post-editor\" class=\"post-editor\">
+      \ \r\n\r\n    \r\n    <div class=\"wmd-container\">\r\n        <div id=\"wmd-button-bar\"
+      class=\"wmd-button-bar\"></div>\r\n        <textarea id=\"wmd-input\" class=\"wmd-input\"
+      name=\"post-text\" cols=\"92\" rows=\"15\" tabindex=\"101\"></textarea>\r\n
+      \   </div>\r\n\r\n    <div class=\"fl\" style=\"margin-top: 8px; height:24px;\">&nbsp;</div>\r\n
+      \   <div id=\"draft-saved\" class=\"draft-saved community-option fl\" style=\"margin-top:
+      8px; height:24px; display:none;\">draft saved</div>\r\n\r\n\r\n\r\n    <div
+      id=\"wmd-preview\" class=\"wmd-preview\"></div>\r\n    <div></div>\r\n    <div
+      class=\"edit-block\">\r\n        <input id=\"fkey\" name=\"fkey\" type=\"hidden\"
+      value=\"985f2bb97b67624c07a43fe74d612fe7\">\r\n        <input id=\"author\"
+      name=\"author\" type=\"text\">\r\n    </div>\r\n</div>   \r\n    <div class=\"form-item\">\r\n
+      \       <table>\r\n        <tr>\r\n        <td class=\"vm open-id-login\">\r\n
+      \           <a id=\"login-link\" style=\"font-size: 200%; margin-left: 30px;\"
+      href=\"/users/login?returnurl=%2fquestions%2f9277007%2fgitlabhq-w-denied-for-rails\">log
+      in</a>\r\n            <script type=\"text/javascript\">\r\n                StackExchange.ready(function
+      () {\r\n                    StackExchange.helpers.onClickDraftSave('#login-link');\r\n
+      \               });\r\n            </script>\r\n        </td>\r\n\r\n    \r\n
+      \       <td class=\"orcell\">\r\n            <div class=\"orword\">or</div>\r\n
+      \           <div class=\"orline\"></div>\r\n        </td>\r\n        <td class=\"vm\">\r\n
+      \           <div>\r\n                <label for=\"display-name\">Name</label>\r\n
+      \               <input id=\"display-name\" name=\"display-name\" type=\"text\"
+      size=\"30\" maxlength=\"30\" value=\"\" tabindex=\"105\">\r\n            </div>\r\n
+      \           <div>\r\n                <label for=\"m-address\">Email</label>\r\n
+      \               <input id=\"m-address\" name=\"m-address\" type=\"text\" size=\"40\"
+      maxlength=\"100\" value=\"\" tabindex=\"106\">\r\n                <span class=\"edit-field-overlay\">required,
+      but never shown</span>\r\n            </div>\r\n            <div>\r\n                <label
+      for=\"home-page\">Home Page</label>\r\n                <input id=\"home-page\"
+      name=\"home-page\" type=\"text\" size=\"40\" maxlength=\"200\" value=\"\" tabindex=\"107\">\r\n
+      \           </div>\r\n        </td>\r\n    \r\n        </tr>\r\n        </table>\r\n
+      \   </div>\r\n               \r\n        <div class=\"form-submit cbt\"><input
+      id=\"submit-button\" type=\"submit\" value=\"Post Your Answer\" tabindex=\"110\"></div>\r\n
+      \   </form>\r\n\r\n\r\n        <h2 class=\"bottom-notice\">\r\n            Browse
+      other questions tagged <a href=\"/questions/tagged/ruby-on-rails\" class=\"post-tag\"
+      title=\"show questions tagged 'ruby-on-rails'\" rel=\"tag\">ruby-on-rails</a>
+      <a href=\"/questions/tagged/git\" class=\"post-tag\" title=\"show questions
+      tagged 'git'\" rel=\"tag\">git</a> <a href=\"/questions/tagged/version-control\"
+      class=\"post-tag\" title=\"show questions tagged 'version-control'\" rel=\"tag\">version-control</a>
+      \r\n                or <a href=\"/questions/ask\">ask your own question</a>.\r\n
+      \       </h2>\r\n</div>\r\n</div>\r\n<div id=\"sidebar\">\r\n\r\n\r\n\r\n    <style
+      type=\"text/css\">\r\n        .hide-newsletter-loading\r\n        {\r\n            visibility:
+      hidden;\r\n        }\r\n    </style>\r\n    <div class=\"module newuser newuser-greeting
+      hide-newsletter-loading\" style=\"display:none\">\r\n        <h4>Hello World!</h4>\r\n
+      \       <div>\r\n            <p><p>This is a collaboratively edited question
+      and answer site for <b>professional and enthusiast programmers</b>. It's 100%
+      free, no registration required.</p></p>\r\n            <p class=\"ar\"><a href=\"/about?mnu=1\">about
+      &raquo;</a>&nbsp;&nbsp;&nbsp;<a href=\"/faq?mnu=1\">faq &raquo;</a>\r\n            </p>\r\n
+      \       </div>\r\n\r\n\r\n            <script type=\"text/javascript\">\r\n
+      \               StackExchange.ready(function () {\r\n                    var
+      newUser = $('.newuser-greeting');\r\n                    if(!StackExchange.options.user.isAnonymous)
+      {\r\n                        newUser.removeClass('hide-newsletter-loading');\r\n
+      \                       return;\r\n                    }\r\n\r\n                    var
+      continuingSession = window.sessionStorage && window.sessionStorage['targettedNewsletter'];\r\n\r\n
+      \                   var matches = /:\\/\\/([^\\/]*)/.exec(document.referrer);\r\n\r\n
+      \                   if (!continuingSession && (!matches || matches.length !=
+      2)) {\r\n                        newUser.removeClass('hide-newsletter-loading');\r\n
+      \                   } else {\r\n                        var domain = continuingSession
+      || matches[1];\r\n\r\n                        if (continuingSession || $.inArray(domain,
+      ['www.reddit.com','news.ycombinator.com']) > -1) {\r\n                            $.ajax({\r\n
+      \                               url: '/newsletter/targetted/ajax',\r\n                                data:
+      { domain: domain },\r\n                                success: function (data,
+      status, xhr) {\r\n                                    $('#newsletter-ad').remove();\r\n
+      \                                   newUser.empty().append($(data));\r\n                                },\r\n
+      \                               complete: function () {\r\n                                    newUser.attr('class',
+      '').attr('style', '');\r\n                                }\r\n                            });\r\n\r\n
+      \                           if(!continuingSession && window.sessionStorage)
+      {\r\n                                window.sessionStorage['targettedNewsletter']
+      = domain + '-continued';\r\n                            }\r\n                        }
+      else {\r\n                            newUser.removeClass('hide-newsletter-loading');\r\n
+      \                       }\r\n                    }\r\n                });\r\n
+      \           </script>\r\n    </div>\r\n    <div class=\"module\">\r\n        <p
+      class=\"label-key\">tagged</p>\r\n        <div class=\"tagged\"><a href=\"/questions/tagged/ruby-on-rails\"
+      class=\"post-tag\" title=\"show questions tagged 'ruby-on-rails'\" rel=\"tag\">ruby-on-rails</a>&nbsp;<span
+      class=\"item-multiplier\">&times;&nbsp;63644</span><br>\n<a href=\"/questions/tagged/git\"
+      class=\"post-tag\" title=\"show questions tagged 'git'\" rel=\"tag\">git</a>&nbsp;<span
+      class=\"item-multiplier\">&times;&nbsp;13477</span><br>\n<a href=\"/questions/tagged/version-control\"
+      class=\"post-tag\" title=\"show questions tagged 'version-control'\" rel=\"tag\">version-control</a>&nbsp;<span
+      class=\"item-multiplier\">&times;&nbsp;5475</span><br>\n</div>\r\n        <table
+      id=\"qinfo\">\r\n            <tr>\r\n                <td><p class=\"label-key\">asked</p></td>\r\n
+      \               <td style=\"padding-left:10px\"><p class=\"label-key\" title=\"2012-02-14
+      12:39:12Z\"><b>today</b></p></td>\r\n            </tr>\r\n            <tr>\r\n
+      \               <td><p class=\"label-key\">viewed</p></td>\r\n\r\n                <td
+      style=\"padding-left:10px\"><p class=\"label-key\"><b>28 times</b></p></td>\r\n
+      \           </tr>\r\n        </table>\r\n    </div>\r\n    \r\n        <script
+      type=\"text/javascript\">\r\n            var scriptSrc = \"http://engine2.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45?keywords=ruby-on-rails,git,version-control\";\r\n
+      \           if (document.referrer) {\r\n                if (/\\?/.test(scriptSrc))\r\n
+      \                   scriptSrc += \"&\";\r\n                else\r\n                    scriptSrc
+      += \"?\";\r\n                scriptSrc += \"xReferrer=\" + document.referrer;\r\n
+      \           }\r\n            StackExchange.ready(function(){var z = document.createElement(\"script\");
+      z.type = \"text/javascript\"; z.async = \"true\"; z.src = scriptSrc; var s =
+      document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(z, s);});\r\n
+      \       </script>\r\n    \r\n    <div class=\"everyonelovesstackoverflow\" id=\"adzerk2\">\r\n
+      \   </div>\r\n\r\n    \r\n    <div>\r\n        <script type=\"text/javascript\">\r\n
+      \           var careers_adurl=\"http://careers.stackoverflow.com/ad/js\",careers_cssurl=\"http://cdn.sstatic.net/careers/ads/sidebar.min.css?358c1c\",careers_leaderboardcssurl=\"http://cdn.sstatic.net/careers/ads/ninja.min.css?358c1c\",careers_companycssurl=\"http://cdn.sstatic.net/careers/ads/company\";(function(){var
+      b=\"min-height:220px;margin:15px 0\",c=$(\"<div>\").addClass(\"hireme\").attr(\"style\",b),a=$(\"<div>\").html(c);document.write(a.html());$.ajax({url:\"http://cdn.sstatic.net/careers/ads/adloader.min.js?358c1c\",dataType:\"script\",cache:true})})();\r\n
+      \       </script>\r\n    </div>\r\n\r\n      \r\n\r\n    <div class=\"module\">\r\n
+      \   <h4 id=\"h-related\">Related</h4>\r\n    <div class=\"related\">\r\n    <div
+      class=\"spacer\">\r\n<a href=\"/questions/536779/git-or-svn-for-rails-app\"
+      class=\"question-hyperlink\">Git or SVN for Rails app?</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/544774/where-to-place-git-repository\"
+      class=\"question-hyperlink\">Where to place Git repository</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/871010/using-git-to-track-ruby-on-rails\"
+      class=\"question-hyperlink\">Using Git to track Ruby on rails</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/1492398/how-to-use-git-for-multiple-developers\"
+      class=\"question-hyperlink\">How to use git for multiple developers</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/1828278/sharing-git-between-different-users\"
+      class=\"question-hyperlink\">Sharing git between different users</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/1969393/rails-exclude-anything-from-version-control\"
+      class=\"question-hyperlink\">Rails: exclude anything from version control?</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/2115561/images-in-a-rails-app-not-getting-pushed-to-git\"
+      class=\"question-hyperlink\">Images in a rails app not getting pushed to git</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/2337281/how-do-i-do-an-initial-push-to-a-remote-repository-with-git\"
+      class=\"question-hyperlink\">How do I do an initial push to a remote repository
+      with Git?</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/2568765/rails-deployment\"
+      class=\"question-hyperlink\">Rails deployment</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a
+      href=\"/questions/2643502/git-permission-denied-publickey\" class=\"question-hyperlink\">Git
+      - Permission denied (publickey)</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a
+      href=\"/questions/3249212/git-pull-permission-denied\" class=\"question-hyperlink\">git
+      pull: permission denied</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/3998869/show-the-latest-commit-value-within-a-web-application\"
+      class=\"question-hyperlink\">Show the latest commit value within a web application?</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/4325770/git-gitosis-repository-read-access-denied\"
+      class=\"question-hyperlink\">Git / Gitosis - Repository Read Access Denied</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/4511298/git-rails-i-messed-up-can-i-revert-to-last-commit-delete-model-controller\"
+      class=\"question-hyperlink\">Git &amp; Rails &mdash; I messed up, can i revert
+      to last commit (delete model/controller/migrations/code)</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/4600229/embed-git-commit-log-in-rails-app\"
+      class=\"question-hyperlink\">Embed Git Commit Log in Rails App?</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/4948190/git-repository-sync-between-computers-when-moving-around\"
+      class=\"question-hyperlink\">git repository sync between computers, when moving
+      around?</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/5401781/what-is-a-version-control-system-how-is-git-useful\"
+      class=\"question-hyperlink\">What is a version control system? How is Git useful?</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/5632280/storing-generated-files-in-git\"
+      class=\"question-hyperlink\">Storing generated files in Git</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/6024918/pull-a-remote-repo-and-pushing-those-files\"
+      class=\"question-hyperlink\">pull a remote repo and pushing those files</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/7269172/how-to-manually-deploy-a-rails-app-with-git\"
+      class=\"question-hyperlink\">How to Manually Deploy a Rails App with Git</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/7622827/deleted-migration-file-keeps-coming-back-rails-3\"
+      class=\"question-hyperlink\">deleted migration file keeps coming back Rails
+      3</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/7784951/how-to-begin-committing-via-git-to-bitbucket-not-seeing-changes\"
+      class=\"question-hyperlink\">How to begin committing via git to bitbucket -
+      Not seeing changes</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/7934110/how-to-restore-git-master-which-was-replaced-by-another-master\"
+      class=\"question-hyperlink\">How to restore git master, which was replaced by
+      another master</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/8746637/location-of-app-when-pushed-to-heroku\"
+      class=\"question-hyperlink\">Location of app when pushed to Heroku</a>\r\n</div>\r\n<div
+      class=\"spacer\">\r\n<a href=\"/questions/9156901/rails-3-2-app-files-to-keep-in-out-of-respository\"
+      class=\"question-hyperlink\">Rails 3.2 app - files to keep in/out of respository</a>\r\n</div>\r\n\r\n
+      \   </div>\r\n    </div>\r\n</div>\r\n\r\n<div id=\"feed-link\">\r\n    <div
+      id=\"feed-link-text\"><a href=\"/feeds/question/9277007\" title=\"feed of this
+      question and its answers\"><span class=\"feed-icon\"></span>question feed</a></div>\r\n</div>\r\n<script
+      type=\"text/javascript\">\r\nStackExchange.ready(function(){$.get('/posts/9277007/ivc/6cdc');});\r\n</script>\r\n<noscript>\r\n
+      \   <div><img src=\"/posts/9277007/ivc/6cdc\" class=\"dno\" alt=\"\" width=\"0\"
+      height=\"0\"></div>\r\n</noscript><div style=\"display:none\" id=\"prettify-lang\">default</div></div>\r\n
+      \       </div>\r\n    </div>\r\n    <div id=\"footer\">\r\n        <div class=\"footerwrap\">\r\n
+      \           <div id=\"footer-menu\">\r\n                <a href=\"/about\">about</a>
+      |\r\n                <a href=\"/faq\">faq</a> |\r\n                <a href=\"http://blog.stackexchange.com?blb=1\">blog</a>
+      |\r\n                    <a href=\"http://chat.stackoverflow.com\">chat</a>
+      |\r\n                <a href=\"http://data.stackexchange.com\">data</a> |\r\n
+      \               <a href=\"http://blog.stackoverflow.com/category/podcasts/\">podcast</a>
+      |\r\n                <a href=\"http://shop.stackexchange.com/\">shop</a> |\r\n
+      \               <a href=\"http://stackexchange.com/legal\">legal</a> |\r\n                <a
+      href=\"http://engine.adzerk.net/redirect/0/2776/2751/0/4de3c60f719c4dfcb1a57531c7050090/0\">advertising
+      info</a> |\r\n\r\n                <a onclick=\"StackExchange.switchMobile('on',
+      '/questions/9277007/gitlabhq-w-denied-for-rails')\">mobile</a> |\r\n\r\n                <b><a
+      href=\"mailto:team@stackoverflow.com\">contact us</a></b>\r\n                  |
+      <b><a href=\"http://meta.stackoverflow.com\">feedback</a></b>\r\n                <div
+      id=\"footer-sites\">\r\n                    \r\n                        <span
+      style=\"color:#FE7A15;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://stackoverflow.com\">stackoverflow.com</a>&nbsp;
+      \r\n                        <span style=\"color:#FE7A15;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://stackapps.com\">api/apps</a>&nbsp; \r\n                        <span
+      style=\"color:#FE7A15;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://careers.stackoverflow.com\">careers</a>&nbsp;
+      \r\n                        <span style=\"color:#E8272C;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://serverfault.com\">serverfault.com</a>&nbsp; \r\n                        <span
+      style=\"color:#00AFEF;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://superuser.com\">superuser.com</a>&nbsp;
+      \r\n                        <span style=\"color:#969696;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://meta.stackoverflow.com\">meta</a>&nbsp; \r\n                        <span
+      style=\"color:#46937D;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://area51.stackexchange.com\">area&nbsp;51</a>&nbsp;
+      \r\n                        <span style=\"color:#C0D0DC;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://webapps.stackexchange.com\">webapps</a>&nbsp; \r\n                        <span
+      style=\"color:#000000;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://gaming.stackexchange.com\">gaming</a>&nbsp;
+      \r\n                        <span style=\"color:#dd4814;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://askubuntu.com\">ubuntu</a>&nbsp; \r\n                        <span
+      style=\"color:#9ce4fe;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://webmasters.stackexchange.com\">webmasters</a>&nbsp;
+      \r\n                        <span style=\"color:#cf4d3f;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://cooking.stackexchange.com\">cooking</a>&nbsp; \r\n                        <span
+      style=\"color:#f4f28d;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://gamedev.stackexchange.com\">game
+      development</a>&nbsp; \r\n                        <span style=\"color:#0f3559;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://math.stackexchange.com\">math</a>&nbsp; \r\n                        <span
+      style=\"color:#f2f2f2;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://photo.stackexchange.com\">photography</a>&nbsp;
+      \r\n                        <span style=\"color:#037187;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://stats.stackexchange.com\">stats</a>&nbsp; \r\n                        <span
+      style=\"color:#f1e7cc;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://tex.stackexchange.com\">tex</a>&nbsp;
+      \r\n                        <span style=\"color:#e1cdae;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://english.stackexchange.com\">english</a>&nbsp; \r\n                        <span
+      style=\"color:#a2d9f6;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://cstheory.stackexchange.com\">theoretical
+      cs</a>&nbsp; \r\n                        <span style=\"color:#1b3e6c;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://programmers.stackexchange.com\">programmers</a>&nbsp; \r\n                        <span
+      style=\"color:#293a5d;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://unix.stackexchange.com\">unix</a>&nbsp;\r\n
+      \                       <span style=\"color:#bec0cb;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://apple.stackexchange.com\">apple</a>&nbsp;\r\n                        <span
+      style=\"color:#939185;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://wordpress.stackexchange.com\">wordpress</a>&nbsp;\r\n
+      \                       <span style=\"color:#ebf5f5;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://physics.stackexchange.com\">physics</a>&nbsp;\r\n                        <span
+      style=\"color:#4176ab;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://diy.stackexchange.com\">home&nbsp;improvement</a>&nbsp;\r\n
+      \                       <span style=\"color:#d1d8d7;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://gis.stackexchange.com\">gis</a>&nbsp;\r\n                        <span
+      style=\"color:#e5e2d3;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://electronics.stackexchange.com\">electronics</a>&nbsp;\r\n
+      \                       <span style=\"color:#a4c639;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://android.stackexchange.com\">android</a>&nbsp;\r\n                        <span
+      style=\"color:#2e4e60;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://security.stackexchange.com\">security</a>&nbsp;\r\n
+      \                       <span style=\"color:#45bcb5;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://bicycles.stackexchange.com\">bicycles</a>&nbsp;\r\n                        <span
+      style=\"color:#00adee;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://dba.stackexchange.com\">dba</a>&nbsp;\r\n
+      \                       <span style=\"color:#2edaf0;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://drupal.stackexchange.com\">drupal</a>&nbsp;\r\n                        <span
+      style=\"color:#213951;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://sharepoint.stackexchange.com\">sharepoint</a>&nbsp;\r\n
+      \                       <span style=\"color:#73abb3;font-size:140%\">&#9632;</span>&nbsp;<a
+      href=\"http://scifi.stackexchange.com\">scifi &amp; fantasy</a>&nbsp;\r\n                        <span
+      style=\"color:#23629F;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://ux.stackexchange.com\">user
+      experience</a>&nbsp;\r\n                </div>\r\n            </div>\r\n            <div
+      id=\"footer-flair\">\r\n                <a class=\"peer1\" href=\"http://www.peer1.com/stackoverflow\"></a>
+      \ \r\n\t            <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"
+      class=\"cc-wiki-link\"></a>\r\n                <div id=\"svnrev\">rev 2012.2.13.1046</div>\r\n
+      \           </div>\r\n            <div id=\"copyright\">\r\n                site
+      design / logo &copy; 2012 stack exchange inc; \r\n                user contributions
+      licensed under <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\" rel=\"license\">cc-wiki</a>
+      with <a href=\"http://blog.stackoverflow.com/2009/06/attribution-required/\"
+      rel=\"license\">attribution required</a>\r\n            </div>\r\n            \r\n\r\n
+      \       </div>\r\n    </div>\r\n    \r\n    <noscript>\r\n        <div id=\"noscript-warning\">Stack
+      Overflow works best with JavaScript enabled<img src=\"http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif\"
+      alt=\"\" class=\"dno\"></div>\r\n    </noscript>\r\n    <script type=\"text/javascript\">var
+      _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-1']);\r\n        _gaq.push(['_setCustomVar',
+      1, 'tags', '|ruby-on-rails|git|version-control|']); \r\n_gaq.push(['_trackPageview']);\r\n
+      \   var _qevents = _qevents || [];\r\n    (function(){\r\n        var s=document.getElementsByTagName('script')[0];\r\n
+      \       var ga=document.createElement('script');\r\n        ga.type='text/javascript';\r\n
+      \       ga.async=true;\r\n        ga.src='http://www.google-analytics.com/ga.js';\r\n
+      \       s.parentNode.insertBefore(ga,s);\r\n        var sc=document.createElement('script');\r\n
+      \       sc.type='text/javascript';\r\n        sc.async=true;\r\n        sc.src='http://edge.quantserve.com/quant.js';
+      \r\n        s.parentNode.insertBefore(sc,s);\r\n    })();\r\n    </script>\r\n
+      \   <script type=\"text/javascript\">\r\n        _qevents.push({ qacct: \"p-c1rF4kxgLUzNc\"
+      });\r\n    </script>    \r\n    \r\n    \r\n</body>\r\n</html>"
+    http_version: '1.1'

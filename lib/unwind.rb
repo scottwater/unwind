@@ -24,14 +24,16 @@ module Unwind
 
 			current_url ||= self.original_url
 
-			response = Net::HTTP.get_response(URI.parse(current_url))
+			current_url = URI.parse(current_url) unless current_url.kind_of?(URI)
+
+			response = Net::HTTP.get_response(current_url)
 
 			if response.kind_of?(Net::HTTPRedirection)
-				@redirects << current_url
+				@redirects << current_url.to_s
 				@redirect_limit -= 1
-				resolve(redirect_url(response))
+				resolve redirect_url(response, current_url) 
 			else
-				@final_url = current_url
+				@final_url = current_url.to_s
 				@response = response
 				self
 			end
@@ -43,11 +45,12 @@ module Unwind
 			raise TooManyRedirects if redirect_limit < 0
 		end
 
-		def redirect_url(response)
+		def redirect_url(response, current_url)
 			if response['location'].nil?
 				response.body.match(/<a href=\"([^>]+)\">/i)[1]
 			else
-				response['location']
+				redirect_uri = URI.parse(response['location'])
+				redirect_uri.relative? ? current_url.merge(redirect_uri) : redirect_uri
 			end
 		end
 		
