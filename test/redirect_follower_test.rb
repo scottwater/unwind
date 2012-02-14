@@ -35,6 +35,14 @@ describe 'Tests :)' do
 		end
 	end
 
+	it 'should handle a https redirect' do 
+		VCR.use_cassette('ssl tpope') do 
+			follower = Unwind::RedirectFollower.resolve('http://github.com/tpope/vim-rails')
+			assert follower.redirected?
+			assert_equal 'https://github.com/tpope/vim-rails', follower.final_url
+		end
+	end
+
 	it 'should not be redirected' do 
 		VCR.use_cassette('no redirect') do 
 			follower  = Unwind::RedirectFollower.resolve('http://www.scottw.com')
