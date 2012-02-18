@@ -25,7 +25,7 @@ module Unwind
       ok_to_continue?
 
       current_url ||= self.original_url
-      response = Faraday.get(current_url)
+      response = Faraday.get(current_url, "accept-encoding" => "none")
 
       if [301, 302, 307].include?(response.status)
         @redirects << current_url.to_s
