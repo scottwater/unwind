@@ -33,10 +33,10 @@ module Unwind
         @redirects << current_url.to_s
         @redirect_limit -= 1
         resolve(redirect_url(response).normalize, apply_cookie(response, headers))
-      elsif response.status == 200 && meta_refresh?(response)
+      elsif response.status == 200 && meta_uri = meta_refresh?(response)
         @redirects << current_url.to_s
         @redirect_limit -= 1
-        resolve(meta_refresh?(response).normalize, apply_cookie(response, headers))
+        resolve(meta_uri.normalize, apply_cookie(response, headers))
       else
         @final_url = current_url.to_s
         @response = response
