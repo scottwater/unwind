@@ -7,7 +7,16 @@ VCR.config do |c|
   c.cassette_library_dir = 'vcr_cassettes' 
 end
 
-describe 'Tests :)' do 
+describe Unwind::RedirectFollower do 
+
+  # needs to be regenerated to properly test...need to stop that :(
+  it 'should handle url with cookie requirement' do 
+    VCR.use_cassette('with cookie') do 
+      follower = Unwind::RedirectFollower.resolve('http://ow.ly/1hf37P')
+      assert_equal 200,  follower.response.status 
+      assert follower.redirected?
+    end
+  end
 
   it 'should resolve the url' do 
     VCR.use_cassette('xZVND1') do 
