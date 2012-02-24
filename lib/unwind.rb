@@ -33,6 +33,10 @@ module Unwind
         @redirects << current_url.to_s
         @redirect_limit -= 1
         resolve(redirect_url(response).normalize, apply_cookie(response, headers))
+      elsif response.status == 200 && meta_refresh?(response)
+        @redirects << current_url.to_s
+        @redirect_limit -= 1
+        resolve(meta_refresh?(response).normalize, apply_cookie(response, headers))
       else
         @final_url = current_url.to_s
         @response = response
@@ -61,6 +65,11 @@ module Unwind
         redirect_uri = Addressable::URI.parse(response['location'])
         redirect_uri.relative? ? response.env[:url].join(response['location']) : redirect_uri
       end
+    end
+    
+    def meta_refresh?(response)
+      body_match = response.body.match(/<meta http-equiv=\"refresh\" content=\"0; URL=(.*)\">/i)
+      body_match ? Addressable::URI.parse(body_match[1]) : false
     end
     
     def apply_cookie(response, headers)
