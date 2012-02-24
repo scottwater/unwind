@@ -29,7 +29,7 @@ module Unwind
       headers = (options || {}).merge({"accept-encoding" => "none"})
       response = Faraday.get(current_url, headers)
 
-      if [301, 302, 307].include?(response.status)
+      if [301, 302, 303].include?(response.status)
         @redirects << current_url.to_s
         @redirect_limit -= 1
         resolve(redirect_url(response).normalize, apply_cookie(response, headers))
