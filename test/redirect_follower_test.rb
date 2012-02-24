@@ -94,9 +94,9 @@ describe Unwind::RedirectFollower do
   
   it 'should handle a meta-refresh' do
     VCR.use_cassette('meta refresh') do
-      follower = Unwind::RedirectFollower.resolve('http://www.nullrefer.com/?http://www.google.com')
+      follower = Unwind::RedirectFollower.resolve('http://www.nullrefer.com/?www.google.com')
       assert follower.redirected?
-      assert_equal 'http://www.google.com', follower.final_url
+      assert_equal 'http://www.google.com/', follower.final_url
     end
   end
 

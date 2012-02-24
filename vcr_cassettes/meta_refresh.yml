@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://www.nullrefer.com:80/?http%3A%2F%2Fwww.google.com
+    uri: http://www.nullrefer.com:80/?www.google.com
     body: 
     headers:
       accept-encoding:
@@ -13,7 +13,7 @@
       message: OK
     headers:
       date:
-      - Fri, 24 Feb 2012 15:41:58 GMT
+      - Fri, 24 Feb 2012 16:20:02 GMT
       server:
       - Apache
       x-powered-by:
@@ -23,9 +23,174 @@
       content-type:
       - text/html
     body: ! "\n<html>\n<head>\n<title>NullRefer.com Anonym Link</title>\n<meta http-equiv=\"refresh\"
-      content=\"0; URL=http://http%3A%2F%2Fwww.google.com\">\n<meta http-equiv=\"Content-Type\"
+      content=\"0; URL=http://www.google.com\">\n<meta http-equiv=\"Content-Type\"
       content=\"text/html; charset=iso-8859-1\">\n\n\n<script type=\"text/javascript\"
       language=\"javascript\">\nvar sc_project=2152146; \nvar sc_invisible=1; \nvar
       sc_partition=19; \nvar sc_security=\"26edb118\"; \n</script><script type=\"text/javascript\"
       language=\"javascript\" src=\"http://www.statcounter.com/counter/counter.js\"></script><noscript></noscript>"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.google.com:80/
+    body: 
+    headers:
+      accept-encoding:
+      - none
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 24 Feb 2012 16:20:04 GMT
+      expires:
+      - '-1'
+      cache-control:
+      - private, max-age=0
+      content-type:
+      - text/html; charset=ISO-8859-1
+      set-cookie:
+      - PREF=ID=c35c457ba1034ad8:FF=0:TM=1330100404:LM=1330100404:S=lhN2U2Vz0pOWcQvU;
+        expires=Sun, 23-Feb-2014 16:20:04 GMT; path=/; domain=.google.com
+      - NID=57=eAKoTays7Ul9ah-ODoVlC20v-kk0VTIiZdEZOwA9dH2Z7Ba-AFdenK4hJP5r4IYmENFgCWnft9Zv1rHA3dvpVmOanZV3yM7Cwjel8GOblGfl99WLXXFuvwNyCS1zil1n;
+        expires=Sat, 25-Aug-2012 16:20:04 GMT; path=/; domain=.google.com; HttpOnly
+      p3p:
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      server:
+      - gws
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+    body: ! '<!doctype html><html itemscope itemtype="http://schema.org/WebPage"><head><meta
+      http-equiv="content-type" content="text/html; charset=ISO-8859-1"><meta name="description"
+      content="Search the world&#39;s information, including webpages, images, videos
+      and more. Google has many special features to help you find exactly what you&#39;re
+      looking for."><meta name="robots" content="noodp"><meta itemprop="image" content="/images/google_favicon_128.png"><title>Google</title><script>window.google={kEI:"tLhHT-XBA-Xg0QGwpfDqDQ",getEI:function(a){var
+      d;while(a&&!(a.getAttribute&&(d=a.getAttribute("eid"))))a=a.parentNode;return
+      d||google.kEI},https:function(){return window.location.protocol=="https:"},kEXPI:"33551,34904,35055,36604,36683,36801,36903,36946,37007,37017",kCSI:{e:"33551,34904,35055,36604,36683,36801,36903,36946,37007,37017",ei:"tLhHT-XBA-Xg0QGwpfDqDQ"},authuser:0,
+
+      ml:function(){},kHL:"en",time:function(){return(new Date).getTime()},log:function(a,d,f,h){var
+      e=new Image,g=google,k=g.lc,i=g.li,m="";e.onerror=(e.onload=(e.onabort=function(){delete
+      k[i]}));k[i]=e;if(!f&&d.search("&ei=")==-1)m="&ei="+google.getEI(h);var j=f||"/gen_204?atyp=i&ct="+a+"&cad="+d+m+"&zx="+google.time(),b=/^http:/i;if(b.test(j)&&google.https()){google.ml(new
+      Error("GLMM"),false,{src:j});
+
+      delete k[i];return}e.src=j;g.li=i+1},lc:[],li:0,Toolbelt:{},y:{},x:function(a,d){google.y[a.id]=
+
+      [a,d];return false}};(function(){var a=
+
+      google.kEI;window.pp_tos={};var d=document.domain.replace(/.*?(google\..*)/,"$1");function
+      f(){var b=0;try{var c=document.cookie.match(/PP_TOS_ACK=([^;]*)/);b=c&&!isNaN(c[1])?c[1]:0}catch(l){e("error","read_cookie")}return
+      b}function h(b){var c=f();if(c>=0){g(++c);if(f()>0&&!b)m()}}function e(b,c){var
+      l=new Image;c=c?"&emsg="+c:"";l.src=["//",d,"/gen_204?atyp=i&ct=pp_tos&cd=",b,"&source=","web","&ei=",a,c].join("");window.pp_tos.beacon=l}function
+      g(b){var c=new Date((new Date).getTime()+5184000000);
+
+      try{var l="PP_TOS_ACK="+b+"; expires="+c.toGMTString()+"; path=/; domain="+d;document.cookie=l}catch(n){e("error","write_cookie")}}function
+      k(){g(-1);e("dismiss");j()}function i(){g(-1);e("tellmore");j()}function m(){var
+      b=document.getElementById("bb_pp_tos_ack");if(b){b.style.display="";e("display")}}function
+      j(){var b=document.getElementById("bb_pp_tos_ack");if(b)b.style.display="none"}window.pp_tos.handleDismiss=k;window.pp_tos.handleLearnMore=i;window.pp_tos.checkCookie=h})();
+
+      window.google.sn="webhp";window.google.timers={};window.google.startTick=function(a,b){window.google.timers[a]={t:{start:(new
+      Date).getTime()},bfr:!(!b)}};window.google.tick=function(a,b,c){if(!window.google.timers[a])google.startTick(a);window.google.timers[a].t[b]=c||(new
+      Date).getTime()};google.startTick("load",true);try{}catch(u){}
+
+      var _gjwl=location;function _gjuc(){var e=_gjwl.href.indexOf("#");if(e>=0){var
+      a=_gjwl.href.substring(e);if(a.indexOf("&q=")>0||a.indexOf("#q=")>=0){a=a.substring(1);if(a.indexOf("#")==-1){for(var
+      c=0;c<a.length;){var d=c;if(a.charAt(d)=="&")++d;var b=a.indexOf("&",d);if(b==-1)b=a.length;var
+      f=a.substring(d,b);if(f.indexOf("fp=")==0){a=a.substring(0,c)+a.substring(b,a.length);b=c}else
+      if(f=="cad=h")return 0;c=b}_gjwl.href="/search?"+a+"&cad=h";return 1}}}return
+      0}function _gjp(){!(window._gjwl.hash&&
+
+      window._gjuc())&&setTimeout(_gjp,500)};
+
+      window._gjp && _gjp()</script><style>#gbar,#guser{font-size:13px;padding-top:1px
+      !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px
+      solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media
+      all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline
+      !important}a.gb1,a.gb4{color:#00c !important}</style><style id=gstyle>body{margin:0;overflow-y:scroll}#gog{padding:3px
+      8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}body,td,a,p,.h{font-family:arial,sans-serif}.h{color:#36c;font-size:20px}.q{color:#00c}.ts
+      td{padding:0}.ts{border-collapse:collapse}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px
+      arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{border-bottom:solid 1px
+      #e7e7e7;border-right:solid 1px #e7e7e7;display:-moz-inline-box;display:inline-block;margin:3px
+      0 4px;margin-left:4px}input{font-family:inherit}a.gb1,a.gb2,a.gb3,a.gb4{color:#11c
+      !important}body{background:#fff;color:black}a{color:#11c;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl
+      a{color:#36c}a:visited{color:#551a8b}a.gb1,a.gb4{text-decoration:underline}a.gb3:hover{text-decoration:none}#ghead
+      a.gb2:hover{color:#fff!important}.sblc{padding-top:5px}.sblc a{display:block;margin:2px
+      0;margin-left:13px;font-size:11px;}.lsbb{background:#eee;border:solid 1px;border-color:#ccc
+      #999 #999 #ccc;height:30px;display:block}.pp-new-desktop,.pp-new-mobile{color:red}.ftl,#fll
+      a{display:inline-block;margin:0 12px}.lsb{background:url(/images/srpr/nav_logo80.png)
+      0 -258px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px
+      arial,sans-serif;vertical-align:top}.lsb:active{background:#ccc}.lst:focus{outline:none}#addlang
+      a{padding:0 3px}.gac_v div{display:none}.gac_v .gac_v2,.gac_bt{display:block!important}table.gssb_c{z-index:986  }.nbcl{background:url(/images/srpr/nav_logo80.png)
+      no-repeat ;height:px;width:px}</style><script>window.rwt=function(a,f,g,l,m,h,c,n,i){try{if(a===window){a=window.event.srcElement;while(a){if(a.href)break;a=a.parentNode}}var
+      b=encodeURIComponent||escape,d;d=a.getAttribute("href");if(c&&c.substring(0,6)!="&sig2=")c="&sig2="+c;var
+      o=["/url?sa=t","","&cd=",b(m),i?"&authuser="+b(i):"",google.j&&google.j.pf?"&sqi=2":"","&ved=",b(n),"&url=",b(d).replace(/\+/g,"%2B"),"&ei=","tLhHT-XBA-Xg0QGwpfDqDQ",h?"&usg="+h:"",c].join("");a.href=o;a.onmousedown=""}catch(p){}return
+      true};
+
+      </script></head><body bgcolor=#ffffff text=#000000 link=#0000cc vlink=#551a8b
+      alink=#ff0000 onload="document.f&&document.f.q.focus();document.gbqf&&document.gbqf.q.focus();if(document.images)new
+      Image().src=''/images/srpr/nav_logo80.png''" ><textarea id=csi style=display:none></textarea><div
+      id=mngb><div id=gbar><nobr><b class=gb1>Search</b> <a class=gb1 href="http://www.google.com/imghp?hl=en&tab=wi">Images</a>
+      <a class=gb1 href="http://video.google.com/?hl=en&tab=wv">Videos</a> <a class=gb1
+      href="http://maps.google.com/maps?hl=en&tab=wl">Maps</a> <a class=gb1 href="http://news.google.com/nwshp?hl=en&tab=wn">News</a>
+      <a class=gb1 href="http://www.google.com/shopping?hl=en&tab=wf">Shopping</a>
+      <a class=gb1 href="https://mail.google.com/mail/?tab=wm">Gmail</a> <a class=gb1
+      style="text-decoration:none" href="http://www.google.com/intl/en/options/"><u>More</u>
+      &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span
+      id=gbf class=gbf></span><span id=gbe><a  href="/url?sa=p&pref=ig&pval=3&q=http://www.google.com/ig%3Fhl%3Den%26source%3Diglk&usg=AFQjCNFA18XPfgb7dKnXfKz7x7g1GDH1tg"
+      class=gb4>iGoogle</a> | </span><a href="http://www.google.com/history/optout?hl=en"
+      class=gb4>Web History</a> | <a  href="/preferences?hl=en" class=gb4>Settings</a>
+      | <a id=gb_70 href="https://accounts.google.com/ServiceLogin?hl=en&continue=http://www.google.com/"
+      class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh
+      style=right:0></div></div><iframe name=wgjf style=display:none></iframe><center><br
+      clear=all id=lgpd><div id=lga><img alt="Google" height=95 id=hplogo src="/intl/en_ALL/images/srpr/logo1w.png"
+      width=275 style="padding:28px 0 14px" onload="window.lol&&lol()"><br><br></div><form
+      action="/search" name=f><table cellpadding=0 cellspacing=0><tr valign=top><td
+      width=25%>&nbsp;</td><td align=center nowrap><input name=hl type=hidden value=en><input
+      name=source type=hidden value=hp><input type=hidden name=ie value="ISO-8859-1"><div
+      class=ds style="height:32px;margin:4px 0"><input autocomplete=off maxlength=2048
+      name=q class="lst" title="Google Search" value="" size=57 style="background:#fff;border:1px
+      solid #ccc;border-bottom-color:#999;border-right-color:#999;color:#000;margin:0;padding:5px
+      8px 0 6px;vertical-align:top"></div><br style="line-height:0"><span class=ds
+      ><span class=lsbb><input name=btnG type=submit value="Google Search" class=lsb></span></span><span
+      class=ds><span class=lsbb><input name=btnI type=submit class=lsb value="I&#39;m
+      Feeling Lucky"></span></span></td><td nowrap width=25% align=left class="fl
+      sblc"><a href="/advanced_search?hl=en">Advanced search</a><a href="/language_tools?hl=en">Language
+      tools</a></td></tr></table><input type=hidden id=gbv name=gbv value="1"></form><div
+      style="font-size:83%;min-height:3.5em"><br></div><div id=res></div><span id=footer><center
+      id=fctr><div style="font-size:10pt"><div id=fll style="margin:19px auto;text-align:center"><a
+      href="/intl/en/ads/">Advertising&nbsp;Programs</a><a href="/services/">Business
+      Solutions</a><a href="https://plus.google.com/116899029375914044550" rel="publisher">+Google</a><a
+      href="/intl/en/about.html">About Google</a></div></div><p style="color:#767676;font-size:8pt">&copy;
+      2012 - <a href="/intl/en/privacy.html">Privacy</a></p></center></span> </center><div
+      id=xjsd></div><div id=xjsi><script>if(google.y)google.y.first=[];google.dlj=function(b){window.setTimeout(function(){var
+      a=document.createElement("script");a.src=b;document.getElementById("xjsd").appendChild(a)},0)};
+
+      if(google.y)google.y.first=[];if(!google.xjs){google.dstr=[];google.rein=[];if(google.timers&&google.timers.load.t){google.timers.load.t.xjsls=new
+      Date().getTime();}google.dlj(''/extern_js/f/CgJlbhICdXMgACswRTgALCswWjgALCswDjgALCswFzgALCswPDgALCswUTgALCswCjgAmgICaGUsKzCYATgALCswFjgALCswGTgALCswQTgALCswTTgALCswTjgALCswVDgALCswaTgALCswkAE4ACwrMJIBOAAsKzCsATgALCsw1QE4ACwrMNgBOAAsKzAYOAAsKzAmOAAsgAJQkAJn/YIh1f-gTMsw.js'');google.xjs=1}google.neegg=1;google.mc=[];google.mc=google.mc.concat([[69,{}],[14,{}],[60,{}],[23,{}],[81,{}],[10,{"client":"hp","dh":true,"ds":"","fl":true,"host":"google.com","jsonp":true,"msgs":{"lcky":"I\u0026#39;m
+      Feeling Lucky","lml":"Learn more","psrc":"This search was removed from your
+      \u003Ca href=\"/history\"\u003EWeb History\u003C/a\u003E","psrl":"Remove","srch":"Google
+      Search"},"ovr":{"fm":1,"l":1,"o":1,"p":1,"pf":1,"ps":1,"sn":1,"sw":1},"pq":"","scd":10,"sce":5}],[152,{}],[65,{}],[213,{"pberr":"\u003Cfont
+      color=red\u003EError:\u003C/font\u003E The server could not complete your request.  Try
+      again in 30 seconds."}],[78,{}],[25,{"g":8,"k":false,"m":{"app":true,"bks":true,"blg":true,"dsc":true,"evn":true,"fin":true,"flm":true,"frm":true,"isch":true,"klg":true,"mbl":true,"nws":true,"plcs":true,"ppl":true,"prc":true,"pts":true,"rcp":true,"shop":true,"vid":true},"t":null}],[216,{}],[105,{}],[22,{"db":false,"m_errors":{"32":"Sorry,
+      no more results to show.","default":"\u003Cfont color=red\u003EError:\u003C/font\u003E
+      The server could not complete your request.  Try again in 30 seconds."},"m_tip":"Click
+      for more information","nlpm":"-153px -84px","nlpp":"-153px -70px","utp":false}],[77,{}],[146,{}],[144,{}],[84,{}],[24,{}],[38,{}]]);google.y.first.push(function(){if(google.med){google.med(''init'');google.initHistory();google.med(''history'');}google.History&&google.History.initialize(''/'')});if(google.j&&google.j.en&&google.j.xi){window.setTimeout(google.j.xi,0);}</script></div><script>(function(){
+
+      var b,d,e,f;function g(a,c){if(a.removeEventListener){a.removeEventListener("load",c,false);a.removeEventListener("error",c,false)}else{a.detachEvent("onload",c);a.detachEvent("onerror",c)}}function
+      h(a){f=(new Date).getTime();++d;a=a||window.event;var c=a.target||a.srcElement;g(c,h)}var
+      i=document.getElementsByTagName("img");b=i.length;d=0;for(var j=0,k;j<b;++j){k=i[j];if(k.complete||typeof
+      k.src!="string"||!k.src)++d;else if(k.addEventListener){k.addEventListener("load",h,false);k.addEventListener("error",
+
+      h,false)}else{k.attachEvent("onload",h);k.attachEvent("onerror",h)}}e=b-d;function
+      l(){if(!google.timers.load.t)return;google.timers.load.t.ol=(new Date).getTime();google.timers.load.t.iml=f;google.kCSI.imc=d;google.kCSI.imn=b;google.kCSI.imp=e;if(google.stt!==undefined)google.kCSI.stt=google.stt;google.timers.load.t.xjs&&google.report&&google.report(google.timers.load,google.kCSI)}if(window.addEventListener)window.addEventListener("load",
+
+      l,false);else if(window.attachEvent)window.attachEvent("onload",l);google.timers.load.t.prt=(f=(new
+      Date).getTime());
+
+      })();
+
+      </script>'
     http_version: '1.1'
