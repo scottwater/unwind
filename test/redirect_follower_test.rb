@@ -91,5 +91,13 @@ describe Unwind::RedirectFollower do
       missing_redirect_location.must_raise Unwind::MissingRedirectLocation
     end
   end
+  
+  it 'should handle a meta-refresh' do
+    VCR.use_cassette('meta refresh') do
+      follower = Unwind::RedirectFollower.resolve('http://www.nullrefer.com/?http://www.google.com')
+      assert follower.redirected?
+      assert_equal 'http://www.google.com', follower.final_url
+    end
+  end
 
 end

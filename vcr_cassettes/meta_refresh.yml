@@ -1,0 +1,31 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.nullrefer.com:80/?http%3A%2F%2Fwww.google.com
+    body: 
+    headers:
+      accept-encoding:
+      - none
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 24 Feb 2012 15:41:58 GMT
+      server:
+      - Apache
+      x-powered-by:
+      - PHP/5.2.17
+      transfer-encoding:
+      - chunked
+      content-type:
+      - text/html
+    body: ! "\n<html>\n<head>\n<title>NullRefer.com Anonym Link</title>\n<meta http-equiv=\"refresh\"
+      content=\"0; URL=http://http%3A%2F%2Fwww.google.com\">\n<meta http-equiv=\"Content-Type\"
+      content=\"text/html; charset=iso-8859-1\">\n\n\n<script type=\"text/javascript\"
+      language=\"javascript\">\nvar sc_project=2152146; \nvar sc_invisible=1; \nvar
+      sc_partition=19; \nvar sc_security=\"26edb118\"; \n</script><script type=\"text/javascript\"
+      language=\"javascript\" src=\"http://www.statcounter.com/counter/counter.js\"></script><noscript></noscript>"
+    http_version: '1.1'
