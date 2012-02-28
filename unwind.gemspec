@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   s.add_development_dependency "rake"
+  s.add_development_dependency "minitest"
   s.add_development_dependency "vcr"
   s.add_development_dependency "fakeweb"
   s.add_runtime_dependency "faraday", '~> 0.7'
