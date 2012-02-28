@@ -94,7 +94,7 @@ module Unwind
       when Hash
         merge!(value)
       when String
-        value = value.gsub(/expires=[\w,\s-:]+;/i, '')
+        value = value.gsub(/expires=[\w,\s\-\:]+;/i, '')
         value = value.gsub(/httponly[\,\;]*/i, '')
         value.split(/[;,]\s/).each do |cookie|
           array = cookie.split('=')
