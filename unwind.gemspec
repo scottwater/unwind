@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Unwind::VERSION
   s.authors     = ["Scott Watermasysk"]
   s.email       = ["scottwater@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://www.scottw.com/unwind"
   s.summary     = %q{Follows a chain redirects.}
   s.description = <<-description 
 										Follows a chain of redirects and reports back on all the steps. 
