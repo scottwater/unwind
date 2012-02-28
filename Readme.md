@@ -4,7 +4,7 @@ Enables following a series of redirects (shortened urls)
 
 # Prerequisites
 
-Only tested on Ruby 1.9.3
+Tested on Ruby 1.8.7 and 1.9.3
 
 # Example Code
   
