@@ -3,7 +3,7 @@ require 'vcr'
 require './lib/unwind'
 
 VCR.configure do |c|
-  c.stub_with :fakeweb
+  c.hook_into :fakeweb
   c.cassette_library_dir = 'vcr_cassettes' 
 end
 
