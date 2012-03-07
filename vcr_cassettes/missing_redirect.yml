@@ -1,31 +1,45 @@
 ---
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://tinyurl.com:80/6oqzkff
-    body: 
+http_interactions:
+- request:
+    method: get
+    uri: http://tinyurl.com/6oqzkff
+    body:
+      encoding: US-ASCII
+      string: ''
     headers:
       accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+      - none
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
       code: 301
       message: Moved Permanently
     headers:
       x-powered-by:
       - PHP/5.3.8
       set-cookie:
-      - tinyUUID=f3ad99e35f5aad3f12c4f303; expires=Wed, 13-Feb-2013 22:00:58 GMT;
+      - tinyUUID=f5798bfc5d7f1890ce83e465; expires=Thu, 07-Mar-2013 17:19:55 GMT;
         path=/; domain=.tinyurl.com
       x-tiny:
-      - cache 0.00062990188598633
+      - cache 0.00070881843566895
       content-type:
       - text/html
       content-length:
       - '0'
+      connection:
+      - close
       date:
-      - Tue, 14 Feb 2012 22:00:58 GMT
+      - Wed, 07 Mar 2012 17:19:55 GMT
       server:
       - TinyURL/1.6
-    body: 
+    body:
+      encoding: US-ASCII
+      string: ''
     http_version: '1.1'
+  recorded_at: Wed, 07 Mar 2012 17:19:54 GMT
+recorded_with: VCR 2.0.0

@@ -2,8 +2,8 @@ require 'minitest/autorun'
 require 'vcr'
 require './lib/unwind'
 
-VCR.config do |c|
-  c.stub_with :fakeweb
+VCR.configure do |c|
+  c.hook_into :fakeweb
   c.cassette_library_dir = 'vcr_cassettes' 
 end
 

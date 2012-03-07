@@ -1,25 +1,35 @@
 ---
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://bit.ly:80/A4H3a2
-    body: 
+http_interactions:
+- request:
+    method: get
+    uri: http://bit.ly/A4H3a2
+    body:
+      encoding: US-ASCII
+      string: ''
     headers:
       accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+      - none
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
       code: 301
       message: Moved
     headers:
       server:
       - nginx
       date:
-      - Tue, 14 Feb 2012 20:41:17 GMT
+      - Wed, 07 Mar 2012 17:19:51 GMT
       content-type:
       - text/html; charset=utf-8
+      connection:
+      - close
       set-cookie:
-      - _bit=4f3ac6ed-00314-06bef-241cf10a;domain=.bit.ly;expires=Sun Aug 12 20:41:17
+      - _bit=4f5798b7-001a8-05ba1-261cf10a;domain=.bit.ly;expires=Mon Sep  3 17:19:51
         2012;path=/; HttpOnly
       cache-control:
       - private; max-age=90
@@ -29,32 +39,42 @@
       - '1.0'
       content-length:
       - '133'
-    body: ! '<html>
+    body:
+      encoding: US-ASCII
+      string: ! '<html>
 
-      <head>
+        <head>
 
-      <title>bit.ly</title>
+        <title>bit.ly</title>
 
-      </head>
+        </head>
 
-      <body>
+        <body>
 
-      <a href="http://stackoverflow.com/a/9260206/889617">moved here</a>
+        <a href="http://stackoverflow.com/a/9260206/889617">moved here</a>
 
-      </body>
+        </body>
 
-      </html>'
+        </html>'
     http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://stackoverflow.com:80/a/9260206/889617
-    body: 
+  recorded_at: Wed, 07 Mar 2012 17:19:51 GMT
+- request:
+    method: get
+    uri: http://stackoverflow.com/a/9260206/889617
+    body:
+      encoding: US-ASCII
+      string: ''
     headers:
       accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+      - none
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
       code: 301
       message: Moved Permanently
     headers:
@@ -65,22 +85,34 @@
       location:
       - /questions/8351604/ruby-debug-not-working/9260206#9260206
       date:
-      - Tue, 14 Feb 2012 20:41:17 GMT
+      - Wed, 07 Mar 2012 17:19:51 GMT
+      connection:
+      - close
       content-length:
       - '174'
-    body: ! "<html><head><title>Object moved</title></head><body>\r\n<h2>Object moved
-      to <a href=\"/questions/8351604/ruby-debug-not-working/9260206#9260206\">here</a>.</h2>\r\n</body></html>\r\n"
+    body:
+      encoding: US-ASCII
+      string: ! "<html><head><title>Object moved</title></head><body>\r\n<h2>Object
+        moved to <a href=\"/questions/8351604/ruby-debug-not-working/9260206#9260206\">here</a>.</h2>\r\n</body></html>\r\n"
     http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://stackoverflow.com:80/questions/8351604/ruby-debug-not-working/9260206
-    body: 
+  recorded_at: Wed, 07 Mar 2012 17:19:51 GMT
+- request:
+    method: get
+    uri: http://stackoverflow.com/questions/8351604/ruby-debug-not-working/9260206
+    body:
+      encoding: US-ASCII
+      string: ''
     headers:
       accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+      - none
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
       code: 200
       message: OK
     headers:
@@ -88,297 +120,650 @@
       - public, max-age=60
       content-type:
       - text/html; charset=utf-8
-      content-encoding:
-      - gzip
       expires:
-      - Tue, 14 Feb 2012 20:42:18 GMT
+      - Wed, 07 Mar 2012 17:20:51 GMT
       last-modified:
-      - Tue, 14 Feb 2012 20:41:18 GMT
+      - Wed, 07 Mar 2012 17:19:51 GMT
       vary:
       - ! '*'
       date:
-      - Tue, 14 Feb 2012 20:41:17 GMT
+      - Wed, 07 Mar 2012 17:19:51 GMT
+      connection:
+      - close
       content-length:
-      - '12578'
-    body: !binary |-
-      H4sIAAAAAAAEAOx9aZfbNrLo5+dz3n9AlIzVPRElUrvkbnkcLzOek+16mdy5
-      mTw/kIQk2hQpk1R3K8v89ldVAEiQotRq2fGdOe/SiVrCUijUhipsvPjsyXeP
-      X/39+6dsma3C2f++d6H+yn8XS8F9+MXgkZ8XWZCFYvZi424tX7ibBYvijF3H
-      ybsgWjCLvcy49459dyWSeRhfX3RkcVU3DKJ3LBHhZSNdxknmbTIWeHHUYMtE
-      zC8byyxbTzsdz4/aaZrxLPDakcg6KYKMFcROsFp05vwK67Xho7ELm6/XobCy
-      eOMtrZPAVwG019Gipp1U8MRbNli2XQvZauAB1DjqxGsRyVxfpF4SrDH1y5tV
-      CIWRHpeNMpk0hkbFNpYmPhi0l7BUg5m4yTpv+RWXqQ2WJl7eSf6W37QXcbwI
-      BV8HaduLV5TWCQM37bx9vxHJtuO0R21H/Wivgqj9Nm3MLjoSnu7v8W1WCfs2
-      BdpuXID68OrSs51+f+i4E8ee7DZiEDXbhiJdCpFpwlKbXpreiY08DNtQBxr2
-      3UlvNOr6/flYaCbutOrxKI6Ae2GlkRJQIiIQK0Vupp1xb+AM7X4nyVXBAlWw
-      lCrUyAsPM5FEPBN1IsOzeFWSkGdC+GweJ0y3yJr1StfMpWcOVdIcQ41gjslK
-      ZJxFfIU0xTYaDGQ7E1F22aiHvKPONZ0KVnwh3oAYVCm3lzW3athBiVOFCi7i
-      Q1g+vfGWPFqIdgI2a3s230Qeke3snP2i9ai+gqZYO4iC7OwXsE3Xj6L0WiR/
-      EeF6miUb0crijIeP49UKyPU43kTZ1G5huaiStgwWyxD+h4QwTqbNz5/1H417
-      T5otFxpcJFDKz3OePWu2dNPP/ali12/nD6rYkk48jn1xhnk6lQriF0OZ5D9K
-      PJaKZVJICjSIY4822fJ1EjamxNNUqwOHZFSFRgssYAJcfRWsRGPq9LqT7qBr
-      j8YtqcSIcENSryEi7obiNZT/C8qBxxM/1XlpABox/aWBkgltVSSu1TBMKGT/
-      x/1HpBXrJJ6LNIVEHjIe+QyYsNykAU8zzFskHPiSpI3fWo0NNIsNBOkj0PLt
-      Kt7kbc/fiS0AnYwH867rTkbucDTs9j17xPu9uRj1/aHThb+ARRC58c3r6CoQ
-      18InbjemlvNbzoRdUgIy0aKdiuwx95biK5DKd4AQEBfs4joRWRbMt9Z8A4YK
-      zO600Rf+hPO+O/ZtAe1BoRUQMAG7kMgC3PfFwO2OvGF3IAtgZQstlyww97ru
-      iI/HfDIcFQVk3tifePO5PRz3x0OZd73yZZY7Fl17Mp6P/J7KypZB4ltrnmRb
-      PToA02PgOWhtJvRQMW2Iwdx2xGQ0H3k9jbMbhELmTsS4a/fGXd+3FeAl6JPG
-      dTJ37YEz8t2uahTsiB/kvfUcl4/tkdvrcl4pEIlrRRF30O05I8f3vYksE0Rg
-      mcCw8IWFZZEBso/OZD4UPXdgc0W7RFwFKD2poo83dD1/0nNHc0X9dLNYgG4K
-      nyCpYpMujGKu4zldVzRKvK9RxYuO8p4u3NjfMi/kaXrZ0BoP9F3kA9JFFKuK
-      F35wxQL/sqFToJzv04By0YE8+MzLqrpFDRIpNOocqJDoGpViqIAh31qI3N5C
-      3iaFAWmnjFFKdcdorSBGDkbXL9uzPHsNTiAPv4bBpFqEinHdyEJEm7qRWWhd
-      Q3PE4siD4fSdcq72DAdn578gtGtAuU3FwaYCI0EfN0nE5jxMxYPGTBohDeKi
-      w6s9MGiWp+leZfHa5TudLhVZ4gCa1hXB5yJd88goZ5EFqy1clwZCCPVri+9A
-      jvhVPWAgvvIqsPG0E8aLIHooybRJwss/dOe5KwTf1eAF3+rdIciYdId2FyzB
-      DECxIFJElRgpPgPx143Zr3kHciS0z8cTAci0d9yyxkxlHQO1trt3oJnUjVvI
-      pjFe8qwWXUg/BtcqPPTh6uBh+p3gdbgbb8ARoD93qznn7xsz+NhVC0WDfbSs
-      0xpKz9VChVQ1ZfC5gIF/RQV16MVJpwEnnQB0WMY+WgyIH8xBC+zefL4XcD1e
-      +rkIojWEqrvglDf9vqGJhn4W+AkNtg65J5ZxCNbPCBS5G0S+uLlsOGZwA1jz
-      m1BEi2wJOX0boqrgZ8jrjhvsiocb+LoX8T0Uxeeig+SqyayrVJvmJrmVd0s+
-      I+UWtixe5GF4qUQuMQ2mLGoxL3Ani7oEF3tTay7NoQhsGVAyiOBvbVl8Ljbh
-      nhx8IK7RwLbxBizKUiQwRkNHaHzlV1Zu8/Kgq0iZ/Yf+it27gFD7cFMmXPBY
-      CpD0Y/YKPu8OiKx1Dkn+mqHjfQIsl/vgAuXA1M/ZV/T37uA2EaeoSvgFfkXS
-      7HX+/RbQF51aJtZJEKVXRISn7zTPTpaSA7n4GJ02W2M7MtOB7MbsUfqOadnZ
-      1Qzz+ThUqaaVvTt8ijiS8rUeqvmCKtnUXCGVysQq9eK1oG/SxmmPDaKgFW/H
-      yaLzKMkCLyTvV04lYGGI2tZqPuFOUz2H5hNyzHOvu+yRXiwdo22KQFFid9h0
-      y1zPjm+/hI4n2LPGnplSKeJLB3FU1M9xRRumHMicrpUGGqVONZjPM57bJswy
-      5n5UTw0oAki3jSMRAg3TEjElXO7/LJJ3Tk6kkniotAwDel0gS/Jvvm7kKs6E
-      J0KaxGTqqXYHy+StyEFWiUwAwW6UD3/Vmaw8MEAA1mZt0WCsJs5eLYO0mDTD
-      SZqUJUKOwUzMYVDMHgDTGZQC8wghMsPpAxBHnrAzCgkYXwALWBazTeTH543Z
-      Zs2wpUI3S54SIeHhlIC1jlPQDrvkAVWw9ePr6AC+fixSEhREHDDb7sU9kijH
-      CRVXXdnTAWy02oUcLZCARGIk5f7zMmrwH4fA6CpOQFMKRPe0pAsaDRkM17lE
-      LVA1F5QA/0cBI/k4aqbbkKhDoZ6a+dNF8bkCgqVLGNhfJyG7ZE00MH/ocYhO
-      4L8dtxpjnCK2aRrRfgnWN+kCYRWK/iUw5Es9O1upVf5VRp+gtRfrcJOefXHW
-      /HyxtijJ0hict3Ls1Tdo+5xVmqgDOgd31I3jdwR37h4F9wiw2XWQZSIhqOr7
-      XUHXTWPSTzmGVmmQ21qdkQsr/WI0nIA4ZiWtgv/+TIshXzZmstyPiy9/KikD
-      NlYlTN6Yzji2sWeK3Hlrc3e3tVqCFaGEmXtsu69kpbzZ7JqaxUaLgUaTO6O5
-      qcJio/HSFpsiIskgWZmqGJqMhS0ZvRQDqDlVayjpxXr2nHk8amYM4jLAWjA5
-      c4x9QOsDBg0sH6rOAlSG4cTn9KKznt27B1VhtAIDs4w3iyV7zpb8SjAehiye
-      EyAvThLhIeAVmKoIoIWh8FtmI2DUwDqmeWNtDToRswsP2pp9gdV1bVYM8vee
-      vnjx3YspY0+TBOysKoAoFmWmupuJe2Ml4v0mAGYmIgRvBTBVCSlD68AAG5xz
-      ZP+8vwA77rTH7VEb2EI4XOCksOzx9TIAc48jAZIMDUmLxdChhCHVU5byLVnc
-      VBh4OJOcZHm/nvCrwP/Tk0d/e/7E+v4x63idDKxvHA3ZvX1ddib3Xm48D/wC
-      nDzeFiQtlbHstuO0h/ccE4rw7z03KBRAD7wNLo7QChfN2tfAaLfbZrUXT2Lv
-      +Ir3DvYw4UGYaimwFEsvifZfxXGGzf3w9KsEhjGV+oIq9NpOu8eMxTkpNlic
-      xPQKHKc1oocap1xUu03/pj3bthWwx0hY0Mcls3xkly/AgC51ZpaE1mMSyeUm
-      o+FZ4nnv7/GGRbj2B3m77MHUZBOZ4r2jOm32A7aKGtEiIWmarKbmC4BNdu/p
-      Dc2U1wjiI3A/Al9wdr3kGfUhfpjr5V8gVEPnYLVlfxareRAWOpsLYBpvEk/I
-      cRaohM0iWhgENO/dQ7SaxKRmizWJ7JD6OfsKfIlQMAFhpmIJIg9j+xQyS5Xw
-      mS7AIZJUbcJXaAY+lxuXlmupoPxsQ7JuNH0fgtWC1iQ0Q7hUkrgR3tt0J98C
-      ahCKf0ZzA7T1QQZAS1BEwSwKUE50JtEhU5rvQ2HgENhHfyO9EhFdBUkcoQCl
-      DIyCL+Z8E2bte7g8uGZTBcePFarw2yr625S2A4k1UOh54LsJkZcxSjiqxGYR
-      BvNAJJiLmZdge2wktoh8RZG373GdRwHBHr6SBuaRh3bsG2BmCLY3fZMKb5OI
-      N2vACgyTrxniesl2nVlIKRMFUAkC9hogbSKIzJII6ETSey1cLfIKhipAFZ6I
-      dRhvpfo8xh0MWcKjWJf08hQTVakFBbwSW1tsqjiiZcXQgXua9hkMpUj5z9n3
-      uEK3Bb4FEPKCMmJGvMkgRJH0wnlw7KkNRry7C50WEoi8Za3SY295eN0/wHLg
-      XFryeOvCUyi2EL6MTiH6JCbmjoQGZPgQEFnklZmsrOihazcbjJb3sd6slEP+
-      xG1IEFlPw0ByZKd5Sqa2TRKq7xSM5r5asU2hNi4tU7NKcZxpLM0B5NsoDOTB
-      YYH4fsVr/TAZQ2MWhYO5YzfDJIr790+zF+3SSJ/PO+ASZIPNAvSzwKsotSen
-      EgxqSMdOdxuQXESXjQQ3JZQ5kkIGBzmW8zAGIXDW0AqiedyQy5FmspxxtzJc
-      858hWsC4fVjna6xlxuMoRGuqOelk2Czpokp2bcexnK5ld5ndnzr9aX/0Xzn6
-      2r2SWDwRHuuypuMwGKSwrCZmTpidXiwSiCZhUO9182XVahEcrlGNIEhNdJlc
-      bSs0rqUqg0HdmGk6hb48fYfk3UeX3nQwnPaGR9EFy+Z0qe1wiSaV1b+RM+x1
-      nY6P3lYZafgVrBalfWDX19dtDUxuPKOvHe6LUbc35vOJw7vcs3m3P7f7E3s8
-      78/njt17mF72uvf5av3Av4RxNspwJo9+J5ff/7kBcpNRe4oXe5lbcO5gL8h1
-      JDDIYFMnEwFmnjw/K4URqYi+igymMvwgAR3OgM09PetTYteQuTDW/yyYnjwv
-      NUSJPeySUdPMU/MkBedMBho6TxK2d7nGpBAH3x4Hap5h7BQX+81IEZFOOMwz
-      WQyEDxCS0/Lk43Qx7OozATYlQJOb2/DGbGD/QdViCHyfReoUNrmj5xB1WSpn
-      lKLpQvpWO69YRLCmjsl5atqUle4E1TqD+VFpyao0nSkTcM+GkVB8k9kgMtAu
-      oVB8KTpXrgIZBrhSujmNapDM/DTZd81TCzll4VYaiNDMTuD2P9xmVgdN0wox
-      lLmyZZ0ry5oT+TgPTIyntTQFM98/yF0ri9fIg9I0n1GrMtOeF1EdSTeuLKDE
-      K7XyFLMKVVt2Zz32SBa76MCvSr5uGbCqXfir81byMarw7aNiRv+hRAoAXqJB
-      vhKf6x5rdVHoSA8V/VmwvOgjUvEAPMd5kOCgJqtLMn0QHriWnGZ78QhkTAgu
-      OU6rLAX4zhifob8AthTMnayfI6LYYCxzfgBuqJPpXtRyEuHmSKQR2U5NIKor
-      0aqwtWrf8tHXFHD5W9atCCmiP+kPDggp2QcskltHSm4wuaAif+nlFAJloLNr
-      Mkzlr7VY5Q5+yGqIgUzBTARQuxqiLHix4nFWP3l/x3UO5+7rHAUm0Z0XLaoz
-      mNSotGtypMgpLlsxaW7SuZi6nF2sZ69AMGX5JqAX0hICahNoRqInNlrsOTqq
-      0bv2zgzHXSPNcjhYGiXvHsXs9KoavXDSYZLwW6IXLfm7sQuJ2omxC9StjV1k
-      a4UPZ7BScxaffNw5No6hOtXKBpFyz5s8HWuJqz23OuGE6yE/vD8d9Ke2c5Qf
-      jmVP98OdyWjYeRuLEDjN/biC+x188aEjBr2+PRw7XT7xBn177Pe5NwSGjca8
-      35387r74bk/+Cj/YN/Tj43nlTqs76dU55iOWBiFOn+53zCk2POyYjyqOudmC
-      M/govr8zuM35NxTnot69Vm61UUIaTPxWO1ApkLe51ubQqTNuGSMrbrX55ObO
-      bMiCwNB2xuNetaFyO8oDLyVVKmiTT+Qzqa3zvXi9bcxEkiRteMBQgbouYJRa
-      CbSSHKRqPgdDEGVM4HJQm7Fv42t0bNC+J9wDYboGJfm8N3mQMdwoiDvhFdfY
-      /cjn6fLB/chN1w8OBqZafno2KyS72nva56VnGPJItjxe66I+HTkqdGKvHRtM
-      HQfM039VTBYm18tgndzpZy83nSEYnU/FzR+QibSnglZMaBNihrzCRbSHRzFn
-      x1LlCg6m5TYW7Zi1D2NR1572e9PepMoiSj+ORwZR/2Wj0qqnZ7Z13OalXu49
-      lQDhp0o3o4Shc2uUgEU0CoeiBAJl0HLXApqKUmt8i2x8PiRKMJD5nyjhg6KE
-      b/g7MBk4qwtxgdyEUPj/DdP/bxz0/5X7vxtggHmKaGVXgnXlEmggF211rel5
-      vvp6kWbgXCxmT8G7ngKF5S/2CGTAJ1sH/jaeroHRSkIsI6UhAvhMoAlqMbnr
-      4DlbBSmua7piDr4UtfdpohTSsJOjFBL1E6MUqHtKlHJ0VFImQR6DyNGrlHz0
-      6gpg/JFWV5zBtGcfu4pAhfMBZq/X/xGXV/TzbxIK9qaD8dQeHEVMLFserA/S
-      seKWdLv9Xq/fSbY8ug5CL74pI984PhZ054LP3aHdHXrufOh0xz17MupDEDj0
-      hv6oO/zdY8GarryA7z/Q948XC/Zbo25OcJOBnyAW7H+cWLCYOjDFxjTPO/6e
-      +vq7x4Kmg/S7xoIgnZ8qetiAeUiyDZgUEW5xjFbBhA7ycCZ8qnhxOIj4F4nw
-      +lO7O7V3wgdMrpesOmnSzyEede1PxaPXqxVwJtmWHSfcv1W7/085PhDgH8W3
-      XdOkydoHY3Ib+6p27MO515v2hzXcOzL208TG5xD3+p9stiXCo0JT6wzC8ZWQ
-      8ypTdv/9Js4eAAEZ6dlbUbdRlbJkyaM4+a+jgcN6Hg4/Lg+Hw0/Fw+eMU9RR
-      bARluAnSjzcUKSyFh7tYyHg+J66tSD03eketuY07jOWW238zlk6mjlPD0slH
-      ZWl/9MlYamz8xVVk2r3PFjGbJ/GKYdJDBol8hf3kjC7HAdal6XFG9V+Gb11n
-      2q8ZDLtHTncahL7zVNqFPAOikE4timb3+VGUm1NK3KxRv2jvuAr4dEHckW7E
-      fJR/4eIUjDtjK1x1VyWLyRuFjuGs/76zeXn35fRbfivE/uk3XUTjt2/6LQdl
-      KsCO02kqXK2/W2Tjc+r0WwWZ/77pN1sJcS0e/y7Tb8/ZkstpLfITgjTdiJSd
-      oRqgVJ8jQni0CN0D4zSEvscMMH60znjE2cts4wcx67XZN1vwDDMgJgJZJ7En
-      fJzeA0ArnOsLcu+eJtw24QyPKs++4R777iX7T/Y1hpiO3R61u3Qom3IrjbCz
-      rzZB6NM++HEbTI/8bzgYnxd1oHev8aYollyBIwuYrnDXefwWR0ONPxgz+BmD
-      k/tczj1y1obiiUfzd1BCo7nO9yVAdnFAyGlP2j1rbf9pRccvRHavtA1BIYMH
-      yGlu8ZWiQQ01d0n5HITkWmKF/JnHYRhfY3GiboV8eKZEHgATQPV4bvoMsmu7
-      PanMsFouT4UzuWm0WIMOAvXsNhR27Eb9YY2DPf0WBFd5Js0V+/a7V4xu7TLc
-      TATiTEhIzFneVoUKabBah3hWF4+akW1G4pMpBqza7FskKR7No6M0LRQvHl7z
-      LVjqgNyjcovMbvfbzrDN8vlexI+HaaxUsoKkpEmLuRupA2VStXe5ACx2STaN
-      rWu7FQGgmvUm1VsLL5hvS/4aiQhdC3CTsbMg8sKNL853mYjiuCOF4CKWTqFZ
-      FlSoQQMy4D/cRkYHTCzVzGXnNbkTzxLh+9sOakQnTTy5XU03dpj/X8fEJYHK
-      x3DRFzC6xpl4g8pXqxr6PYnxaN48TuhAIx6M0qeWdGfO4oSpYHSzRp/kXHpP
-      NO2/V8Hb7DlZAJCUVRDxsCXReU6DTFM1gUdCmi3akIu443gO1giECMla0UII
-      fWmSmMlzo3ih2S53wL0QHt5SB5J+ZrcHbad3fq+GD2clhSsVQaE9k1J7Xktz
-      Sbfn+arElAXzYjHFxEChzAiRrj77hdYC8GoxHHHCWA0HSnR1FaJw7m4ap86I
-      U228e2IOEvOQjvu8AadhPB735FSmCAX0EtP6w57dUwdQoliSUt7j8AyhTEuG
-      YMq+V7x8BkYMCYwDIbCRPVF4Al8CkhFg6z87OjVFHvkiabFUqSJyC82MEiD8
-      qe2HGhZQSLWu4TBNMAC5dJejR+mbgU3HYIAlJaCNRX83zXsumY8nHaW91Ejt
-      lQRifVnrcL2sWVKypnRQqhr7aI6mF8ETSUlFUL2kJ0FDjy/dCVw4SeNwgxp1
-      LpUPWokkN4ozZjpuRbEHgPLgsws9weBoWu1sVSJLy9bVa2UnQwjeRx1O44vV
-      k4TX7VriBrfY48R3EMnUbIl7Fq0wjtcWkEJAx4RvyYuwLPDi3SBqaM+kZ47p
-      OCmGd9xJeNijJ5j+iuAxhDdlOUB1sxb7v0H6BiDyZPsG3e+HTTnhr0ap79Ed
-      puHBL/Yea1rRhl/tXHJXLrMJ1lzF/gYYSI0DUs1iURJr3qzCN/IUXtJOXGNE
-      fBq9jbef5T9BUqU45il6ifQRWnOBoVGuZyVBvdCrp21G7i+qFnMDOu+nj5nL
-      O23UD80sOd7CKOGJAjQJGIRQIE4wXJ8DqDV6zCAB0AcSjzZ7TJuDyoi0ARO2
-      QFu42oRZsA4pVsM9RImcF8NbTNDckbbQRdFpiBhD22gCoV1snYaigBb/tEYh
-      yqo8qPakPY4AJe8dX+BgRbloLYxjqdqcGOPdD6gIubX+z8fI335bGmdoA0/c
-      S/ZqpUYEKDgqjUaBWvZW3isMYG28yBXdv10bBnEurgI/fnzZ2aRJB6Sus/A8
-      C5o9bFrysZlCAsBD3j6Lut1ior1osy+YOpj8T7Jdibfb4eenEk/yHbxfsTMQ
-      uQL86ARMxUaA+0t6r2Cl8ubvNOzsjjt/+2Yqbw/4m7KG34AmS+VtYtvrdwvN
-      Bo0pKeUeL6ym+D1MT4RO1XqhLb/uPk6pfAFF36x5tkSW7GdDaabjd9kxkE8K
-      qMD1bjsGirso775jQNX9N9oxoDH+wB0DOGtmOT3mdPE85qC3b5F7C+ZIJD7f
-      5tNne5eE/602CtxGfcn8mt0BBuHs/oGtFruEq6XIoV0BY3QfRh3FZ4+vq5sa
-      GsfvCxgNhr3JxOv1xn0xcUe4PcDhc+H59qTnTUbid98XUNuZvxm/COhH2RvQ
-      G2qam7z7RKc3TQvx6Rbtq9Oq+Rzy/5yNrM5bU6qasW5G4lpNOjdJqlX2XN9N
-      S/YFfxnX0+6eqZMQOunGXeEwou+tJcvLSqaKQJnkX3Z1PsiTB3bj7+hSPVJD
-      Dx2PJOk45g61lwfuTyuuTysax/cDvOKLF+C/gKlLzhqNdroOg+yswRrnLVb6
-      ufsig6qogNuw5onAPYxxcla5qw2fpeBJ5gqevYJOTFlT0b21WxJv1v2WX32f
-      4HVRiP2U0RX/uyWRqPPgZgrI1uTG0ROxgkBQVt/NbwWgJX5AO0Jewuj5DU/e
-      4YxE/qqIcpXSHfH4yF+QLCWv9OaGXEeJ74KoUh62VNqsGKmU9JlqsPKtw7ey
-      YwmIXLI4svCeSbOikVwyUVQfZQjYJVeusDStf5TqqxS5tlPM4UMoE6a4KALu
-      bXyd4uGYhnkdsu2QyVLwKzq/28V52JAvxcDLMhNwqvHc6ZSN1zcPQGRwtJ92
-      +/CjMVMLkKYeayr4CZ+DIwDxjJ93wUijlbINiPsWHGAaNI5tFYYVUAK+nUZx
-      hJfJE1BGQIsulbql6blGD01clyiq08ojBn7d6ZWqhUJiuWHsvStxXy5WYVP0
-      1gvFI/m9fgnrtrdi1EPH94Og3Er4+pdx3XWFvbk3t9sTNH0WuLRl+7c7Hpkj
-      izkcrijCsQKcHVngNEhRjIpKSaY8tcSq+DsH/bHwFu4p69r2Hx4wxfBQzLMp
-      69koW2Vf5QPvx6/cim8ieYwZN59DJr3mSkz9lKvhEArdasfRY1z2e4Ii/BIk
-      +Kz5eUGuZtW44bNj8QwjVySpBUH8Ucu6uLQwmBcwZCNO8P6pxgyP1ZTt1G5J
-      nFOssWd7N0tclQSOMneboOSQuyLEuQawHVLrLZT7xuxb+ISIGLPr6hXqUqqm
-      lKacZt4UL2+G79mlO+Pxp74ovmRVBzvd2EOqOhSNrq0s7vuJSMEDfroCX/2o
-      jhWVVK+MhN0u9ctdcux9fSqt7+fNmr432b95IELfwjlWIGRjpg4/+HLKLsJD
-      RLR7IiqtjufgTiPTMl4J9VqXv8BX9j3Hd4ccQaqioiKVkXArqbp7SVWy0NTk
-      fg0oJZbs6V4/3HiM4lXzLT1cRlfSGF2Wycrf0L3U3rDqzffgPzDDuS31zrEr
-      Q6J+3YHpdBq+shtn+EYbsLkB+sw7XWDfxnK2Uk1Qb+NNE5fM4phW6AD4w4r3
-      +hW6MkLdzLlzm1kRzNZfkRb//3FPm/nESS1CdAc+fMipYdxPYl5t1jZFkYKb
-      suNguM1pAK0XF6cruaAh3Rw+8V2CBv/b4PYIC6K6NBR04y4uiAHLixKVERPn
-      I9wAopztlEmXybzOWEsjNatl01AKtdoB7aHjoP9ai0SIDAVtDza5a2I6lyW3
-      aNmfQRASxuwHGPD8z4BYfTN7V29xiQTvv9BLHuCjg62KE5qRCrc0Jwjs1sxg
-      uDymlAPf2UYz7BfubH3cm9hwC1qbPc+aKQPj/gc2hw63WBSDAC3oMkdqQ9vp
-      Ns5d4/9VlDUZKUAp5oPxLTYPV9Hm0lGvtGH3E/5+Ez9AEZJBgPlZ1Jzz97oe
-      fDVrVVou4WL68aVSn8hZw7vHQUZwFZZdsi/Omu2qHNX6ZvgE87PPyq3K8CZt
-      Y/228ZK8va3jo1oHlFcwyD5Gppw198juXlzwkS7zngK/7c4gyAcJgEFuEG2g
-      gZdS/oAU1zA8xNftVCa8hGAZV2ru36/P+LEJ8eYCcfW/zbFu/lQzbyEfbHXF
-      M28pUmirM/1H5x+dsx//zz86P/3xvNPGTc1n+upiIMxcJIlI6mZB5BPM2dln
-      u50AZM8+0638+qtusC3He/bZJeue//6s+Y2JEAa3A80gMfwYX1YBtNjtRoH5
-      j85+iuKDdKit/0U7iB4lCd+eyXZa7McmTlbjMm+Q4VR1s4XTcWl7C99xVRpf
-      H4jJP52zGbOcg2TC54s2vhS3buap+kBMN2XNTkHBTi469GLdujmp6oML5lP2
-      i6LaVFPvtyOqpvJO7ikrjANCa9Fa+SZtsZtlcmtv9YO39RuiwP3muRKW0gtG
-      Dz1axsRqnW3Pztt8DYG2f/YFYUUzfztVKs8xvcYFcHzbltnto3upUeRZlpw1
-      adjAC3uhrzKFxlOZcgy6h4vUvLW1+qDh3RXzfabpqG7W1txj1EBJlbx9yZo0
-      QQiICL/6forqc6Dft5sIfD6KNcJnDyY1ybdNQeybOJOuWcmpyv0NiuIsnCyb
-      STe44hAYYGS+6Z7UO9+fIgJQ7o4ZHuN8mqX2mAQ4Q3wfVx9T5RkNe8NBfuOQ
-      m8xqLy38RCHEnZEfdUuYV6NdCmQpUngv13MrUrJzGEem+rNaMaDLeaWburMI
-      rSpqn129wlVOHzr2Gs9q14A0lox37/jFl+V02Qr0dgnO+iKWL86pbb0SwVPS
-      TopM3dM3+ZpjA3xt3Tt2j3rQmzDi2O+Kvr50sxa8qnkC8rkqPITcTN/0mcu+
-      mVg+sVO7ecJc7se18WPpsX9CxihzlziEXmREOS8TD4YJvS8A/M0gEt22vFGH
-      3rz2c2fcHY066gVhb7pv+m/6vZb82YWfzuhNf6B+92R2/yGQD6dq08uSdWoZ
-      1qNirtEh3PWj6wYaLNn5x8NOG3cBn+WdOD/fLYpP0csvoZv3q+3ig0Pabio+
-      5coP6yqXi9y8UKhfNmDM3elQpX5lHDsUGJ6d/4I8+5mGdAXVgyKZeBrSvsmz
-      huL0+QP2cxuFANlaFQPM4+k2Ip7j0iWlpCQDeU8eSPEwmwLfQrWTfrV9xRc4
-      1V20+KP90wOWtnFdN8q+jX18pzyM/9lXdJ/M2c/gstIbl02BLo3OSq6NAfW4
-      K5+6Wq6L4LwMztShu+qHer3wG+7j4s6t7yMGDem8TRstXc1L01K9ygsNVbEO
-      bsRWk1j0knWo9rA3GHuOV4AKQRRE4sY88e8ANQqit3wvTPSzebS9AzxVo/Gg
-      KpQuuFEBvmZRrod2calMLp5NncH6htnQ6uUXZw1iSAN8cd+XPmFjGYCLKBrK
-      PW+QeW603PMWN8svs1V45p0/yKXxGt8nd8ZlBkQeOqTDgO2YnnCfNulLgr8t
-      aIOBDO060JLdol3ptMb/2/lv56VQaY+DqSWwxskkwQXtzqy5yDf9yX84k1fd
-      Ooold8VMQllaBIdGHNoelbHHS/l6aTUJSFANHBK5kVhrzwCGpiSOV7jBKcf8
-      VhXpdNjFZ5Zlalmd0ZI5e+I3lBg1/QQWpmLgsVevKew+SIRq5A2dA4bKih2+
-      DjqJ8ASebIba1bJrWfgJBebRJgxb4IZ+xVPhV/Zy/FYK78r9RMCP/DZujTlT
-      ndGyQXYOCGVZs53dHsXKtwZdIyZaoJZ9xWrkMgYXX9NfY5LXrKwL7ebQjiGa
-      Ia/z6x173OsPnI48H4BeEagyjdOOVVy6osubbzmVm/cDucUba+AuYjmLWpqm
-      PwqNsT0eDR3biC+MIyiAiVVcT1GHS1FNXj3+QqHT7j08FaNB17bHzlgdcAEM
-      HItHvsXlGY2UzgBaPcvjIGcwPCqks5iW9y0ZphdxXh3SOZIOzaE/kuc18pOk
-      j/HIFG5nl/3KYnka8+wHCfr81I79LqdNDvVTdezjH0S5jzdLnEqGiW2P+qOJ
-      KXFRjIvIEcUGYKYC9LlT0gc8B4lfUpxwTPjB7hqyCACZAshygKQuCBAPTzIF
-      scLN8piy8/0Io6Ht/eyF/LLHbOTFdrMOk8+ZdIeDwciwGy6w7t06DkAf8Ge2
-      VO8ns3DjraHN0v8/RMHcsnS+KsGktdoXdMPPY7zYIFd1i2qcrOrOZNTtT/qm
-      KCzEylKHI6x1EgPfVhjGHKvWEiE858yeqyMW30soeCZJafCHoDvoTzoaL4Un
-      Et3owZHYarQUmkhlowMfjmzPtiejca9DJ2tN/Egg3irrOrCKy6PqsKyefpas
-      V7Xbg7Z9MnqD8WAyHnSW8TXabokat9bhBuSPpIDw3NCFCGggwCBAOTroTuMB
-      5Ji9ghoHO/IXvD46ViadM9kO6+AZzYfsjHol26IDbHQ8o7iyYKMP98vqUOfk
-      QaA3mNjOYNyZJxDJWcrCY39S3IZC+xust+DDQ9ncISg0Aw+0W36MOr6FgYAf
-      tv/URovJRlrUE2xF7aJQrWgnouhbi87N49k2bIZhMydreN8Z24O+U3IvYjIq
-      UsXpKJ8V0TI4jICZiNShmQPdMqUxpoOLUtE76pi9hMYKaCcj3+8Ox12nU6/n
-      OK0OiHG61AMyhbWCoAV3vx1CvoBlHr7Ho6206s8ULKZgnYz6cNwfjYekXiAv
-      ASoOqJceC1G0aJzIUUAPxEAooT8He4Ia5eOdFHjamefDrD6qh8as8DnOCtgd
-      Cfv8dJkajcbOaASRZZTLESqHgb67ydQYmNKNdNJbRI/Awj1PB3oFzl8uUHgo
-      uwCqbnww77kDqPfl7YQImgXqqp8TujSejOnuu6ILaBO8DQTerii2jddhbKgD
-      ariuczIqk9FwAgZKsg5lfhUs5I4RaZGIrD2rOq4cxPGJBsYKYGR4iJq9nUs2
-      TpaNgd0fjMHHNggZwaix8ZYWnnzFIQSDUIv8Srnx9iDiJMWEPbsf+rhdJYpx
-      gXjJ6CAtjBJ0PYJFAN9IgPcTKnhyFyD+6dslk+nFoXE6YR+eSgio8OkE7PeH
-      A3LJ6CB+yeApf/wWROQBfqynRlvtdp+M03Aw7tnOqPN2s1ojByMw7Ricg/2d
-      W6uthQdjy4PlQRT/CmCQcwiGrkDAs+Z/XOHdKr74Y3k8PBnlUW/Yc3L3BuNU
-      fi1ojKcD9nm8Cmivk22VzIr4fL0+2BPl1GCsqqDL4/t5zBrg25C3hijJ3kkW
-      AfTTuzfo4XFB5Qmn1SijiN0AYektoj27g1+sXmVWxvzFS4zeYKD8K+klmrsP
-      9JI/5fTHkRg5fXDdx50AD9gJCOC4dc23yvfFy8zAScaT1xHNs8XRPFhspEXF
-      02vH6sBzupgjwdutruUb7nEUR3dXnutG6KwEnbYgfgQLPe6OezCCd+iehT0h
-      FLhDB7F/Ku8u3etLnYwbiPVgOOzg/Q5SpPEsfrpZ4+UIJMFHkvcVAJAC/PLl
-      10wBIHn9cNMyHg1Hw77dwRXDGzUc3wE1qtZSI+9HwghCuUm/NOji3tYMvC/o
-      N/cDD7i0heAFR2DKJ79CeypW6okIvMc4JQnmuk+HbZ9hGWRjzGyMUWPGhWq6
-      MZY3RgLNNSHWa3a24ltX6EugID3FDeosn5c7OeYbTybD/kTNaEr6kHCtYXAo
-      Jm9Si45KWMtbPFSj4yRh38MgcH/l4xWgzICmDl4sq05pzayW7lBegrpGp9eE
-      8NVihzFPVcrRFwfm/cacNO/9ziu9MVte7hIU79UmQcRbEeSe57RRPuFNjeGJ
-      d1w0wYxZXhGzsIPVTty6pFK3fmKsr32BS69nzcpbtoMrr8Pdid9Uy6rGMsNF
-      FJfXpRCP4vz/HkA5p/EguDrFD2z18bCJ3VBHHfGr0cG8IWJG3VZ14tAa36of
-      zLdWyPHMmy/mfBNmEozJ/n3iUGZ3HGdSwPMqmKX5Q7nXCaisUaIGgLpcpFyG
-      yuXiQzvK1cZyZCz79VDpOX9Pm8lvLamvhQnjhVzWEvmSUrx66IYu7krH3H2Q
-      8KlCq18ka8wwfR+cKgycUN/FCPgF6cfCKHpVWhj3eCYWMfh/69j3OIpfY6a+
-      Hgs5XcbrXew6dN0teY9HAdmpH4oFDxsz+nMsFLlFxtwhkwh5l1/H7nRHoyF8
-      DBz43vdFzxva85Ez8fr+HG/SGMDA7ngje2DbE7sD2sR9IFQWUNiJ+9M0ErVo
-      xBHdx3rZKNuMFMyvt/wmdmGkOWvGEe5vNa2+UnXD6kfFIVR9UUzzvDFbEYgD
-      KBjbofBIYBZPM8FXf9rhOEgeHkb38D5FaRTdGl1j7NcSSEXfldCCWAapr3PY
-      D7Cq5HhiJa3TcnzqU/GRJl/ZM4pip58/ezp65AweFGeEnb79h8bs/ueTYa/7
-      QA0GlXMmptSVu7KThH2StT8xXuBvpBInXDXHX/8dqOzdUwOCJLNOxurpuDvq
-      Pj4JKzm5RqOVYls54WScbPvRs6fPTsNpA/4XHdqRGJk/T8ZnMsR/J+GzT1kx
-      /WR8+sNJb/TkJHxAWvjA2R0pQL4hR9YZOCdj9th+Yj85TZquhUvKVoOayjoZ
-      K5uek7Ba8BUMAnVIyZyTcfL9/tjpn4QTT99t3E2UbSQi8vvJiEw80Z+LkxAB
-      vqw47tfdxzWVezJu3rzv9+Yn4ebJM8p1iKmsk7Ga9+fdsX8SViA0whdXdVhh
-      FsTBVyKM17iJ72T07HlvMJichN6KZ8s63DD9ZHzmXfx3Ej7rZZzFdQhRxgLi
-      mCVtFD8JL7s3csajk/ACjLJamaeMkzGaO2LkeSdhBIFzHT6QfDI2wvF8fpph
-      gBAgDNJaUVJZJ2PFu/5kftpY7KXZUuB94jVoUY7IcFKKeadz0HF7YngaB41j
-      4XUIlk6Nn4hdd9Ljg9MM1yYKagUM0wt87oaOKzzbc09CB9yBUNThQxmnIjTp
-      TZzxaR46HuZY4z0udUjlmaciJtz5YH4aYmAh08CrRUtlnYpU3xkN+Wns84Na
-      JcQbXmQFdYFseRy8G3q+44/908z7IqilFySfiowYiK7fOwkZEQoPr+Lew0Qj
-      +1TkeN8b9k5zGHjkJ3Hg1yGmsk5Fqiv6Yniaz54Kb5MEWa2I6bxT0eoPXM89
-      TRPdwNt6oajlos47FS3b5r44baz23fppTdeIT++GTFf4fH4a6/xks+ZhLT6U
-      czJKTm8ycE5CKV1CZExLNXVoFbmnojbqcdc9zTSkXjAParHCDEbXDrM5jzKe
-      nizw3d6wOzltLmZT7zGkImHiZi2SQETewbG6uvqxN60yrzkPeVBaA8kL5m/6
-      WguROPq6Qj2GX1+3KR0RLU9L4rIOp1Mp/6sCrwSBDhwGVwLqr+IobeO7VcLA
-      E1Eq0o67tVLe6bXtTr6Y5HnWdfAuUCt32EQNzrpz6VWUiCu8tu2K4eHZdrft
-      9NuOPRrW0qQuTYPCFxrKC8BrGqR7jHyBt4GzDgvjRczuY4UH1CojujDNUxZE
-      Xp0bSlzGSe4kcOm9ISlThPDp2IJx69VdaUcn41UOBPOShMQeWmbdMbv1ay5d
-      25507GEHD9YpFC190dJOI0YhpgvtcquO5OYywb7FO5USldclKU0zTOdZ1zzB
-      PUGN2Utiw3eqS7SLKJUvvSAq/JVf8ZdyZVW96WHnivN1cCPC9vsN2AeauCWy
-      UGJnbXlO8qz/7mbx9eufv/Xai2CeL3oa66Cl5cmLYr1TJRxe2cVjbm8W/P0l
-      fvz6648/PcAv7fUmXZ792HyTiuyRR5eFN1vN14+swbBrd0e25TR/Mg8ZVus8
-      3qRZvPobT5ot5rRYM+MLuuHkV1rdQR7jNgL5i9Z6fkV4wIISoCwB4uJNhXjm
-      v2iQUH5Plynj0bz866+/sh/xOh8sY65NF2jSeeHLw6eFm5IyzXM8LVyuuuBF
-      3fKh5rySUWPB6XjzZbNCc/NaEyhDx5wv8UhfOR1lRJ8upGvw43gRCotHPNxm
-      6IWinEC5t6kJcP/p5gVv5Wf/8CFaeHfpUOrd3iEoU9shSDc7JHwYhyoyTz+p
-      O4Yh29+f1Cv6Yxx5vagcdz0s/UVDWoqk8P3C3nPPy6asUdHBRnGDS94S/pBJ
-      +vOio+6Nv+jg2d/Z/xsA7KHuFsvCAAA=
+      - '53737'
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\r\n<html>\r\n\r\n\r\n\r\n<head>\r\n    \r\n    \r\n
+        \   <title>Ruby-debug not working - Stack Overflow</title>\r\n    <link rel=\"shortcut
+        icon\" href=\"http://cdn.sstatic.net/stackoverflow/img/favicon.ico\">\r\n
+        \   <link rel=\"apple-touch-icon\" href=\"http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png\">\r\n
+        \   <link rel=\"search\" type=\"application/opensearchdescription+xml\" title=\"Stack
+        Overflow\" href=\"/opensearch.xml\">\r\n\r\n    \r\n    <script type=\"text/javascript\"
+        src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>\r\n
+        \   <script type=\"text/javascript\" src=\"http://cdn.sstatic.net/js/stub.js?v=c014461b9109\"></script>\r\n
+        \   <link rel=\"stylesheet\" type=\"text/css\" href=\"http://cdn.sstatic.net/stackoverflow/all.css?v=6fc726be6344\">\r\n
+        \   \r\n    <link rel=\"canonical\" href=\"http://stackoverflow.com/questions/8351604/ruby-debug-not-working\">\r\n
+        \   <link rel=\"alternate\" type=\"application/atom+xml\" title=\"Feed for
+        question 'Ruby-debug not working'\" href=\"/feeds/question/8351604\">\r\n
+        \   <meta name=\"title\" content=\"Ruby-debug not working - Stack Overflow\">\r\n
+        \   <link rel=\"image_src\" href=\"http://sstatic.net/stackoverflow/img/apple-touch-icon.png\">\r\n
+        \   <script type=\"text/javascript\">\r\n        \r\n        StackExchange.ready(function
+        () {\r\n\r\n            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:8351604});\r\n\r\n
+        \           styleCode();\r\n        });\r\n    </script>\r\n\r\n\r\n        <script
+        type=\"text/javascript\">\r\n        StackExchange.init({\"stackAuthUrl\":\"https://stackauth.com\",\"serverTime\":1331140791,\"styleCode\":true,\"enableUserHovercards\":true,\"site\":{\"name\":\"Stack
+        Overflow\",\"description\":\"Q&A for professional and enthusiast programmers\"},\"user\":{\"isAnonymous\":true,\"fkey\":\"d1ca270bb20662c910b1306026a3cf00\",\"inboxUnviewedCount\":-1}});\r\n
+        \       StackExchange.using.setCacheBreakers({\"js/prettify-full.js\":\"4ed9aa4b8d0e\",\"js/moderator.js\":\"f57f00dcb1ac\",\"js/full-anon.js\":\"10196d1a84c9\",\"js/full.js\":\"ab9bd3b0c449\",\"js/wmd.js\":\"9ad7148077d1\",\"js/third-party/jquery.autocomplete.min.js\":\"e5f01e97f7c3\",\"js/mobile.js\":\"9e820382dd06\",\"js/help.js\":\"fc9fb0517db2\",\"js/tageditor.js\":\"c1ba807b32aa\",\"js/tageditornew.js\":\"ab523171ddc9\",\"js/inline-tag-editing.js\":\"be882e188985\",\"js/revisions.js\":\"8c6bcd93b7fe\",\"js/suggested-edits.js\":\"92144b1c12be\",\"js/probes.js\":\"beb933322ff0\"});\r\n
+        \       \r\n    </script>\r\n\r\n</head>\r\n<body class=\"question-page\">\r\n
+        \   <noscript><div id=\"noscript-padding\"></div></noscript>\r\n    <div id=\"notify-container\"></div>\r\n
+        \   <div id=\"overlay-header\"></div>\r\n    <div id=\"custom-header\"></div>\r\n\r\n
+        \   <div class=\"container\">\r\n        <div id=\"header\">\r\n            <div
+        id=\"portalLink\">\r\n                <a class=\"genu\" href=\"http://stackexchange.com\"
+        onclick=\"StackExchange.ready(function(){genuwine.click();});return false;\">Stack
+        Exchange</a>\r\n            </div>\r\n            <div id=\"topbar\">\r\n
+        \               <div id=\"hlinks\">\r\n                    <span id=\"hlinks-user\">\r\n
+        \                 \r\n                  </span>\r\n                  <span
+        id=\"hlinks-nav\">\r\n                  <a href=\"/users/login?returnurl=%2fquestions%2f8351604%2fruby-debug-not-working%2f9260206\">log
+        in</a>\r\n <span class=\"lsep\">|</span>\r\n<a href=\"http://careers.stackoverflow.com\">careers</a>\r\n
+        <span class=\"lsep\">|</span>\r\n\r\n                  </span>\r\n                  <span
+        id=\"hlinks-custom\">\r\n                  <a href=\"http://chat.stackoverflow.com\">chat</a>\r\n
+        <span class=\"lsep\">|</span>\r\n<a href=\"http://meta.stackoverflow.com\">meta</a>\r\n
+        <span class=\"lsep\">|</span>\r\n<a href=\"/about\">about</a>\r\n <span class=\"lsep\">|</span>\r\n<a
+        href=\"/faq\">faq</a>\r\n                  </span>\r\n                </div>\r\n
+        \               <div id=\"hsearch\">\r\n                    <form id=\"search\"
+        action=\"/search\" method=\"get\" autocomplete=\"off\">\r\n                    <div>\r\n
+        \                       <input autocomplete=\"off\" name=\"q\" class=\"textbox\"
+        placeholder=\"search\" tabindex=\"1\" type=\"text\" maxlength=\"140\" size=\"28\"
+        value=\"\">\r\n                    </div>\r\n                    </form>\r\n
+        \               </div>\r\n            </div>\r\n            <br class=\"cbt\">\r\n
+        \           <div id=\"hlogo\">\r\n                <a href=\"/\" >Stack Overflow</a>\r\n
+        \           </div>\r\n            <div id=\"hmenus\">\r\n                <div
+        class=\"nav mainnavs\">\r\n                    <ul>\r\n                        <li
+        class=\"youarehere\"><a id=\"nav-questions\" href=\"/questions\">Questions</a></li>\r\n
+        \                       <li><a id=\"nav-tags\" href=\"/tags\">Tags</a></li>\r\n
+        \                       <li><a id=\"nav-users\" href=\"/users\">Users</a></li>\r\n
+        \                       <li><a id=\"nav-badges\" href=\"/badges\">Badges</a></li>\r\n
+        \                       <li><a id=\"nav-unanswered\" href=\"/unanswered\">Unanswered</a></li>\r\n
+        \                   </ul>\r\n                </div>\r\n                <div
+        class=\"nav askquestion\">\r\n                    <ul>\r\n                        <li>\r\n
+        \                           <a id=\"nav-askquestion\"  href=\"/questions/ask\">Ask
+        Question</a>\r\n                        </li>\r\n                    </ul>\r\n
+        \               </div>\r\n            </div>\r\n        </div>\r\n\r\n        \r\n\r\n\r\n
+        \       <div id=\"content\">\r\n            \r\n            \r\n\r\n\r\n<div
+        itemscope itemtype=\"http://schema.org/Article\">\r\n<link itemprop=\"image\"
+        href=\"http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png\">\r\n<div
+        id=\"question-header\">\r\n    <h1 itemprop=\"name\"><a href=\"/questions/8351604/ruby-debug-not-working\"
+        class=\"question-hyperlink\">Ruby-debug not working</a></h1>\r\n</div>\r\n<div
+        id=\"mainbar\">\r\n\r\n\r\n<div class=\"question\" id=\"question\" data-questionid=\"8351604\">\r\n\r\n
+        \   <div class=\"everyonelovesstackoverflow\" id=\"adzerk1\">\r\n    </div>\r\n\r\n
+        \   \r\n    <table>\r\n    <tr>\r\n    <td class=\"votecell\">\r\n        \r\n\r\n<div
+        class=\"vote\">\r\n    <input type=\"hidden\" value=\"8351604\">\r\n    <a
+        class=\"vote-up-off\" title=\"This question shows research effort; it is useful
+        and clear (click again to undo)\">up vote</a>\r\n    <span class=\"vote-count-post\">1</span>\r\n
+        \   <a class=\"vote-down-off\" title=\"This question does not show any research
+        effort; it is unclear or not useful (click again to undo)\">down vote</a>\r\n
+        \   <a class=\"star-off\" href=\"#\" title=\"This is a favorite question (click
+        again to undo)\">favorite</a>\r\n    <div class=\"favoritecount\"><b></b></div>
+        \  \r\n \r\n    <script type=\"text/javascript\">\r\n        StackExchange.ready(function
+        () {\r\n            var shareUrl = 'http%3a%2f%2fstackoverflow.com%2fq%2f8351604';\r\n
+        \           var shareMsg = 'Ruby-debug+not+working';\r\n            \r\n            StackExchange.share.gplus($('#gp-share-8351604'),
+        shareUrl, shareMsg) ;\r\n            StackExchange.share.facebook($('#fb-share-8351604'),
+        shareUrl, shareMsg);\r\n            StackExchange.share.twitter($('#twitter-share-8351604'),
+        shareUrl, shareMsg);\r\n        });\r\n    </script>\r\n    <a id=\"gp-share-8351604\"
+        class=\"gp-share\" title=\"share link to this question on Google+\">share
+        [g+]</a>\r\n    <a id=\"fb-share-8351604\" class=\"fb-share\" title=\"share
+        link to this question on Facebook\">share [fb]</a>\r\n    <a id=\"twitter-share-8351604\"
+        class=\"twitter-share\" title=\"share link to this question on Twitter\">share
+        [tw]</a>    \r\n</div>\r\n\r\n    </td>\r\n<td class=\"postcell\">\r\n<div>
+        \         \r\n    <div class=\"post-text\" itemprop=\"description\">\r\n        <p>I
+        can't get the server to start in debugging mode:</p>\n\n<p>even though I have
+        all of the correct gems installed, the server refuses to start.</p>\n\n<pre><code>$
+        gem install ruby-debug\nERROR:  Error installing ruby-debug:\n       rbx-require-relative
+        requires Ruby version ~&gt; 1.8.7.\n</code></pre>\n\n<p>which doesn't work,
+        other posts say to use ruby-debug19:</p>\n\n<pre><code>David@DAVID-PC /c/triton6
+        \n$ gem install ruby-debug19\nSuccessfully installed ruby-debug19-0.11.6\n1
+        gem installed\nInstalling ri documentation for ruby-debug19-0.11.6...\nInstalling
+        RDoc documentation for ruby-debug19-0.11.6...\n\nDavid@DAVID-PC /c/triton6
+        \n$ rails server --debug\n=&gt; Booting WEBrick\n=&gt; Rails 3.1.3 application
+        starting in development on http://0.0.0.0:3000\n=&gt; Call with -d to detach\n=&gt;
+        Ctrl-C to shutdown server\nYou need to install ruby-debug to run the server
+        in debugging mode. With gems, use 'gem install &gt; ruby-debug' \nExiting\n</code></pre>\n\n<p>Any
+        idea what to do?</p>\n\n<p>Here is my Gemfile:</p>\n\n<pre><code>source 'http://rubygems.org'\n\ngem
+        'rails', '3.1.3'\n\n# Bundle edge Rails instead:\n# gem 'rails',     :git
+        =&gt; 'git://github.com/rails/rails.git'\n\ngem 'sqlite3'\ngem 'ruby-debug19'\ngem
+        'execjs'\ngem 'ruby-debug-ide'\n\n# Gems used only for assets and not required\n#
+        in production environments by default.\ngroup :assets do\ngem 'sass-rails',
+        \  '~&gt; 3.1.5'\ngem 'coffee-rails', '~&gt; 3.1.1'\ngem 'uglifier', '&gt;=
+        1.0.3'\nend\n\ngem 'jquery-rails'\n\n# To use ActiveModel has_secure_password\n#
+        gem 'bcrypt-ruby', '~&gt; 3.0.0'\n\n# Use unicorn as the web server\n# gem
+        'unicorn'\n\n# Deploy with Capistrano\n# gem 'capistrano'\n\n# To use debugger\n#
+        gem 'ruby-debug19', :require =&gt; 'ruby-debug'\n\ngroup :test do\n# Pretty
+        printed test output\ngem 'turn', '0.8.2', :require =&gt; false\nend\n</code></pre>\n\r\n
+        \   </div>            \r\n    <div class=\"post-taglist\">\r\n        <a href=\"/questions/tagged/ruby-on-rails\"
+        class=\"post-tag\" title=\"show questions tagged 'ruby-on-rails'\" rel=\"tag\">ruby-on-rails</a>
+        <a href=\"/questions/tagged/ruby-debug\" class=\"post-tag\" title=\"show questions
+        tagged 'ruby-debug'\" rel=\"tag\">ruby-debug</a> \r\n    </div>\r\n    <table
+        class=\"fw\">\r\n    <tr>\r\n    <td class=\"vt\">\r\n        <div class=\"post-menu\"><a
+        href=\"/q/8351604\" title=\"short permalink to this question\" id=\"link-post-8351604\">link</a><span
+        class=\"lsep\">|</span><a href=\"/posts/8351604/edit\" >improve this question</a></div>\r\n
+        \   </td>\r\n    <td align=\"right\" class=\"post-signature\">\r\n<div class=\"user-info\"><div
+        class=\"user-action-time\">edited <a href=\"/posts/8351604/revisions\" title=\"show
+        all edits to this post\"><span title=\"2011-12-02 04:14:47Z\" class=\"relativetime\">Dec
+        2 '11 at 4:14</span></a></div><div class=\"user-gravatar32\"></div><div class=\"user-details\"><br></div></div>
+        \   </td>\r\n    <td class=\"post-signature owner\">\r\n    <div class=\"user-info\"><div
+        class=\"user-action-time\">asked <span title=\"2011-12-02 03:56:36Z\" class=\"relativetime\">Dec
+        2 '11 at 3:56</span></div><div class=\"user-gravatar32\"><a href=\"/users/716321/david\"><div
+        class=\"\"><img src=\"http://www.gravatar.com/avatar/ade7238af91a2ac0a24f04908f4ff103?s=32&amp;d=identicon&amp;r=PG\"
+        alt=\"\" width=\"32\" height=\"32\"></div></a></div><div class=\"user-details\"><a
+        href=\"/users/716321/david\">David</a><br><span class=\"reputation-score\"
+        title=\"reputation score\" dir=\"ltr\">35</span><span title=\"6 bronze badges\"><span
+        class=\"badge3\"></span><span class=\"badgecount\">6</span></span></div></div>\r\n
+        \       <br class=\"cbt\">\r\n        <div class=\"accept-rate cool\" title=\"this
+        user has accepted an answer for 2 of 4 eligible questions\">50% accept rate</div>\r\n
+        \   </td>\r\n    </tr>\r\n    </table>\r\n</div>\r\n</td>    </tr>\r\n\r\n\r\n<tr>\r\n<td
+        class=\"votecell\"></td>\r\n<td>\r\n    <div id=\"comments-8351604\" class=\"comments
+        dno\">\r\n        <table>\r\n        <tbody>\r\n        \r\n            <tr><td></td><td></td></tr>\r\n
+        \       \r\n        </tbody>\r\n    \r\n        </table>\r\n    </div>\r\n
+        \   \r\n    \r\n    <div class=\"was-this-helpful\">\r\n        feedback\r\n
+        \   </div>\r\n    \r\n</td>\r\n</tr>    </table>    \r\n</div>\r\n\r\n\r\n\r\n<div
+        id=\"answers\">\r\n\r\n    <a name=\"tab-top\"></a>\r\n    <div id=\"answers-header\">\r\n
+        \       <div class=\"subheader answers-subheader\">\r\n            <h2>4 Answers</h2>\r\n
+        \           <div id=\"tabs\">\r\n                <a href=\"/questions/8351604/ruby-debug-not-working?answertab=active#tab-top\"
+        title=\"Answers with the latest activity first\">active</a>\r\n<a href=\"/questions/8351604/ruby-debug-not-working?answertab=oldest#tab-top\"
+        title=\"Answers in the order they were provided\">oldest</a>\r\n<a class=\"youarehere\"
+        href=\"/questions/8351604/ruby-debug-not-working?answertab=votes#tab-top\"
+        title=\"Answers with the highest score first\">votes</a>\r\n\r\n            </div>\r\n
+        \       </div>    \r\n    </div>    \r\n\r\n\r\n  \r\n    <a name=\"8351615\"></a>\r\n
+        \   <div id=\"answer-8351615\" class=\"answer\"  data-answerid=\"8351615\">\r\n
+        \       <table>\r\n        <tr>\r\n        <td class=\"votecell\">\r\n            \r\n\r\n<div
+        class=\"vote\">\r\n    <input type=\"hidden\" value=\"8351615\">\r\n    <a
+        class=\"vote-up-off\" title=\"This answer is useful (click again to undo)\">up
+        vote</a>\r\n    <span class=\"vote-count-post\">2</span>\r\n    <a class=\"vote-down-off\"
+        title=\"This answer is not useful (click again to undo)\">down vote</a>\r\n
+        \r\n</div>\r\n\r\n        </td>\r\n\r\n\r\n<td class=\"answercell\">\r\n    <div
+        class=\"post-text\"><p>Make sure you have <code>gem \"ruby-debug19\", :require
+        =&gt; 'ruby-debug'</code> in your Gemfile, then run <code>bundle install</code>
+        :)</p>\n\n<p><strong>Edit:</strong> Added the important <code>:require =&gt;</code>
+        statement, which I missed before</p>\n</div>\r\n    <table class=\"fw\">\r\n
+        \   <tr>\r\n    <td class=\"vt\">\r\n<div class=\"post-menu\"><a href=\"/a/8351615\"
+        title=\"short permalink to this answer\" id=\"link-post-8351615\">link</a><span
+        class=\"lsep\">|</span><a href=\"/posts/8351615/edit\" >improve this answer</a></div>
+        \   </td>\r\n    <td align=\"right\" class=\"post-signature\">\r\n<div class=\"user-info\"><div
+        class=\"user-action-time\">edited <a href=\"/posts/8351615/revisions\" title=\"show
+        all edits to this post\"><span title=\"2011-12-02 15:30:36Z\" class=\"relativetime\">Dec
+        2 '11 at 15:30</span></a></div><div class=\"user-gravatar32\"></div><div class=\"user-details\"><br></div></div>
+        \   </td>\r\n            \r\n\r\n    <td align=\"right\" class=\"post-signature\">
+        \  \r\n       \r\n\r\n    <div class=\"user-info user-hover\"><div class=\"user-action-time\">answered
+        <span title=\"2011-12-02 03:58:05Z\" class=\"relativetime\">Dec 2 '11 at 3:58</span></div><div
+        class=\"user-gravatar32\"><a href=\"/users/224334/ryanwilcox\"><div class=\"\"><img
+        src=\"http://www.gravatar.com/avatar/bfeafb6026cbf6128309744296c6d726?s=32&amp;d=identicon&amp;r=PG\"
+        alt=\"\" width=\"32\" height=\"32\"></div></a></div><div class=\"user-details\"><a
+        href=\"/users/224334/ryanwilcox\">RyanWilcox</a><br><span class=\"reputation-score\"
+        title=\"reputation score\" dir=\"ltr\">4,785</span><span title=\"7 silver
+        badges\"><span class=\"badge2\"></span><span class=\"badgecount\">7</span></span><span
+        title=\"14 bronze badges\"><span class=\"badge3\"></span><span class=\"badgecount\">14</span></span></div></div>\r\n
+        \   </td>\r\n    </tr>\r\n    </table>\r\n</td>        </tr>\r\n\r\n\r\n<tr>\r\n<td
+        class=\"votecell\"></td>\r\n<td>\r\n    <div id=\"comments-8351615\" class=\"comments\">\r\n
+        \       <table>\r\n        <tbody>\r\n                    \r\n    <tr id=\"comment-10301309\"
+        class=\"comment\">\r\n        <td></td>\r\n        <td class=\"comment-text\"><div><span
+        class=\"comment-copy\">unfortunately, that doesn&#39;t work:</span> &ndash;&nbsp;<a
+        href=\"/users/716321/david\" title=\"35 reputation\" class=\"comment-user
+        owner\">David</a> <span class=\"comment-date\" dir=\"ltr\"><span title=\"2011-12-02
+        04:02:09Z\">Dec 2 '11 at 4:02</span></span></div></td>\r\n    </tr>\r\n            \r\n
+        \   <tr id=\"comment-10301320\" class=\"comment\">\r\n        <td></td>\r\n
+        \       <td class=\"comment-text\"><div><span class=\"comment-copy\">Umm,
+        try <code>bundle exec rails server --debug</code>...</span> &ndash;&nbsp;<a
+        href=\"/users/224334/ryanwilcox\" title=\"4785 reputation\" class=\"comment-user\">RyanWilcox</a>
+        <span class=\"comment-date\" dir=\"ltr\"><span title=\"2011-12-02 04:03:46Z\">Dec
+        2 '11 at 4:03</span></span></div></td>\r\n    </tr>\r\n            \r\n    <tr
+        id=\"comment-10301343\" class=\"comment\">\r\n        <td></td>\r\n        <td
+        class=\"comment-text\"><div><span class=\"comment-copy\">nope :-( same error:
+        &quot;use &#39;jem install ruby-debug&#39;&quot;</span> &ndash;&nbsp;<a href=\"/users/716321/david\"
+        title=\"35 reputation\" class=\"comment-user owner\">David</a> <span class=\"comment-date\"
+        dir=\"ltr\"><span title=\"2011-12-02 04:06:46Z\">Dec 2 '11 at 4:06</span></span></div></td>\r\n
+        \   </tr>\r\n            \r\n    <tr id=\"comment-10301366\" class=\"comment\">\r\n
+        \       <td></td>\r\n        <td class=\"comment-text\"><div><span class=\"comment-copy\">I
+        added my Gemfile and double checked that I&#39;m executing in the correct
+        location</span> &ndash;&nbsp;<a href=\"/users/716321/david\" title=\"35 reputation\"
+        class=\"comment-user owner\">David</a> <span class=\"comment-date\" dir=\"ltr\"><span
+        title=\"2011-12-02 04:09:11Z\">Dec 2 '11 at 4:09</span></span></div></td>\r\n
+        \   </tr>\r\n            \r\n    <tr id=\"comment-10301476\" class=\"comment\">\r\n
+        \       <td></td>\r\n        <td class=\"comment-text\"><div><span class=\"comment-copy\">Any
+        idea where I can go from here?  I am at a total loss.</span> &ndash;&nbsp;<a
+        href=\"/users/716321/david\" title=\"35 reputation\" class=\"comment-user
+        owner\">David</a> <span class=\"comment-date\" dir=\"ltr\"><span title=\"2011-12-02
+        04:21:49Z\">Dec 2 '11 at 4:21</span></span></div></td>\r\n    </tr>\r\n\r\n
+        \       </tbody>\r\n    \r\n        </table>\r\n    </div>\r\n    <a id=\"comments-link-8351615\"
+        class=\"comments-link\" title=\"expand to show all comments on this post\">show
+        <b>1</b> more comment</a>\r\n    \r\n    <div class=\"was-this-helpful\">\r\n
+        \       feedback\r\n    </div>\r\n    \r\n</td>\r\n</tr>    </table>\r\n</div>\r\n\r\n
+        \   <div class=\"everyonelovesstackoverflow\" id=\"adzerk3\">\r\n    </div>\r\n\r\n
+        \   \r\n  \r\n    <a name=\"9260206\"></a>\r\n    <div id=\"answer-9260206\"
+        class=\"answer\"  data-answerid=\"9260206\">\r\n        <table>\r\n        <tr>\r\n
+        \       <td class=\"votecell\">\r\n            \r\n\r\n<div class=\"vote\">\r\n
+        \   <input type=\"hidden\" value=\"9260206\">\r\n    <a class=\"vote-up-off\"
+        title=\"This answer is useful (click again to undo)\">up vote</a>\r\n    <span
+        class=\"vote-count-post\">2</span>\r\n    <a class=\"vote-down-off\" title=\"This
+        answer is not useful (click again to undo)\">down vote</a>\r\n \r\n</div>\r\n\r\n
+        \       </td>\r\n\r\n\r\n<td class=\"answercell\">\r\n    <div class=\"post-text\"><p>I
+        had the same issues (and more) to get ruby debugging working in Aptana Studio
+        3. My setup and procedure to make it work:</p>\n\n<ul>\n<li>Mac OS X Lion
+        10.7.2</li>\n<li>Aptana Studio 3 (Build 3.0.8.201201201658)</li>\n<li><p>Using
+        rvm, in my project working directory I have a .rvmrc stating:</p>\n\n<pre><code>rvm
+        use ruby-1.9.3-p0@mygemset\n</code></pre></li>\n</ul>\n\n<p>To make ruby debugging
+        work in Aptana Studio I now have the following setup</p>\n\n<ul>\n<li><p>At
+        the end of my Gemfile I have:</p>\n\n<pre><code>gem \"ruby-debug-base19x\",
+        \"0.11.30.pre10\"\ngem 'ruby-debug-ide'\n</code></pre></li>\n</ul>\n\n<p>Note
+        that I'm NOT using ruby-debug-ide19 and ruby-debug19, Aptana Studio simply
+        refused to use this gem. No matter what, it always picked ruby-debug-ide 0.4.16.
+        </p>\n\n<p>I'm also not using ruby-debug-base19, but ruby-debug-base19x.</p>\n\n<ul>\n<li><p>To
+        build the latest ruby-debug-base19x, be sure the specify the correct ruby
+        context (include):</p>\n\n<pre><code>rvm 1.9.3-p0@mygemset do gem install
+        --pre ruby-debug-base19x -- --with-ruby-include=/Users/Freddy/.rvm/src/ruby-1.9.3-p0\n</code></pre></li>\n</ul>\n\n<p>Lose
+        the rvm ... do when not using rvm.</p>\n\n<ul>\n<li><p>Don't forget to do
+        Bundle install (or bundle update) from your project working directory. In
+        my terminal, when I type'Bundle list', for the mentioned gems the following
+        versions are listed:</p>\n\n<pre><code>linecache19 (0.5.13)\nruby-debug-base19x
+        (0.11.30.pre10)\nruby-debug-ide (0.4.16)\n</code></pre></li>\n<li><p>Important
+        : if you have linecache19 version 0.5.12 instead of .13, download the latest
+        version from <a href=\"http://rubyforge.org/frs/?group_id=8883&amp;release_id=46303\"
+        rel=\"nofollow\">RubyForge: ruby-debug19: Project Filelist</a>. I Downloaded
+        it to my ~/Downloads folder, so building and installing this gem in my rvm
+        context is as follows:</p>\n\n<pre><code>rvm 1.9.3-p0@mygemset do gem install
+        ~/Downloads/linecache19-0.5.13.gem -- --with-ruby-include=/Users/Freddy/.rvm/src/ruby-1.9.3-p0\n</code></pre></li>\n</ul>\n\n<p>If
+        you needed to install linecache19 version 0.5.13, don't forget to run 'bundle
+        update' again.</p>\n\n<ul>\n<li>After all this the final issue I had (and
+        its solution) when running the debugger in the ide is described here:</li>\n</ul>\n\n<p><a
+        href=\"http://stackoverflow.com/questions/8961367/aptana-3-ruby-debugger-exception-in-debugthread-loop-undefined-method-is-bin\">Aptana
+        3 ruby debugger - Exception in DebugThread loop: undefined method `is_binary_data?'</a></p>\n\n<p>Put
+        the code provided in the first answer above the 'module Debugger' statement
+        in xml_printer.rb. </p>\n\n<p>Enjoy!</p>\n\n<p>-- Freddy</p>\n\n<p><strong>A
+        note on building ruby-1.9.3-p0</strong>. This is a bit out of the scope of
+        the question, but since building this was (also) a pain a hint here. Compiling
+        ruby-1.9.3.-p0 gave multiple compiler errors related to openssl. The best
+        thing to do is to install the openssl-0.9.8n package in the rvm environment:</p>\n\n<ul>\n<li><p>When
+        you have XCode 4.2 installed, first you need to put the following in your
+        .rvmrc or .profile :</p>\n\n<pre><code>export CC=/usr/bin/gcc-4.2\n</code></pre></li>\n</ul>\n\n<p>Don't
+        for get to enabled it, e.g. $ source ~/.rvmrc</p>\n\n<ul>\n<li><p>Install
+        the openssl-0.9.8n package in the rvm environment (also see <a href=\"http://beginrescueend.com/packages/openssl/\"
+        rel=\"nofollow\">RVM: Ruby Version Manager - 'rvm pkg install openssl'</a>):</p>\n\n<pre><code>rvm
+        pkg install openssl\nrvm reinstall 1.9.3-p0 --with-openssl-dir=$rvm_path/usr\n</code></pre></li>\n</ul>\n</div>\r\n
+        \   <table class=\"fw\">\r\n    <tr>\r\n    <td class=\"vt\">\r\n<div class=\"post-menu\"><a
+        href=\"/a/9260206\" title=\"short permalink to this answer\" id=\"link-post-9260206\">link</a><span
+        class=\"lsep\">|</span><a href=\"/posts/9260206/edit\" >improve this answer</a></div>
+        \   </td>\r\n    <td align=\"right\" class=\"post-signature\">\r\n<div class=\"user-info\"><div
+        class=\"user-action-time\">edited <a href=\"/posts/9260206/revisions\" title=\"show
+        all edits to this post\"><span title=\"2012-02-13 12:14:53Z\" class=\"relativetime\">Feb
+        13 at 12:14</span></a></div><div class=\"user-gravatar32\"></div><div class=\"user-details\"><br></div></div>
+        \   </td>\r\n            \r\n\r\n    <td align=\"right\" class=\"post-signature\">
+        \  \r\n       \r\n\r\n    <div class=\"user-info\"><div class=\"user-action-time\">answered
+        <span title=\"2012-02-13 12:04:36Z\" class=\"relativetime\">Feb 13 at 12:04</span></div><div
+        class=\"user-gravatar32\"><a href=\"/users/889617/visionscaper\"><div class=\"\"><img
+        src=\"http://www.gravatar.com/avatar/756399c3384e9b726cb1afecd093c97e?s=32&amp;d=identicon&amp;r=PG\"
+        alt=\"\" width=\"32\" height=\"32\"></div></a></div><div class=\"user-details\"><a
+        href=\"/users/889617/visionscaper\">Visionscaper</a><br><span class=\"reputation-score\"
+        title=\"reputation score\" dir=\"ltr\">96</span><span title=\"8 bronze badges\"><span
+        class=\"badge3\"></span><span class=\"badgecount\">8</span></span></div></div>\r\n
+        \   </td>\r\n    </tr>\r\n    </table>\r\n</td>        </tr>\r\n\r\n\r\n<tr>\r\n<td
+        class=\"votecell\"></td>\r\n<td>\r\n    <div id=\"comments-9260206\" class=\"comments
+        dno\">\r\n        <table>\r\n        <tbody>\r\n        \r\n            <tr><td></td><td></td></tr>\r\n
+        \       \r\n        </tbody>\r\n    \r\n        </table>\r\n    </div>\r\n
+        \   \r\n    \r\n    <div class=\"was-this-helpful\">\r\n        feedback\r\n
+        \   </div>\r\n    \r\n</td>\r\n</tr>    </table>\r\n</div>\r\n\r\n  \r\n    <a
+        name=\"8351945\"></a>\r\n    <div id=\"answer-8351945\" class=\"answer\"  data-answerid=\"8351945\">\r\n
+        \       <table>\r\n        <tr>\r\n        <td class=\"votecell\">\r\n            \r\n\r\n<div
+        class=\"vote\">\r\n    <input type=\"hidden\" value=\"8351945\">\r\n    <a
+        class=\"vote-up-off\" title=\"This answer is useful (click again to undo)\">up
+        vote</a>\r\n    <span class=\"vote-count-post\">1</span>\r\n    <a class=\"vote-down-off\"
+        title=\"This answer is not useful (click again to undo)\">down vote</a>\r\n
+        \r\n</div>\r\n\r\n        </td>\r\n\r\n\r\n<td class=\"answercell\">\r\n    <div
+        class=\"post-text\"><p>The answer's already in your Gemfile, I think.</p>\n\n<pre><code>gem
+        'ruby-debug19', :require =&gt; 'ruby-debug'\n</code></pre>\n</div>\r\n    <table
+        class=\"fw\">\r\n    <tr>\r\n    <td class=\"vt\">\r\n<div class=\"post-menu\"><a
+        href=\"/a/8351945\" title=\"short permalink to this answer\" id=\"link-post-8351945\">link</a><span
+        class=\"lsep\">|</span><a href=\"/posts/8351945/edit\" >improve this answer</a></div>
+        \   </td>\r\n            \r\n\r\n    <td align=\"right\" class=\"post-signature\">
+        \  \r\n       \r\n\r\n    <div class=\"user-info user-hover\"><div class=\"user-action-time\">answered
+        <span title=\"2011-12-02 04:54:01Z\" class=\"relativetime\">Dec 2 '11 at 4:54</span></div><div
+        class=\"user-gravatar32\"><a href=\"/users/1976/joel-meador\"><div class=\"\"><img
+        src=\"http://www.gravatar.com/avatar/61e53406812a9c5408d4ac619478a429?s=32&amp;d=identicon&amp;r=PG\"
+        alt=\"\" width=\"32\" height=\"32\"></div></a></div><div class=\"user-details\"><a
+        href=\"/users/1976/joel-meador\">Joel Meador</a><br><span class=\"reputation-score\"
+        title=\"reputation score\" dir=\"ltr\">1,465</span><span title=\"7 silver
+        badges\"><span class=\"badge2\"></span><span class=\"badgecount\">7</span></span><span
+        title=\"15 bronze badges\"><span class=\"badge3\"></span><span class=\"badgecount\">15</span></span></div></div>\r\n
+        \   </td>\r\n    </tr>\r\n    </table>\r\n</td>        </tr>\r\n\r\n\r\n<tr>\r\n<td
+        class=\"votecell\"></td>\r\n<td>\r\n    <div id=\"comments-8351945\" class=\"comments\">\r\n
+        \       <table>\r\n        <tbody>\r\n                    \r\n    <tr id=\"comment-10301883\"
+        class=\"comment\">\r\n        <td></td>\r\n        <td class=\"comment-text\"><div><span
+        class=\"comment-copy\">errr.... that got me to a different error.  Now therubyracer
+        won&#39;t compile.</span> &ndash;&nbsp;<a href=\"/users/716321/david\" title=\"35
+        reputation\" class=\"comment-user owner\">David</a> <span class=\"comment-date\"
+        dir=\"ltr\"><span title=\"2011-12-02 05:11:54Z\">Dec 2 '11 at 5:11</span></span></div></td>\r\n
+        \   </tr>\r\n            \r\n    <tr id=\"comment-10316812\" class=\"comment\">\r\n
+        \       <td></td>\r\n        <td class=\"comment-text\"><div><span class=\"comment-copy\">What
+        does the stack trace say?</span> &ndash;&nbsp;<a href=\"/users/1976/joel-meador\"
+        title=\"1465 reputation\" class=\"comment-user\">Joel Meador</a> <span class=\"comment-date\"
+        dir=\"ltr\"><span title=\"2011-12-02 20:43:39Z\">Dec 2 '11 at 20:43</span></span></div></td>\r\n
+        \   </tr>\r\n\r\n        </tbody>\r\n    \r\n        </table>\r\n    </div>\r\n
+        \   \r\n    \r\n    <div class=\"was-this-helpful\">\r\n        feedback\r\n
+        \   </div>\r\n    \r\n</td>\r\n</tr>    </table>\r\n</div>\r\n\r\n  \r\n    <a
+        name=\"9540318\"></a>\r\n    <div id=\"answer-9540318\" class=\"answer\"  data-answerid=\"9540318\">\r\n
+        \       <table>\r\n        <tr>\r\n        <td class=\"votecell\">\r\n            \r\n\r\n<div
+        class=\"vote\">\r\n    <input type=\"hidden\" value=\"9540318\">\r\n    <a
+        class=\"vote-up-off\" title=\"This answer is useful (click again to undo)\">up
+        vote</a>\r\n    <span class=\"vote-count-post\">0</span>\r\n    <a class=\"vote-down-off\"
+        title=\"This answer is not useful (click again to undo)\">down vote</a>\r\n
+        \r\n</div>\r\n\r\n        </td>\r\n\r\n\r\n<td class=\"answercell\">\r\n    <div
+        class=\"post-text\"><p>What made it work for me is:</p>\n\n<pre><code>sudo
+        gem install ruby-debug19\ngem install linecache19\ngem install ruby-debug-base19\nbundle
+        update\nrails server -u\n</code></pre>\n</div>\r\n    <table class=\"fw\">\r\n
+        \   <tr>\r\n    <td class=\"vt\">\r\n<div class=\"post-menu\"><a href=\"/a/9540318\"
+        title=\"short permalink to this answer\" id=\"link-post-9540318\">link</a><span
+        class=\"lsep\">|</span><a href=\"/posts/9540318/edit\" >improve this answer</a></div>
+        \   </td>\r\n            \r\n\r\n    <td align=\"right\" class=\"post-signature\">
+        \  \r\n       \r\n\r\n    <div class=\"user-info\"><div class=\"user-action-time\">answered
+        <span title=\"2012-03-02 21:01:48Z\" class=\"relativetime\">Mar 2 at 21:01</span></div><div
+        class=\"user-gravatar32\"><a href=\"/users/433333/standup75\"><div class=\"\"><img
+        src=\"http://www.gravatar.com/avatar/4e551983f7abc814ec4d5e19ee523ad3?s=32&amp;d=identicon&amp;r=PG\"
+        alt=\"\" width=\"32\" height=\"32\"></div></a></div><div class=\"user-details\"><a
+        href=\"/users/433333/standup75\">standup75</a><br><span class=\"reputation-score\"
+        title=\"reputation score\" dir=\"ltr\">478</span><span title=\"1 silver badge\"><span
+        class=\"badge2\"></span><span class=\"badgecount\">1</span></span><span title=\"10
+        bronze badges\"><span class=\"badge3\"></span><span class=\"badgecount\">10</span></span></div></div>\r\n
+        \   </td>\r\n    </tr>\r\n    </table>\r\n</td>        </tr>\r\n\r\n\r\n<tr>\r\n<td
+        class=\"votecell\"></td>\r\n<td>\r\n    <div id=\"comments-9540318\" class=\"comments\">\r\n
+        \       <table>\r\n        <tbody>\r\n                    \r\n    <tr id=\"comment-12091283\"
+        class=\"comment\">\r\n        <td></td>\r\n        <td class=\"comment-text\"><div><span
+        class=\"comment-copy\">Be careful when posting copy and paste boilerplate/verbatim
+        answers to multiple questions, these tend to be flagged as &quot;spammy&quot;
+        by the community. If you&#39;re doing this then it usually means the questions
+        are duplicates so flag them as such instead: <a href=\"http://stackoverflow.com/questions/7802124\">stackoverflow.com/questions/7802124</a></span>
+        &ndash;&nbsp;<a href=\"/users/419/kev\" title=\"35136 reputation\" class=\"comment-user\">Kev<span
+        class=\"mod-flair\" title=\"moderator\">&#9830;</span></a> <span class=\"comment-date\"
+        dir=\"ltr\"><span title=\"2012-03-03 00:00:19Z\">Mar 3 at 0:00</span></span></div></td>\r\n
+        \   </tr>\r\n            \r\n    <tr id=\"comment-12131440\" class=\"comment\">\r\n
+        \       <td></td>\r\n        <td class=\"comment-text\"><div><span class=\"comment-copy\">Thanks
+        for the advise, just meant to be helpful, cause I really got stuck on that</span>
+        &ndash;&nbsp;<a href=\"/users/433333/standup75\" title=\"478 reputation\"
+        class=\"comment-user\">standup75</a> <span class=\"comment-date\" dir=\"ltr\"><span
+        title=\"2012-03-05 15:22:37Z\">2 days ago</span></span></div></td>\r\n    </tr>\r\n\r\n
+        \       </tbody>\r\n    \r\n        </table>\r\n    </div>\r\n    \r\n    \r\n
+        \   <div class=\"was-this-helpful\">\r\n        feedback\r\n    </div>\r\n
+        \   \r\n</td>\r\n</tr>    </table>\r\n</div>\r\n    <a name='new-answer'></a>\r\n
+        \   <form id=\"post-form\" action=\"/questions/8351604/answer/submit\" method=\"post\"
+        \ class=\"post-form\">\r\n        <h2 class=\"space\">Your Answer</h2>\r\n\r\n<script
+        type=\"text/javascript\">\r\n    StackExchange.ready(function() {\r\n    \r\n
+        \       initTagRenderer(\"\".split(\" \"), \"\".split(\" \"));\r\n\r\n              \r\n
+        \           prepareEditor({\r\n                heartbeatType: 'answer',\r\n
+        \               bindNavPrevention: true,\r\n                postfix: \"\",\r\n
+        \               onDemand: true\r\n                ,immediatelyShowMarkdownHelp:true\r\n
+        \           });\r\n            \r\n    });  \r\n</script>\r\n\r\n\r\n<div
+        id=\"post-editor\" class=\"post-editor\">  \r\n\r\n    \r\n    <div class=\"wmd-container\">\r\n
+        \       <div id=\"wmd-button-bar\" class=\"wmd-button-bar\"></div>\r\n        <textarea
+        id=\"wmd-input\" class=\"wmd-input\" name=\"post-text\" cols=\"92\" rows=\"15\"
+        tabindex=\"101\"></textarea>\r\n    </div>\r\n\r\n    <div class=\"fl\" style=\"margin-top:
+        8px; height:24px;\">&nbsp;</div>\r\n    <div id=\"draft-saved\" class=\"draft-saved
+        community-option fl\" style=\"margin-top: 8px; height:24px; display:none;\">draft
+        saved</div>\r\n\r\n\r\n\r\n    <div id=\"wmd-preview\" class=\"wmd-preview\"></div>\r\n
+        \   <div></div>\r\n    <div class=\"edit-block\">\r\n        <input id=\"fkey\"
+        name=\"fkey\" type=\"hidden\" value=\"d1ca270bb20662c910b1306026a3cf00\">\r\n
+        \       <input id=\"author\" name=\"author\" type=\"text\">\r\n    </div>\r\n</div>
+        \  \r\n    <div class=\"form-item\">\r\n        <table>\r\n        <tr>\r\n
+        \       <td class=\"vm open-id-login\">\r\n            <a id=\"login-link\"
+        style=\"font-size: 200%; margin-left: 30px;\" href=\"/users/login?returnurl=%2fquestions%2f8351604%2fruby-debug-not-working\">log
+        in</a>\r\n            <script type=\"text/javascript\">\r\n                StackExchange.ready(function
+        () {\r\n                    StackExchange.helpers.onClickDraftSave('#login-link');\r\n
+        \               });\r\n            </script>\r\n        </td>\r\n\r\n    \r\n
+        \       <td class=\"orcell\">\r\n            <div class=\"orword\">or</div>\r\n
+        \           <div class=\"orline\"></div>\r\n        </td>\r\n        <td class=\"vm\">\r\n
+        \           <div>\r\n                <label for=\"display-name\">Name</label>\r\n
+        \               <input id=\"display-name\" name=\"display-name\" type=\"text\"
+        size=\"30\" maxlength=\"30\" value=\"\" tabindex=\"105\">\r\n            </div>\r\n
+        \           <div>\r\n                <label for=\"m-address\">Email</label>\r\n
+        \               <input id=\"m-address\" name=\"m-address\" type=\"text\" size=\"40\"
+        maxlength=\"100\" value=\"\" tabindex=\"106\">\r\n                <span class=\"edit-field-overlay\">required,
+        but never shown</span>\r\n            </div>\r\n            <div>\r\n                <label
+        for=\"home-page\">Home Page</label>\r\n                <input id=\"home-page\"
+        name=\"home-page\" type=\"text\" size=\"40\" maxlength=\"200\" value=\"\"
+        tabindex=\"107\">\r\n            </div>\r\n        </td>\r\n    \r\n        </tr>\r\n
+        \       </table>\r\n    </div>\r\n               \r\n        <div class=\"form-submit
+        cbt\"><input id=\"submit-button\" type=\"submit\" value=\"Post Your Answer\"
+        tabindex=\"110\"></div>\r\n    </form>\r\n\r\n\r\n        <h2 class=\"bottom-notice\">\r\n
+        \               Not the answer you're looking for? \r\n            Browse
+        other questions tagged <a href=\"/questions/tagged/ruby-on-rails\" class=\"post-tag\"
+        title=\"show questions tagged 'ruby-on-rails'\" rel=\"tag\">ruby-on-rails</a>
+        <a href=\"/questions/tagged/ruby-debug\" class=\"post-tag\" title=\"show questions
+        tagged 'ruby-debug'\" rel=\"tag\">ruby-debug</a> \r\n                or <a
+        href=\"/questions/ask\">ask your own question</a>.\r\n        </h2>\r\n</div>\r\n</div>\r\n<div
+        id=\"sidebar\">\r\n\r\n\r\n\r\n    <style type=\"text/css\">\r\n        .hide-newsletter-loading\r\n
+        \       {\r\n            visibility: hidden;\r\n        }\r\n    </style>\r\n
+        \   <div class=\"module newuser newuser-greeting hide-newsletter-loading\"
+        style=\"display:none\">\r\n        <h4>Hello World!</h4>\r\n        <div>\r\n
+        \           <p><p>This is a collaboratively edited question and answer site
+        for <b>professional and enthusiast programmers</b>. It's 100% free, no registration
+        required.</p></p>\r\n            <p class=\"ar\"><a href=\"/about?mnu=1\">about
+        &raquo;</a>&nbsp;&nbsp;&nbsp;<a href=\"/faq?mnu=1\">faq &raquo;</a>\r\n            </p>\r\n
+        \       </div>\r\n\r\n\r\n            <script type=\"text/javascript\">\r\n
+        \               StackExchange.ready(function () {\r\n                    var
+        newUser = $('.newuser-greeting');\r\n                    if(!StackExchange.options.user.isAnonymous)
+        {\r\n                        newUser.removeClass('hide-newsletter-loading');\r\n
+        \                       return;\r\n                    }\r\n\r\n                    var
+        continuingSession = window.sessionStorage && window.sessionStorage['targettedNewsletter'];\r\n\r\n
+        \                   var matches = /:\\/\\/([^\\/]*)/.exec(document.referrer);\r\n\r\n
+        \                   if (!continuingSession && (!matches || matches.length
+        != 2)) {\r\n                        newUser.removeClass('hide-newsletter-loading');\r\n
+        \                   } else {\r\n                        var domain = continuingSession
+        || matches[1];\r\n\r\n                        if (continuingSession || $.inArray(domain,
+        ['www.reddit.com','news.ycombinator.com']) > -1) {\r\n                            $.ajax({\r\n
+        \                               url: '/newsletter/targetted/ajax',\r\n                                data:
+        { domain: domain },\r\n                                success: function (data,
+        status, xhr) {\r\n                                    $('#newsletter-ad').remove();\r\n
+        \                                   newUser.empty().append($(data));\r\n                                },\r\n
+        \                               complete: function () {\r\n                                    newUser.attr('class',
+        '').attr('style', '');\r\n                                }\r\n                            });\r\n\r\n
+        \                           if(!continuingSession && window.sessionStorage)
+        {\r\n                                window.sessionStorage['targettedNewsletter']
+        = domain + '-continued';\r\n                            }\r\n                        }
+        else {\r\n                            newUser.removeClass('hide-newsletter-loading');\r\n
+        \                       }\r\n                    }\r\n                });\r\n
+        \           </script>\r\n    </div>\r\n    <div class=\"module\">\r\n        <p
+        class=\"label-key\">tagged</p>\r\n        <div class=\"tagged\"><a href=\"/questions/tagged/ruby-on-rails\"
+        class=\"post-tag\" title=\"show questions tagged 'ruby-on-rails'\" rel=\"tag\">ruby-on-rails</a>&nbsp;<span
+        class=\"item-multiplier\"><span class=\"item-multiplier-x\">&times;</span>&nbsp;<span
+        class=\"item-multiplier-count\">66134</span></span><br>\n<a href=\"/questions/tagged/ruby-debug\"
+        class=\"post-tag\" title=\"show questions tagged 'ruby-debug'\" rel=\"tag\">ruby-debug</a>&nbsp;<span
+        class=\"item-multiplier\"><span class=\"item-multiplier-x\">&times;</span>&nbsp;<span
+        class=\"item-multiplier-count\">82</span></span><br>\n</div>\r\n        <table
+        id=\"qinfo\">\r\n            <tr>\r\n                <td><p class=\"label-key\">asked</p></td>\r\n
+        \               <td style=\"padding-left:10px\"><p class=\"label-key\" title=\"2011-12-02
+        03:56:36Z\"><b>3 months ago</b></p></td>\r\n            </tr>\r\n            <tr>\r\n
+        \               <td><p class=\"label-key\">viewed</p></td>\r\n\r\n                <td
+        style=\"padding-left:10px\"><p class=\"label-key\"><b>561 times</b></p></td>\r\n
+        \           </tr>\r\n            <tr>\r\n                <td><p class=\"label-key\">active</p></td>\r\n
+        \               <td style=\"padding-left:10px\"><p class=\"label-key\"><b><a
+        href=\"?lastactivity\" class=\"lastactivity-link\" title=\"2012-03-02 21:01:48Z\">4
+        days ago</a></b></p></td>\r\n            </tr>\r\n        </table>\r\n    </div>\r\n
+        \   \r\n        <script type=\"text/javascript\">\r\n            var scriptSrc
+        = \"http://engine2.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44?keywords=ruby-on-rails,ruby-debug\";\r\n
+        \           if (document.referrer) {\r\n                if (/\\?/.test(scriptSrc))\r\n
+        \                   scriptSrc += \"&\";\r\n                else\r\n                    scriptSrc
+        += \"?\";\r\n                scriptSrc += \"xReferrer=\" + document.referrer;\r\n
+        \           }\r\n            StackExchange.ready(function(){var z = document.createElement(\"script\");
+        z.type = \"text/javascript\"; z.async = \"true\"; z.src = scriptSrc; var s
+        = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(z,
+        s);});\r\n        </script>\r\n    \r\n    <div class=\"everyonelovesstackoverflow\"
+        id=\"adzerk2\">\r\n    </div>\r\n\r\n    \r\n    <div id=\"hireme\">\r\n        <script
+        type=\"text/javascript\">\r\n            var careers_adurl=\"http://careers.stackoverflow.com/ad/js\",careers_cssurl=\"http://cdn.sstatic.net/careers/ads/sidebar.min.css?35cfa9\",careers_leaderboardcssurl=\"http://cdn.sstatic.net/careers/ads/ninja.min.css?35cfa8\",careers_companycssurl=\"http://cdn.sstatic.net/careers/ads/company\",careers_adselector=\"div.hireme,
+        div#hireme\";if($(careers_adselector).length==0){var style=\"min-height:220px;margin:12px
+        0\",div=$(\"<div>\").attr(\"id\",\"hireme\").addClass(\"hireme\").attr(\"style\",style),dummy=$(\"<div>\").html(div);document.write(dummy.html())}StackExchange.ready(function(){$.ajax({url:\"http://cdn.sstatic.net/careers/ads/adloader.min.js?35cfa8\",dataType:\"script\",cache:true})});\r\n
+        \       </script>\r\n    </div>\r\n\r\n      \r\n\r\n    <div class=\"module\">\r\n
+        \   <h4 id=\"h-linked\">Linked</h4>\r\n    <div class=\"linked\">\r\n    <div
+        class=\"spacer\">\r\n<a href=\"/questions/1083451/debugging-in-ruby-1-9\"
+        class=\"question-hyperlink\">Debugging in ruby 1.9</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a
+        href=\"/questions/8087610/ruby-debug-with-ruby-1-9-3\" class=\"question-hyperlink\">ruby-debug
+        with Ruby 1.9.3?</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/5200818/ruby-1-9-1-and-aptana-studio-3-cant-get-debug-to-work-windows\"
+        class=\"question-hyperlink\">Ruby 1.9.1 and Aptana Studio 3 Cant get debug
+        to work (Windows)</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/8961367/aptana-3-ruby-debugger-exception-in-debugthread-loop-undefined-method-is-bin\"
+        class=\"question-hyperlink\">Aptana 3 ruby debugger - Exception in DebugThread
+        loop: undefined method `is_binary_data?&#39;</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a
+        href=\"/questions/7802124/debug-rails-3-1-1-application\" class=\"question-hyperlink\">debug
+        rails 3.1.1 application</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/9007479/ruby-debug-not-finding-variables-in-rspec-in-sinatra\"
+        class=\"question-hyperlink\">ruby-debug not finding variables in rspec (in
+        sinatra)</a>\r\n</div>\r\n\r\n    </div>\r\n    </div>\r\n    <div class=\"module\">\r\n
+        \   <h4 id=\"h-related\">Related</h4>\r\n    <div class=\"related\">\r\n    <div
+        class=\"spacer\">\r\n<a href=\"/questions/1926557/debugging-breakpoint-ing-the-rails-core-with-ruby-debug\"
+        class=\"question-hyperlink\">Debugging/Breakpoint-ing the Rails Core with
+        Ruby-Debug?</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/1972494/ruby-debug-gem-install-problem-on-windows\"
+        class=\"question-hyperlink\">Ruby-Debug Gem Install Problem on Windows</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/1972549/problem-installing-ruby-debug-on-windows\"
+        class=\"question-hyperlink\">Problem Installing Ruby-Debug on Windows</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/3009783/using-ruby-debug-with-jruby-1-5-0\"
+        class=\"question-hyperlink\">using ruby-debug with jruby-1.5.0</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/3585985/how-to-debug-a-plugin-gem-with-useful-notes-to-setup-and-use-ruby-debug-gem\"
+        class=\"question-hyperlink\">How to debug a plugin / gem? (with useful notes
+        to setup and use ruby-debug gem)</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a
+        href=\"/questions/4180541/ruby-debug-wont-install-build-native-extensions\"
+        class=\"question-hyperlink\">ruby-debug wont install / build native extensions</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/4426821/installing-ruby-debug-ide-on-an-offline-machine\"
+        class=\"question-hyperlink\">installing ruby-debug-ide on an offline machine</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/4778177/can-install-gem-ruby-debug-but-rails-server-cant-find-it\"
+        class=\"question-hyperlink\">Can install gem ruby-debug, but rails server
+        can&#39;t find it</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/4898334/ruby-debug-and-cucumber\"
+        class=\"question-hyperlink\">ruby-debug and cucumber</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/4976958/debugging-migrations-in-rails-3-using-ruby-debug\"
+        class=\"question-hyperlink\">Debugging migrations in rails 3 using ruby-debug?</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/5045867/ruby-debug-no-such-file-to-load-spec-helper\"
+        class=\"question-hyperlink\">Ruby Debug &ldquo;no such file to load --spec_helper&rdquo;</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/5200401/ruby-debug-color\" class=\"question-hyperlink\">Ruby-debug
+        color?</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/5446594/running-ruby-debug-in-rspec\"
+        class=\"question-hyperlink\">Running ruby debug in rspec?</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/6583017/jump-to-next-line-of-my-code-in-ruby-debug\"
+        class=\"question-hyperlink\">Jump to next line of *my code* in ruby-debug</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/6753617/problems-with-ruby-debug-in-rspec-on-jruby-and-windows\"
+        class=\"question-hyperlink\">Problems with ruby-debug in RSpec on JRuby and
+        Windows</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/8087610/ruby-debug-with-ruby-1-9-3\"
+        class=\"question-hyperlink\">ruby-debug with Ruby 1.9.3?</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/8283477/error-installing-ruby-debug-ide\"
+        class=\"question-hyperlink\">Error: installing ruby-debug-ide</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/8753566/thin-with-ssl-support-and-ruby-debug\"
+        class=\"question-hyperlink\">Thin with SSL support and ruby-debug</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/8767640/nginx-rails-and-ruby-debug\"
+        class=\"question-hyperlink\">nginx, rails and ruby-debug</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/8859947/ruby-debug-aborts-sporadically-while-debugging-cucumber-scenarios-for-a-rails-ap\"
+        class=\"question-hyperlink\">ruby-debug aborts sporadically while debugging
+        cucumber scenarios for a rails app (maybe when I raise an exception)</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/8996498/ruby-debug-with-pow-breakpoints-never-hit\"
+        class=\"question-hyperlink\">ruby-debug with Pow &mdash; breakpoints never
+        hit</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/9122232/how-do-i-install-ruby-debug-in-ruby-1-9-3-rails-3-2-1\"
+        class=\"question-hyperlink\">how do I install ruby-debug in ruby 1.9.3 / Rails
+        3.2.1</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/9187140/ruby-debug-does-not-halt\"
+        class=\"question-hyperlink\">ruby-debug does not halt</a>\r\n</div>\r\n<div
+        class=\"spacer\">\r\n<a href=\"/questions/9408670/is-ruby-debug-ide-available-to-be-installed-on-windows-with-ruby1-9-3\"
+        class=\"question-hyperlink\">Is ruby-debug-ide available to be installed on
+        windows with ruby1.9.3?</a>\r\n</div>\r\n<div class=\"spacer\">\r\n<a href=\"/questions/9415217/why-my-aptanastudio3-0-cant-debug-rails-application\"
+        class=\"question-hyperlink\">Why my AptanaStudio3.0 can&#39;t debug Rails
+        application?</a>\r\n</div>\r\n\r\n    </div>\r\n    </div>\r\n</div>\r\n\r\n<div
+        id=\"feed-link\">\r\n    <div id=\"feed-link-text\"><a href=\"/feeds/question/8351604\"
+        title=\"feed of this question and its answers\"><span class=\"feed-icon\"></span>question
+        feed</a></div>\r\n</div>\r\n<script type=\"text/javascript\">\r\nStackExchange.ready(function(){$.get('/posts/8351604/ivc/24ee');});\r\n</script>\r\n<noscript>\r\n
+        \   <div><img src=\"/posts/8351604/ivc/24ee\" class=\"dno\" alt=\"\" width=\"0\"
+        height=\"0\"></div>\r\n</noscript><div style=\"display:none\" id=\"prettify-lang\">default</div></div>\r\n
+        \       </div>\r\n    </div>\r\n    <div id=\"footer\">\r\n        <div class=\"footerwrap\">\r\n
+        \           <div id=\"footer-menu\">\r\n                <a href=\"/about\">about</a>
+        |\r\n                <a href=\"/faq\">faq</a> |\r\n                \r\n                    <span
+        onclick=\"if(window.localStorage){localStorage.setItem('blog-new',1331153908000);
+        $('.new-blog-post').fadeOut();}\">\r\n                        <script type=\"text/javascript\">if(!window.localStorage
+        || new Date(+localStorage.getItem('blog-new'))<new Date())document.write('<span
+        title=\"The New Stack Exchange Beta Theme, by Robert Cartaino - 20 hours ago\"
+        class=\"new-blog-post\">new<\\/span>');</script>\r\n                        <a
+        href=\"http://blog.stackexchange.com?blt=1\">blog</a>\r\n                    </span>
+        |\r\n                    <a href=\"http://chat.stackoverflow.com\">chat</a>
+        |\r\n                <a href=\"http://data.stackexchange.com\">data</a> |\r\n
+        \               <a href=\"http://blog.stackoverflow.com/category/podcasts/\">podcast</a>
+        |\r\n                <a href=\"http://shop.stackexchange.com/\">shop</a> |\r\n
+        \               <a href=\"http://stackexchange.com/legal\">legal</a> |\r\n
+        \               <a href=\"http://engine.adzerk.net/redirect/0/2776/2751/0/4de3c60f719c4dfcb1a57531c7050090/0\">advertising
+        info</a> |\r\n\r\n                <a onclick=\"StackExchange.switchMobile('on',
+        '/questions/8351604/ruby-debug-not-working/9260206')\">mobile</a> |\r\n\r\n
+        \               <b><a href=\"mailto:team@stackoverflow.com\">contact us</a></b>\r\n
+        \                 | <b><a href=\"http://meta.stackoverflow.com\">feedback</a></b>\r\n
+        \               <div id=\"footer-sites\">\r\n                    \r\n                        <span
+        style=\"color:#FE7A15;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://stackoverflow.com\">stackoverflow.com</a>&nbsp;
+        \r\n                        <span style=\"color:#FE7A15;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://stackapps.com\">api/apps</a>&nbsp; \r\n                        <span
+        style=\"color:#FE7A15;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://careers.stackoverflow.com\">careers</a>&nbsp;
+        \r\n                        <span style=\"color:#E8272C;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://serverfault.com\">serverfault.com</a>&nbsp; \r\n                        <span
+        style=\"color:#00AFEF;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://superuser.com\">superuser.com</a>&nbsp;
+        \r\n                        <span style=\"color:#969696;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://meta.stackoverflow.com\">meta</a>&nbsp; \r\n                        <span
+        style=\"color:#46937D;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://area51.stackexchange.com\">area&nbsp;51</a>&nbsp;
+        \r\n                        <span style=\"color:#C0D0DC;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://webapps.stackexchange.com\">webapps</a>&nbsp; \r\n                        <span
+        style=\"color:#000000;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://gaming.stackexchange.com\">gaming</a>&nbsp;
+        \r\n                        <span style=\"color:#dd4814;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://askubuntu.com\">ubuntu</a>&nbsp; \r\n                        <span
+        style=\"color:#9ce4fe;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://webmasters.stackexchange.com\">webmasters</a>&nbsp;
+        \r\n                        <span style=\"color:#cf4d3f;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://cooking.stackexchange.com\">cooking</a>&nbsp; \r\n                        <span
+        style=\"color:#f4f28d;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://gamedev.stackexchange.com\">game
+        development</a>&nbsp; \r\n                        <span style=\"color:#0f3559;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://math.stackexchange.com\">math</a>&nbsp; \r\n                        <span
+        style=\"color:#f2f2f2;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://photo.stackexchange.com\">photography</a>&nbsp;
+        \r\n                        <span style=\"color:#037187;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://stats.stackexchange.com\">stats</a>&nbsp; \r\n                        <span
+        style=\"color:#f1e7cc;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://tex.stackexchange.com\">tex</a>&nbsp;
+        \r\n                        <span style=\"color:#e1cdae;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://english.stackexchange.com\">english</a>&nbsp; \r\n                        <span
+        style=\"color:#a2d9f6;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://cstheory.stackexchange.com\">theoretical
+        cs</a>&nbsp; \r\n                        <span style=\"color:#1b3e6c;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://programmers.stackexchange.com\">programmers</a>&nbsp; \r\n                        <span
+        style=\"color:#293a5d;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://unix.stackexchange.com\">unix</a>&nbsp;\r\n
+        \                       <span style=\"color:#bec0cb;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://apple.stackexchange.com\">apple</a>&nbsp;\r\n                        <span
+        style=\"color:#939185;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://wordpress.stackexchange.com\">wordpress</a>&nbsp;\r\n
+        \                       <span style=\"color:#ebf5f5;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://physics.stackexchange.com\">physics</a>&nbsp;\r\n                        <span
+        style=\"color:#4176ab;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://diy.stackexchange.com\">home&nbsp;improvement</a>&nbsp;\r\n
+        \                       <span style=\"color:#d1d8d7;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://gis.stackexchange.com\">gis</a>&nbsp;\r\n                        <span
+        style=\"color:#e5e2d3;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://electronics.stackexchange.com\">electronics</a>&nbsp;\r\n
+        \                       <span style=\"color:#a4c639;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://android.stackexchange.com\">android</a>&nbsp;\r\n                        <span
+        style=\"color:#2e4e60;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://security.stackexchange.com\">security</a>&nbsp;\r\n
+        \                       <span style=\"color:#45bcb5;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://bicycles.stackexchange.com\">bicycles</a>&nbsp;\r\n                        <span
+        style=\"color:#00adee;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://dba.stackexchange.com\">dba</a>&nbsp;\r\n
+        \                       <span style=\"color:#2edaf0;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://drupal.stackexchange.com\">drupal</a>&nbsp;\r\n                        <span
+        style=\"color:#213951;font-size:140%\">&#9632;</span>&nbsp;<a href=\"http://sharepoint.stackexchange.com\">sharepoint</a>&nbsp;\r\n
+        \                       <span style=\"color:#73abb3;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://scifi.stackexchange.com\">scifi &amp; fantasy</a>&nbsp;\r\n
+        \                       <span style=\"color:#23629F;font-size:140%\">&#9632;</span>&nbsp;<a
+        href=\"http://ux.stackexchange.com\">user experience</a>&nbsp;\r\n                </div>\r\n
+        \           </div>\r\n            <div id=\"footer-flair\">\r\n                <a
+        class=\"peer1\" href=\"http://www.peer1.com/stackoverflow\"></a>  \r\n\t            <a
+        href=\"http://creativecommons.org/licenses/by-sa/3.0/\" class=\"cc-wiki-link\"></a>\r\n
+        \               <div id=\"svnrev\">rev 2012.3.7.1501</div>\r\n            </div>\r\n
+        \           <div id=\"copyright\">\r\n                site design / logo &copy;
+        2012 stack exchange inc; \r\n                user contributions licensed under
+        <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\" rel=\"license\">cc-wiki</a>
+        with <a href=\"http://blog.stackoverflow.com/2009/06/attribution-required/\"
+        rel=\"license\">attribution required</a>\r\n            </div>\r\n            \r\n\r\n
+        \       </div>\r\n    </div>\r\n    \r\n    <noscript>\r\n        <div id=\"noscript-warning\">Stack
+        Overflow works best with JavaScript enabled<img src=\"http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif\"
+        alt=\"\" class=\"dno\"></div>\r\n    </noscript>\r\n    <script type=\"text/javascript\">var
+        _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-1']);\r\n        _gaq.push(['_setCustomVar',
+        1, 'tags', '|ruby-on-rails|ruby-debug|']); \r\n_gaq.push(['_trackPageview']);\r\n
+        \   var _qevents = _qevents || [];\r\n    (function(){\r\n        var s=document.getElementsByTagName('script')[0];\r\n
+        \       var ga=document.createElement('script');\r\n        ga.type='text/javascript';\r\n
+        \       ga.async=true;\r\n        ga.src='http://www.google-analytics.com/ga.js';\r\n
+        \       s.parentNode.insertBefore(ga,s);\r\n        var sc=document.createElement('script');\r\n
+        \       sc.type='text/javascript';\r\n        sc.async=true;\r\n        sc.src='http://edge.quantserve.com/quant.js';
+        \r\n        s.parentNode.insertBefore(sc,s);\r\n    })();\r\n    </script>\r\n
+        \   <script type=\"text/javascript\">\r\n        _qevents.push({ qacct: \"p-c1rF4kxgLUzNc\"
+        });\r\n    </script>    \r\n    \r\n    \r\n    \r\n</body>\r\n</html>"
     http_version: '1.1'
+  recorded_at: Wed, 07 Mar 2012 17:19:52 GMT
+recorded_with: VCR 2.0.0
