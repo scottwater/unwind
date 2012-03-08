@@ -29,21 +29,16 @@ module Unwind
       headers = (options || {}).merge({"accept-encoding" => "none"})
       response = Faraday.get(current_url, headers)
 
-      if [301, 302, 303].include?(response.status)
-        @redirects << current_url.to_s
-        @redirect_limit -= 1
-        resolve(redirect_url(response).normalize, apply_cookie(response, headers))
-      elsif response.status == 200 && meta_uri = meta_refresh?(response)
-        @redirects << current_url.to_s
-        @redirect_limit -= 1
-        resolve(meta_uri.normalize, apply_cookie(response, headers))
+      if is_response_redirect?(response)
+        handle_redirect(redirect_url(response), current_url, response, headers)
+      elsif meta_uri = meta_refresh?(response)
+        handle_redirect(meta_uri, current_url, response, headers)
       else
-        @final_url = current_url.to_s
-        @response = response
-        self
+        handle_final_response(current_url, response)
       end
-    end
 
+      self
+    end
 
     def self.resolve(original_url, limit=5)
       new(original_url, limit).resolve
@@ -51,6 +46,30 @@ module Unwind
 
   private
 
+    def record_redirect(url)
+      @redirects << url.to_s
+      @redirect_limit -= 1
+    end
+
+    def is_response_redirect?(response)
+      [301, 302, 303].include?(response.status)
+    end
+
+    def handle_redirect(uri_to_redirect, url, response, headers)
+      record_redirect url
+      resolve(uri_to_redirect.normalize, apply_cookie(response, headers))
+    end
+
+    def handle_final_response(current_url, response)
+      current_url = current_url.dup.to_s
+      if response.status == 200 &&  canonical = canonical_link?(response)
+        @redirects << current_url
+        @final_url = canonical
+      else
+        @final_url = current_url
+      end
+      @response = response
+    end
 
     def ok_to_continue?
       raise TooManyRedirects if redirect_limit < 0
@@ -68,8 +87,15 @@ module Unwind
     end
     
     def meta_refresh?(response)
-      body_match = response.body.match(/<meta http-equiv=\"refresh\" content=\"0; URL=(.*)\">/i)
-      body_match ? Addressable::URI.parse(body_match[1]) : false
+      if response.status == 200
+        body_match = response.body.match(/<meta http-equiv=\"refresh\" content=\"0; URL=(.*)\">/i)
+        Addressable::URI.parse(body_match[1]) if body_match
+      end
+    end
+
+    def canonical_link?(response)
+      body_match = response.body.match(/<link rel=[\'\"]canonical[\'\"] href=[\'\"](.*)[\'\"]/i)
+      body_match ? Addressable::URI.parse(body_match[1]).to_s : false
     end
     
     def apply_cookie(response, headers)

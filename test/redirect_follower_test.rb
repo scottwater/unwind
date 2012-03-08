@@ -76,6 +76,15 @@ describe Unwind::RedirectFollower do
     end 
   end
 
+  it 'should set the final url as being the canonical url and treat it as s redirect' do 
+    VCR.use_cassette('canonical url', :preserve_exact_body_bytes => true) do 
+      follower  = Unwind::RedirectFollower.resolve('http://www.scottw.com?test=abc')
+      assert  follower.redirected?
+      assert 'http://www.scottw.com', follower.final_url
+      assert 'http://www.scottw?test=abc', follower.redirects[0]
+    end 
+  end
+
   it 'should raise TooManyRedirects' do 
     VCR.use_cassette('xZVND1') do 
       follower = Unwind::RedirectFollower.new('http://j.mp/xZVND1', 1)
