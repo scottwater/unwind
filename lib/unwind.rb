@@ -1,5 +1,6 @@
 require "unwind/version"
 require 'faraday'
+require 'addressable/uri'
 
 module Unwind
 
@@ -27,7 +28,7 @@ module Unwind
       current_url ||= self.original_url
       #adding this header because we really only care about resolving the url
       headers = (options || {}).merge({"accept-encoding" => "none"})
-      response = Faraday.get(current_url, headers)
+      response = Faraday.get(current_url, {}, headers)
 
       if is_response_redirect?(response)
         handle_redirect(redirect_url(response), current_url, response, headers)
@@ -82,7 +83,7 @@ module Unwind
         Addressable::URI.parse(body_match[0])
       else
         redirect_uri = Addressable::URI.parse(response['location'])
-        redirect_uri.relative? ? response.env[:url].join(response['location']) : redirect_uri
+        redirect_uri.relative? ? Addressable::URI.parse(response.env[:url]).join(response['location']) : redirect_uri
       end
     end
     
