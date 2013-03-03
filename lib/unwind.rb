@@ -63,9 +63,16 @@ module Unwind
 
     def handle_final_response(current_url, response)
       current_url = current_url.dup.to_s
-      if response.status == 200 &&  canonical = canonical_link?(response)
+      if response.status == 200 && canonical = canonical_link?(response)
         @redirects << current_url
-        @final_url = canonical
+        if Addressable::URI.parse(canonical).relative?
+          current_uri = Addressable::URI.parse(current_url)
+          # Is there a cleaner way of doing this?
+          @final_url = "#{current_uri.scheme}://#{current_uri.host}#{canonical}"
+        else
+          @final_url = canonical
+        end
+
       else
         @final_url = current_url
       end
@@ -95,7 +102,7 @@ module Unwind
     end
 
     def canonical_link?(response)
-      body_match = response.body.match(/<link rel=[\'\"]canonical[\'\"] href=[\'\"](.*)[\'\"]/i)
+      body_match = response.body.match(/<link rel=[\'\"]canonical[\'\"] href=[\'\"](.*?)[\'\"]/i)
       body_match ? Addressable::URI.parse(body_match[1]).to_s : false
     end
     
