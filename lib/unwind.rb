@@ -94,8 +94,13 @@ module Unwind
     end
 
     def canonical_link?(response)
-      body_match = response.body.match(/<link rel=[\'\"]canonical[\'\"] href=[\'\"](.*)[\'\"]/i)
-      body_match ? Addressable::URI.parse(body_match[1]).to_s : false
+      doc = Nokogiri::HTML(response.body)
+
+      if canonical = doc.at('link[rel=canonical]')
+        return canonical["href"]
+      end
+
+      false
     end
     
     def apply_cookie(response, headers)
