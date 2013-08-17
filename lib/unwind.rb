@@ -1,4 +1,5 @@
 require "unwind/version"
+require 'nokogiri'
 require 'faraday'
 
 module Unwind
