@@ -1,10 +1,12 @@
 require 'minitest/autorun'
+require 'fakeweb'
 require 'vcr'
 require './lib/unwind'
 
 VCR.configure do |c|
   c.hook_into :fakeweb
-  c.cassette_library_dir = 'vcr_cassettes' 
+  c.cassette_library_dir = 'vcr_cassettes'
+  c.allow_http_connections_when_no_cassette = true
 end
 
 describe Unwind::RedirectFollower do 
@@ -106,6 +108,14 @@ describe Unwind::RedirectFollower do
       follower = Unwind::RedirectFollower.resolve('http://www.nullrefer.com/?www.google.com')
       assert follower.redirected?
       assert_equal 'http://www.google.com/', follower.final_url
+    end
+  end
+
+  describe 'handling 404s' do
+    it "should set not_found?" do
+      FakeWeb.register_uri :get, 'http://nope.com', status: 404
+      follower = Unwind::RedirectFollower.resolve('http://nope.com/')
+      assert follower.not_found?
     end
   end
 

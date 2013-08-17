@@ -21,6 +21,10 @@ module Unwind
       !(self.final_url == self.original_url)
     end
 
+    def not_found?
+      @response.status == 404
+    end
+
     def resolve(current_url=nil, options={})
 
       ok_to_continue?
