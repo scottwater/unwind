@@ -132,7 +132,7 @@ describe Unwind::RedirectFollower do
 
       follower = Unwind::RedirectFollower.resolve('http://foo.com/')
 
-      assert !FakeWeb.last_request["cookie"].nil?
+      assert FakeWeb.last_request["cookie"].match(/sid=3EBE6B02\-E226\-017F\-541D\-B1D03209F38B/)
     end
   end
 
