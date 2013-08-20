@@ -107,11 +107,16 @@ module Unwind
 
       false
     end
-    
+
     def apply_cookie(response, headers)
-      if response.status == 302 && response['set-cookie']
-        headers.merge(:cookie => CookieHash.to_cookie_string(response['set-cookie']))
-      else 
+      if headers[:cookie] || response['set-cookie']
+        cookies = CookieHash.new
+
+        cookies.add_cookies(headers[:cookie]) if headers[:cookie]
+        cookies.add_cookies(response['set-cookie']) if response['set-cookie']
+
+        headers.merge(:cookie => cookies.to_cookie_string)
+      else
         #todo: should we delete the cookie at this point if it exists?
         headers
       end
