@@ -119,4 +119,21 @@ describe Unwind::RedirectFollower do
     end
   end
 
+  describe 'preserving cookies' do
+    it "should preserve cookies to redirected domains" do
+      FakeWeb.register_uri :get, 'http://foo.com', status: 302,
+        "set-cookies" => "sid=3EBE6B02-E226-017F-541D-B1D03209F38B; Path=/; Domain=.foo.com",
+        "location" => "http://bar.com"
+
+      FakeWeb.register_uri :get, 'http://bar.com', status: 302,
+        "location" => "http://foo.com/content"
+
+      FakeWeb.register_uri :get, 'http://foo.com/content', status: 200
+
+      follower = Unwind::RedirectFollower.resolve('http://foo.com/')
+
+      assert !FakeWeb.last_request["cookie"].nil?
+    end
+  end
+
 end
