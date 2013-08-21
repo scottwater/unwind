@@ -6,6 +6,7 @@ module Unwind
 
   class TooManyRedirects < StandardError; end
   class MissingRedirectLocation < StandardError; end
+  class TimeoutError < StandardError; end
 
   class RedirectFollower
 
@@ -32,7 +33,12 @@ module Unwind
       current_url ||= self.original_url
       #adding this header because we really only care about resolving the url
       headers = (options || {}).merge({"accept-encoding" => "none"})
-      response = Faraday.get(current_url, headers)
+
+      begin
+        response = Faraday.get(current_url, headers)
+      rescue Faraday::Error::TimeoutError => e
+        raise Unwind::TimeoutError, $!
+      end
 
       if is_response_redirect?(response)
         handle_redirect(redirect_url(response), current_url, response, headers)

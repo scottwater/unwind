@@ -136,4 +136,9 @@ describe Unwind::RedirectFollower do
     end
   end
 
+  it "should raise exception on timeout" do
+    FakeWeb.register_uri :get, "http://slow.com", :exception => Timeout::Error
+    lambda { Unwind::RedirectFollower.resolve('http://slow.com/') }.must_raise Unwind::TimeoutError
+  end
+
 end
