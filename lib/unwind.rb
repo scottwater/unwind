@@ -1,10 +1,12 @@
 require "unwind/version"
+require 'nokogiri'
 require 'faraday'
 
 module Unwind
 
   class TooManyRedirects < StandardError; end
   class MissingRedirectLocation < StandardError; end
+  class TimeoutError < StandardError; end
 
   class RedirectFollower
 
@@ -20,6 +22,10 @@ module Unwind
       !(self.final_url == self.original_url)
     end
 
+    def not_found?
+      @response.status == 404
+    end
+
     def resolve(current_url=nil, options={})
 
       ok_to_continue?
@@ -27,7 +33,12 @@ module Unwind
       current_url ||= self.original_url
       #adding this header because we really only care about resolving the url
       headers = (options || {}).merge({"accept-encoding" => "none"})
-      response = Faraday.get(current_url, headers)
+
+      begin
+        response = Faraday.get(current_url, headers)
+      rescue Faraday::Error::TimeoutError => e
+        raise Unwind::TimeoutError, $!
+      end
 
       if is_response_redirect?(response)
         handle_redirect(redirect_url(response), current_url, response, headers)
@@ -64,7 +75,7 @@ module Unwind
       current_url = current_url.dup.to_s
       if response.status == 200 &&  canonical = canonical_link?(response)
         @redirects << current_url
-        @final_url = canonical
+        @final_url = canonical.to_s
       else
         @final_url = current_url
       end
@@ -94,14 +105,27 @@ module Unwind
     end
 
     def canonical_link?(response)
-      body_match = response.body.match(/<link rel=[\'\"]canonical[\'\"] href=[\'\"](.*)[\'\"]/i)
-      body_match ? Addressable::URI.parse(body_match[1]).to_s : false
+      doc = Nokogiri::HTML(response.body)
+
+      if canonical = doc.at('link[rel=canonical]')
+        href = Addressable::URI.parse(canonical["href"])
+        return unless href
+        return response.env[:url].join(href) if href.relative?
+        return href
+      end
+
+      false
     end
-    
+
     def apply_cookie(response, headers)
-      if response.status == 302 && response['set-cookie']
-        headers.merge(:cookie => CookieHash.to_cookie_string(response['set-cookie']))
-      else 
+      if headers[:cookie] || response['set-cookie']
+        cookies = CookieHash.new
+
+        cookies.add_cookies(headers[:cookie]) if headers[:cookie]
+        cookies.add_cookies(response['set-cookie']) if response['set-cookie']
+
+        headers.merge(:cookie => cookies.to_cookie_string)
+      else
         #todo: should we delete the cookie at this point if it exists?
         headers
       end

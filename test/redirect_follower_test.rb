@@ -1,10 +1,12 @@
 require 'minitest/autorun'
+require 'fakeweb'
 require 'vcr'
 require './lib/unwind'
 
 VCR.configure do |c|
   c.hook_into :fakeweb
-  c.cassette_library_dir = 'vcr_cassettes' 
+  c.cassette_library_dir = 'vcr_cassettes'
+  c.allow_http_connections_when_no_cassette = true
 end
 
 describe Unwind::RedirectFollower do 
@@ -85,8 +87,18 @@ describe Unwind::RedirectFollower do
     end 
   end
 
-  it 'should raise TooManyRedirects' do 
-    VCR.use_cassette('xZVND1') do 
+  it 'should handle relative canonical urls' do
+    FakeWeb.register_uri :get, 'http://foo.com/', status: 200, body: """
+      <body><link rel='canonical' href='/index.html'></body>
+    """
+
+    follower = Unwind::RedirectFollower.resolve('http://foo.com/')
+
+    assert follower.final_url, "http://foo.com/index.html"
+  end
+
+  it 'should raise TooManyRedirects' do
+    VCR.use_cassette('xZVND1') do
       follower = Unwind::RedirectFollower.new('http://j.mp/xZVND1', 1)
       too_many_redirects = lambda {follower.resolve}
       too_many_redirects.must_raise Unwind::TooManyRedirects
@@ -107,6 +119,36 @@ describe Unwind::RedirectFollower do
       assert follower.redirected?
       assert_equal 'http://www.google.com/', follower.final_url
     end
+  end
+
+  describe 'handling 404s' do
+    it "should set not_found?" do
+      FakeWeb.register_uri :get, 'http://nope.com', status: 404
+      follower = Unwind::RedirectFollower.resolve('http://nope.com/')
+      assert follower.not_found?
+    end
+  end
+
+  describe 'preserving cookies' do
+    it "should preserve cookies to redirected domains" do
+      FakeWeb.register_uri :get, 'http://foo.com', status: 302,
+        "set-cookie" => "sid=3EBE6B02-E226-017F-541D-B1D03209F38B; Path=/; Domain=.foo.com",
+        "location" => "http://bar.com"
+
+      FakeWeb.register_uri :get, 'http://bar.com', status: 302,
+        "location" => "http://foo.com/content"
+
+      FakeWeb.register_uri :get, 'http://foo.com/content', status: 200
+
+      follower = Unwind::RedirectFollower.resolve('http://foo.com/')
+
+      assert FakeWeb.last_request["cookie"].match(/sid=3EBE6B02\-E226\-017F\-541D\-B1D03209F38B/)
+    end
+  end
+
+  it "should raise exception on timeout" do
+    FakeWeb.register_uri :get, "http://slow.com", :exception => Timeout::Error
+    lambda { Unwind::RedirectFollower.resolve('http://slow.com/') }.must_raise Unwind::TimeoutError
   end
 
 end
