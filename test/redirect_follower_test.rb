@@ -87,8 +87,18 @@ describe Unwind::RedirectFollower do
     end 
   end
 
-  it 'should raise TooManyRedirects' do 
-    VCR.use_cassette('xZVND1') do 
+  it 'should handle relative canonical urls' do
+    FakeWeb.register_uri :get, 'http://foo.com/', status: 200, body: """
+      <body><link rel='canonical' href='/index.html'></body>
+    """
+
+    follower = Unwind::RedirectFollower.resolve('http://foo.com/')
+
+    assert follower.final_url, "http://foo.com/index.html"
+  end
+
+  it 'should raise TooManyRedirects' do
+    VCR.use_cassette('xZVND1') do
       follower = Unwind::RedirectFollower.new('http://j.mp/xZVND1', 1)
       too_many_redirects = lambda {follower.resolve}
       too_many_redirects.must_raise Unwind::TooManyRedirects

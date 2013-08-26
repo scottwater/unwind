@@ -75,7 +75,7 @@ module Unwind
       current_url = current_url.dup.to_s
       if response.status == 200 &&  canonical = canonical_link?(response)
         @redirects << current_url
-        @final_url = canonical
+        @final_url = canonical.to_s
       else
         @final_url = current_url
       end
@@ -108,7 +108,10 @@ module Unwind
       doc = Nokogiri::HTML(response.body)
 
       if canonical = doc.at('link[rel=canonical]')
-        return canonical["href"]
+        href = Addressable::URI.parse(canonical["href"])
+        return unless href
+        return response.env[:url].join(href) if href.relative?
+        return href
       end
 
       false
