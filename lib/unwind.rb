@@ -1,5 +1,6 @@
 require "unwind/version"
 require 'faraday'
+require 'addressable/uri'
 
 module Unwind
 
@@ -27,7 +28,7 @@ module Unwind
       current_url ||= self.original_url
       #adding this header because we really only care about resolving the url
       headers = (options || {}).merge({"accept-encoding" => "none"})
-      response = Faraday.get(current_url, headers)
+      response = Faraday.get(current_url, {}, headers)
 
       if is_response_redirect?(response)
         handle_redirect(redirect_url(response), current_url, response, headers)
@@ -62,9 +63,16 @@ module Unwind
 
     def handle_final_response(current_url, response)
       current_url = current_url.dup.to_s
-      if response.status == 200 &&  canonical = canonical_link?(response)
+      if response.status == 200 && canonical = canonical_link?(response)
         @redirects << current_url
-        @final_url = canonical
+        if Addressable::URI.parse(canonical).relative?
+          current_uri = Addressable::URI.parse(current_url)
+          # Is there a cleaner way of doing this?
+          @final_url = "#{current_uri.scheme}://#{current_uri.host}#{canonical}"
+        else
+          @final_url = canonical
+        end
+
       else
         @final_url = current_url
       end
@@ -82,7 +90,7 @@ module Unwind
         Addressable::URI.parse(body_match[0])
       else
         redirect_uri = Addressable::URI.parse(response['location'])
-        redirect_uri.relative? ? response.env[:url].join(response['location']) : redirect_uri
+        redirect_uri.relative? ? Addressable::URI.parse(response.env[:url]).join(response['location']) : redirect_uri
       end
     end
     
@@ -94,7 +102,7 @@ module Unwind
     end
 
     def canonical_link?(response)
-      body_match = response.body.match(/<link rel=[\'\"]canonical[\'\"] href=[\'\"](.*)[\'\"]/i)
+      body_match = response.body.match(/<link rel=[\'\"]canonical[\'\"] href=[\'\"](.*?)[\'\"]/i)
       body_match ? Addressable::URI.parse(body_match[1]).to_s : false
     end
     
