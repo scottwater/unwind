@@ -96,7 +96,7 @@ module Unwind
     
     def meta_refresh?(response)
       if response.status == 200
-        body_match = response.body.match(/<meta http-equiv=\"refresh\" content=\"0; URL=(.*)\">/i)
+        body_match = response.body.match(/<meta http-equiv=\"refresh\" content=\"0; URL=(.*?)\"\s*\/*>/i)
         Addressable::URI.parse(body_match[1]) if body_match
       end
     end
