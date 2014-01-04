@@ -28,12 +28,22 @@ module Unwind
       current_url ||= self.original_url
       #adding this header because we really only care about resolving the url
       headers = (options || {}).merge({"accept-encoding" => "none"})
-      response = Faraday.get(current_url, {}, headers)
+
+      # Add retry/timeout options (not very clean code but it's only for me)
+      conn = Faraday.new do |faraday|
+        faraday.request :retry,   2
+        #faraday.response :logger
+        faraday.adapter  Faraday.default_adapter
+      end
+      response = conn.get do |req|
+        req.options[:timeout] = 5
+        req.options[:open_timeout] = 3
+        req.headers = headers
+        req.url current_url
+      end
 
       if is_response_redirect?(response)
         handle_redirect(redirect_url(response), current_url, response, headers)
-      elsif meta_uri = meta_refresh?(response)
-        handle_redirect(meta_uri, current_url, response, headers)
       else
         handle_final_response(current_url, response)
       end
@@ -94,6 +104,7 @@ module Unwind
       end
     end
     
+    # Don't want this feature so don't call it anymore
     def meta_refresh?(response)
       if response.status == 200
         body_match = response.body.match(/<meta http-equiv=\"refresh\" content=\"0; URL=(.*?)\"\s*\/*>/i)
