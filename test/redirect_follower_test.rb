@@ -109,5 +109,21 @@ describe Unwind::RedirectFollower do
       assert_equal 'http://www.google.com/', follower.final_url
     end
   end
+  
+  it 'should handle a relative meta-refresh' do
+    VCR.use_cassette('relative meta refresh') do
+      follower = Unwind::RedirectFollower.resolve('http://fb.me/2JYu23acx')
+      assert follower.redirected?
+      assert_equal 'https://www.facebook.com/londonswf/posts/696389650411604?_fb_noscript=1', follower.final_url
+    end
+  end
+  
+  it 'should handle a relative canonical url' do
+    VCR.use_cassette('relative canonical url') do
+      follower = Unwind::RedirectFollower.resolve('http://youtu.be/hPJ0oLahGDg')
+      assert follower.redirected?
+      assert_equal 'http://www.youtube.com/watch?v=hPJ0oLahGDg', follower.final_url
+    end
+  end
 
 end
