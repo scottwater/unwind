@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Scott Watermasysk"]
   s.email       = ["scottwater@gmail.com"]
   s.homepage    = "http://www.scottw.com/unwind"
+  s.licenses    = ['MIT']
   s.summary     = %q{Follows a chain redirects.}
   s.description = <<-description 
 										Follows a chain of redirects and reports back on all the steps. 
@@ -23,9 +24,9 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  s.add_development_dependency "rake"
-  s.add_development_dependency "minitest"
-  s.add_development_dependency "vcr", "~> 2.8.0"
-  s.add_development_dependency "webmock"
-  s.add_runtime_dependency "addressable"
+  s.add_development_dependency 'rake', '~> 10.1'
+  s.add_development_dependency 'minitest', '~> 5.2'
+  s.add_development_dependency 'vcr', '~> 2.8'
+  s.add_development_dependency 'webmock', '~> 1.17'
+  s.add_runtime_dependency 'addressable', '~> 2.2'
 end
