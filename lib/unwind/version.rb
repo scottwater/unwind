@@ -1,3 +1,3 @@
 module Unwind
-  VERSION = "0.11.1"
+  VERSION = "0.2.0"
 end
