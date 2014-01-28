@@ -4,7 +4,7 @@ require 'vcr'
 require './lib/unwind'
 
 VCR.configure do |c|
-  c.hook_into :fakeweb
+  c.hook_into :webmock
   c.cassette_library_dir = 'vcr_cassettes'
 end
 
