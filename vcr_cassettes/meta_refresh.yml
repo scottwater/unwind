@@ -7,41 +7,42 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      accept-encoding:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       - none
-      accept:
-      - ! '*/*'
-      user-agent:
+      Accept:
+      - "*/*"
+      User-Agent:
       - Ruby
-      connection:
-      - close
+      Host:
+      - www.nullrefer.com
   response:
     status:
       code: 200
       message: OK
     headers:
-      date:
-      - Wed, 07 Mar 2012 17:19:52 GMT
-      server:
+      Date:
+      - Tue, 28 Jan 2014 05:45:14 GMT
+      Server:
       - Apache
-      x-powered-by:
+      X-Powered-By:
       - PHP/5.2.17
-      content-length:
-      - '493'
-      connection:
+      Content-Length:
+      - '521'
+      Connection:
       - close
-      content-type:
+      Content-Type:
       - text/html
     body:
-      encoding: US-ASCII
-      string: ! "\n<html>\n<head>\n<title>NullRefer.com Anonym Link</title>\n<meta
-        http-equiv=\"refresh\" content=\"0; URL=http://www.google.com\">\n<meta http-equiv=\"Content-Type\"
-        content=\"text/html; charset=iso-8859-1\">\n\n\n<script type=\"text/javascript\"
-        language=\"javascript\">\nvar sc_project=2152146; \nvar sc_invisible=1; \nvar
-        sc_partition=19; \nvar sc_security=\"26edb118\"; \n</script><script type=\"text/javascript\"
-        language=\"javascript\" src=\"http://www.statcounter.com/counter/counter.js\"></script><noscript></noscript>"
-    http_version: '1.1'
-  recorded_at: Wed, 07 Mar 2012 17:19:53 GMT
+      encoding: UTF-8
+      string: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<html>\n<head>\n<title>Nullrefer.com
+        Anonym Link</title>\n<meta http-equiv=\"refresh\" content=\"0; URL=http://www.google.com\">\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\n\n\n\n<script
+        type=\"text/javascript\" language=\"javascript\">\nvar sc_project=2152146;
+        \nvar sc_invisible=1; \nvar sc_partition=19; \nvar sc_security=\"26edb118\";
+        \n</script><script type=\"text/javascript\" language=\"javascript\" src=\"http://www.statcounter.com/counter/counter.js\"></script><noscript></noscript>\n\n\n\n\n\n"
+    http_version: 
+  recorded_at: Tue, 28 Jan 2014 05:45:16 GMT
 - request:
     method: get
     uri: http://www.google.com/
@@ -49,161 +50,120 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      accept-encoding:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       - none
-      accept:
-      - ! '*/*'
-      user-agent:
+      Accept:
+      - "*/*"
+      User-Agent:
       - Ruby
-      connection:
-      - close
+      Host:
+      - www.google.com
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Location:
+      - http://www.google.com.au/?gfe_rd=ctrl&ei=7EPnUo26JaSN8QfamYDwAw&gws_rd=cr
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=UTF-8
+      Set-Cookie:
+      - NID=67=Khl9fSng5AThENmBZyNeqP2IthdtSpg6raPrwAE79Lx3yaK29-spEpsjG9f50DD2kLTRYH-xNA4v86YKL97SiLPcl9_QcYLWqjIN65gyuq5NywPW9lufkO9Ds2GLmT_I;
+        expires=Wed, 30-Jul-2014 05:45:16 GMT; path=/; domain=.google.com; HttpOnly
+      - PREF=ID=88e66d11b612970b:FF=0:TM=1390887916:LM=1390887916:S=wpQenCWFIXlrafUw;
+        expires=Thu, 28-Jan-2016 05:45:16 GMT; path=/; domain=.google.com
+      P3p:
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      Date:
+      - Tue, 28 Jan 2014 05:45:16 GMT
+      Server:
+      - gws
+      Content-Length:
+      - '278'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 80:quic
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"http://www.google.com.au/?gfe_rd=ctrl&amp;ei=7EPnUo26JaSN8QfamYDwAw&amp;gws_rd=cr\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Tue, 28 Jan 2014 05:45:16 GMT
+- request:
+    method: get
+    uri: http://www.google.com.au/?ei=7EPnUo26JaSN8QfamYDwAw&gfe_rd=ctrl&gws_rd=cr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      - none
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.google.com.au
+      Cookie:
+      - PREF=ID; NID=67
   response:
     status:
       code: 200
       message: OK
     headers:
-      date:
-      - Wed, 07 Mar 2012 17:19:53 GMT
-      expires:
-      - '-1'
-      cache-control:
+      Date:
+      - Tue, 28 Jan 2014 05:45:17 GMT
+      Expires:
+      - "-1"
+      Cache-Control:
       - private, max-age=0
-      content-type:
+      Content-Type:
       - text/html; charset=ISO-8859-1
-      set-cookie:
-      - PREF=ID=4bfeb64443f79f00:FF=0:TM=1331140793:LM=1331140793:S=GJjS0PKXChIvENlO;
-        expires=Fri, 07-Mar-2014 17:19:53 GMT; path=/; domain=.google.com
-      - NID=57=jhDLZ6-lPY-xuSHRXylsOn_mocmU6cIG5TuI61objldwRTuyQMFI45szY8hHM5jkRKFU-PHhXh_CsgV-m0kNYIaE9wPVfNd4dCiRwruCOr2fV1go9g09xF-NPHTx5b-0;
-        expires=Thu, 06-Sep-2012 17:19:53 GMT; path=/; domain=.google.com; HttpOnly
-      p3p:
+      Set-Cookie:
+      - NID=67=f6mKyM4D-cmniubRqKCuKxfS4eFvvC8RBVTBscoFP-DHxBCfxhScIlUFibputldg-UroiaWkLU_wKU9bCQz3E88XxvYIZdubOwghZZxkkG6z8cVOXO116rEL8pHzns9n;
+        expires=Wed, 30-Jul-2014 05:45:17 GMT; path=/; domain=.google.com.au; HttpOnly
+      - PREF=ID=2fa5161b0c68f6de:FF=0:TM=1390887917:LM=1390887917:S=MhUj3X5oiys-swOO;
+        expires=Thu, 28-Jan-2016 05:45:17 GMT; path=/; domain=.google.com.au
+      P3p:
       - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
         for more info."
-      server:
+      Server:
       - gws
-      x-xss-protection:
+      X-Xss-Protection:
       - 1; mode=block
-      x-frame-options:
+      X-Frame-Options:
       - SAMEORIGIN
-      connection:
-      - close
+      Alternate-Protocol:
+      - 80:quic
+      Transfer-Encoding:
+      - chunked
     body:
-      encoding: US-ASCII
-      string: ! '<!doctype html><html itemscope itemtype="http://schema.org/WebPage"><head><meta
-        http-equiv="content-type" content="text/html; charset=ISO-8859-1"><meta name="description"
-        content="Search the world&#39;s information, including webpages, images, videos
-        and more. Google has many special features to help you find exactly what you&#39;re
-        looking for."><meta name="robots" content="noodp"><meta itemprop="image" content="/images/google_favicon_128.png"><title>Google</title><script>window.google={kEI:"uZhXT_KII8rt0gHyq7n4Aw",getEI:function(a){var
-        d;while(a&&!(a.getAttribute&&(d=a.getAttribute("eid"))))a=a.parentNode;return
-        d||google.kEI},https:function(){return window.location.protocol=="https:"},kEXPI:"31701,35055,35091,36683,36945,37054,37059,37153,37322,37329,37367",kCSI:{e:"31701,35055,35091,36683,36945,37054,37059,37153,37322,37329,37367",ei:"uZhXT_KII8rt0gHyq7n4Aw"},authuser:0,
-
-        ml:function(){},kHL:"en",time:function(){return(new Date).getTime()},log:function(a,d,f,h){var
-        e=new Image,g=google,k=g.lc,i=g.li,m="";e.onerror=(e.onload=(e.onabort=function(){delete
-        k[i]}));k[i]=e;if(!f&&d.search("&ei=")==-1)m="&ei="+google.getEI(h);var j=f||"/gen_204?atyp=i&ct="+a+"&cad="+d+m+"&zx="+google.time(),b=/^http:/i;if(b.test(j)&&google.https()){google.ml(new
-        Error("GLMM"),false,{src:j});
-
-        delete k[i];return}e.src=j;g.li=i+1},lc:[],li:0,Toolbelt:{},y:{},x:function(a,d){google.y[a.id]=
-
-        [a,d];return false}};
-
-        window.google.sn="webhp";window.google.timers={};window.google.startTick=function(a,b){window.google.timers[a]={t:{start:(new
-        Date).getTime()},bfr:!(!b)}};window.google.tick=function(a,b,c){if(!window.google.timers[a])google.startTick(a);window.google.timers[a].t[b]=c||(new
-        Date).getTime()};google.startTick("load",true);try{}catch(u){}
-
-        var _gjwl=location;function _gjuc(){var e=_gjwl.href.indexOf("#");if(e>=0){var
-        a=_gjwl.href.substring(e);if(a.indexOf("&q=")>0||a.indexOf("#q=")>=0){a=a.substring(1);if(a.indexOf("#")==-1){for(var
-        c=0;c<a.length;){var d=c;if(a.charAt(d)=="&")++d;var b=a.indexOf("&",d);if(b==-1)b=a.length;var
-        f=a.substring(d,b);if(f.indexOf("fp=")==0){a=a.substring(0,c)+a.substring(b,a.length);b=c}else
-        if(f=="cad=h")return 0;c=b}_gjwl.href="/search?"+a+"&cad=h";return 1}}}return
-        0}function _gjp(){!(window._gjwl.hash&&
-
-        window._gjuc())&&setTimeout(_gjp,500)};
-
-        window._gjp && _gjp()</script><style>#gbar,#guser{font-size:13px;padding-top:1px
-        !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px
-        solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media
-        all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline
-        !important}a.gb1,a.gb4{color:#00c !important}</style><style id=gstyle>body{margin:0;overflow-y:scroll}#gog{padding:3px
-        8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}body,td,a,p,.h{font-family:arial,sans-serif}.h{color:#36c;font-size:20px}.q{color:#00c}.ts
-        td{padding:0}.ts{border-collapse:collapse}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px
-        arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:-moz-inline-box;display:inline-block;margin:3px
-        0 4px;margin-left:4px}input{font-family:inherit}a.gb1,a.gb2,a.gb3,a.gb4{color:#11c
-        !important}body{background:#fff;color:black}a{color:#11c;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl
-        a{color:#36c}a:visited{color:#551a8b}a.gb1,a.gb4{text-decoration:underline}a.gb3:hover{text-decoration:none}#ghead
-        a.gb2:hover{color:#fff!important}.sblc{padding-top:5px}.sblc a{display:block;margin:2px
-        0;margin-left:13px;font-size:11px;}.lsbb{background:#eee;border:solid 1px;border-color:#ccc
-        #999 #999 #ccc;height:30px;display:block}.pp-new-desktop,.pp-new-mobile{color:red}.ftl,#fll
-        a{display:inline-block;margin:0 12px}.lsb{background:url(/images/srpr/nav_logo80.png)
-        0 -258px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px
-        arial,sans-serif;vertical-align:top}.lsb:active{background:#ccc}.lst:focus{outline:none}#addlang
-        a{padding:0 3px}.gac_v div{display:none}.gac_v .gac_v2,.gac_bt{display:block!important}table.gssb_c{z-index:986  }.nbcl{background:url(/images/srpr/nav_logo80.png)
-        no-repeat ;height:px;width:px}</style><script>window.rwt=function(a,f,g,l,m,h,c,n,i){try{if(a===window){a=window.event.srcElement;while(a){if(a.href)break;a=a.parentNode}}var
-        b=encodeURIComponent||escape,d;d=a.getAttribute("href");if(c&&c.substring(0,6)!="&sig2=")c="&sig2="+c;var
-        o=["/url?sa=t","","&cd=",b(m),i?"&authuser="+b(i):"",google.j&&google.j.pf?"&sqi=2":"","&ved=",b(n),"&url=",b(d).replace(/\+/g,"%2B"),"&ei=","uZhXT_KII8rt0gHyq7n4Aw",h?"&usg="+h:"",c].join("");a.href=o;a.onmousedown=""}catch(p){}return
-        true};
-
-        </script></head><body bgcolor=#ffffff text=#000000 link=#0000cc vlink=#551a8b
-        alink=#ff0000 onload="document.f&&document.f.q.focus();document.gbqf&&document.gbqf.q.focus();if(document.images)new
-        Image().src=''/images/srpr/nav_logo80.png''" ><textarea id=csi style=display:none></textarea><div
-        id=mngb><div id=gbar><nobr><b class=gb1>Search</b> <a class=gb1 href="http://www.google.com/imghp?hl=en&tab=wi">Images</a>
-        <a class=gb1 href="http://video.google.com/?hl=en&tab=wv">Videos</a> <a class=gb1
-        href="http://maps.google.com/maps?hl=en&tab=wl">Maps</a> <a class=gb1 href="http://news.google.com/nwshp?hl=en&tab=wn">News</a>
-        <a class=gb1 href="http://www.google.com/shopping?hl=en&tab=wf">Shopping</a>
-        <a class=gb1 href="https://mail.google.com/mail/?tab=wm">Gmail</a> <a class=gb1
-        style="text-decoration:none" href="http://www.google.com/intl/en/options/"><u>More</u>
-        &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span
-        id=gbf class=gbf></span><span id=gbe><a  href="/url?sa=p&pref=ig&pval=3&q=http://www.google.com/ig%3Fhl%3Den%26source%3Diglk&usg=AFQjCNFA18XPfgb7dKnXfKz7x7g1GDH1tg"
-        class=gb4>iGoogle</a> | </span><a href="http://www.google.com/history/optout?hl=en"
-        class=gb4>Web History</a> | <a  href="/preferences?hl=en" class=gb4>Settings</a>
-        | <a id=gb_70 href="https://accounts.google.com/ServiceLogin?hl=en&continue=http://www.google.com/"
-        class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh
-        style=right:0></div></div><iframe name=wgjf style=display:none></iframe><center><br
-        clear=all id=lgpd><div id=lga><img alt="Google" height=95 id=hplogo src="/intl/en_ALL/images/srpr/logo1w.png"
-        width=275 style="padding:28px 0 14px" onload="window.lol&&lol()"><br><br></div><form
-        action="/search" name=f><table cellpadding=0 cellspacing=0><tr valign=top><td
-        width=25%>&nbsp;</td><td align=center nowrap><input name=hl type=hidden value=en><input
-        name=source type=hidden value=hp><input type=hidden name=ie value="ISO-8859-1"><div
-        class=ds style="height:32px;margin:4px 0"><input autocomplete=off maxlength=2048
-        name=q class="lst" title="Google Search" value="" size=57 style="color:#000;margin:0;padding:5px
-        8px 0 6px;vertical-align:top"></div><br style="line-height:0"><span class=ds
-        ><span class=lsbb><input name=btnG type=submit value="Google Search" class=lsb></span></span><span
-        class=ds><span class=lsbb><input name=btnI type=submit class=lsb value="I&#39;m
-        Feeling Lucky"></span></span></td><td nowrap width=25% align=left class="fl
-        sblc"><a href="/advanced_search?hl=en">Advanced search</a><a href="/language_tools?hl=en">Language
-        tools</a></td></tr></table><input type=hidden id=gbv name=gbv value="1"></form><div
-        style="font-size:83%;min-height:3.5em"><br></div><div id=res></div><span id=footer><center
-        id=fctr><div style="font-size:10pt"><div id=fll style="margin:19px auto;text-align:center"><a
-        href="/intl/en/ads/">Advertising&nbsp;Programs</a><a href="/services/">Business
-        Solutions</a><a href="https://plus.google.com/116899029375914044550" rel="publisher">+Google</a><a
-        href="/intl/en/about.html">About Google</a></div></div><p style="color:#767676;font-size:8pt">&copy;
-        2012 - <a href="/intl/en/privacy.html">Privacy</a></p></center></span> </center><div
-        id=xjsd></div><div id=xjsi><script>if(google.y)google.y.first=[];google.dlj=function(b){window.setTimeout(function(){var
-        a=document.createElement("script");a.src=b;document.getElementById("xjsd").appendChild(a)},0)};
-
-        if(google.y)google.y.first=[];if(!google.xjs){google.dstr=[];google.rein=[];if(google.timers&&google.timers.load.t){google.timers.load.t.xjsls=new
-        Date().getTime();}google.dlj(''/extern_js/f/CgJlbhICdXMgACswRTgALCswWjgALCswDjgALCswFzgALCswPDgALCswUTgALCswCjgAmgICaGUsKzCYATgALCswFjgALCswGTgALCswQTgALCswTTgALCswTjgALCswVDgALCswaTgALCswkAE4ACwrMJIBOAAsKzCsATgALCsw1QE4ACwrMNgBOAAsKzAYOAAsKzAmOAAsgAJQkAJr/aTjpa-xHJeU.js'');google.xjs=1}google.neegg=1;google.mc=[];google.mc=google.mc.concat([[69,{}],[14,{}],[60,{}],[23,{}],[81,{}],[10,{"client":"hp","dh":true,"ds":"","fl":true,"host":"google.com","jsonp":true,"msgs":{"lcky":"I\u0026#39;m
-        Feeling Lucky","lml":"Learn more","psrc":"This search was removed from your
-        \u003Ca href=\"/history\"\u003EWeb History\u003C/a\u003E","psrl":"Remove","srch":"Google
-        Search"},"ovr":{"fm":1,"l":1,"o":1,"p":1,"pf":1,"ps":1,"sn":1,"sw":1},"pq":"","scd":10,"sce":5}],[152,{}],[65,{}],[213,{"pberr":"\u003Cfont
-        color=red\u003EError:\u003C/font\u003E The server could not complete your
-        request.  Try again in 30 seconds."}],[78,{}],[25,{"g":8,"k":false,"m":{"app":true,"bks":true,"blg":true,"dsc":true,"evn":true,"fin":true,"flm":true,"frm":true,"isch":true,"klg":true,"mbl":true,"nws":true,"plcs":true,"ppl":true,"prc":true,"pts":true,"rcp":true,"shop":true,"vid":true},"t":null}],[216,{}],[105,{}],[22,{"db":false,"m_errors":{"32":"Sorry,
-        no more results to show.","default":"\u003Cfont color=red\u003EError:\u003C/font\u003E
-        The server could not complete your request.  Try again in 30 seconds."},"m_tip":"Click
-        for more information","nlpm":"-153px -84px","nlpp":"-153px -70px","utp":false}],[77,{}],[146,{}],[144,{}],[84,{}],[24,{}],[38,{}]]);google.y.first.push(function(){if(google.med){google.med(''init'');google.initHistory();google.med(''history'');}google.History&&google.History.initialize(''/'')});if(google.j&&google.j.en&&google.j.xi){window.setTimeout(google.j.xi,0);}</script></div><script>(function(){
-
-        var b,d,e,f;function g(a,c){if(a.removeEventListener){a.removeEventListener("load",c,false);a.removeEventListener("error",c,false)}else{a.detachEvent("onload",c);a.detachEvent("onerror",c)}}function
-        h(a){f=(new Date).getTime();++d;a=a||window.event;var c=a.target||a.srcElement;g(c,h)}var
-        i=document.getElementsByTagName("img");b=i.length;d=0;for(var j=0,k;j<b;++j){k=i[j];if(k.complete||typeof
-        k.src!="string"||!k.src)++d;else if(k.addEventListener){k.addEventListener("load",h,false);k.addEventListener("error",
-
-        h,false)}else{k.attachEvent("onload",h);k.attachEvent("onerror",h)}}e=b-d;function
-        l(){if(!google.timers.load.t)return;google.timers.load.t.ol=(new Date).getTime();google.timers.load.t.iml=f;google.kCSI.imc=d;google.kCSI.imn=b;google.kCSI.imp=e;if(google.stt!==undefined)google.kCSI.stt=google.stt;google.timers.load.t.xjs&&google.report&&google.report(google.timers.load,google.kCSI)}if(window.addEventListener)window.addEventListener("load",
-
-        l,false);else if(window.attachEvent)window.attachEvent("onload",l);google.timers.load.t.prt=(f=(new
-        Date).getTime());
-
-        })();
-
-        </script>'
-    http_version: '1.1'
-  recorded_at: Wed, 07 Mar 2012 17:19:53 GMT
-recorded_with: VCR 2.0.0
+      encoding: UTF-8
+      string: |-
+        <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage"><head><meta itemprop="image" content="/images/google_favicon_128.png"><title>Google</title><script>(function(){
+        window.google={kEI:"7UPnUruZAs3TkAW5-4HIBg",getEI:function(a){for(var b;a&&(!a.getAttribute||!(b=a.getAttribute("eid")));)a=a.parentNode;return b||google.kEI},https:function(){return"https:"==window.location.protocol},kEXPI:"17259,4000116,4005204,4007278,4007661,4007830,4008067,4008133,4008142,4009033,4009352,4009378,4009565,4009641,4010073,4010806,4010858,4010899,4011063,4011108,4011228,4011258,4011559,4011863,4012001,4012316,4012318,4012320,4012342,4012365,4012538,4012869,4013374,4013414,4013416,4013436,4013472,4013513,4013717,4013723,4013781,4013787,4013821,4013823,4013842,4013919,4013946,4013979,4014097,4014215,4014273,4014276,4014373,4014375,4014431,4014461,4014495,4014513,4014515,4014565,4014584,4014597,4014606,4014636,4014649,8300007,8500073,8500075,8500153,10200002,10200012,10200014,10200029",kCSI:{e:"17259,4000116,4005204,4007278,4007661,4007830,4008067,4008133,4008142,4009033,4009352,4009378,4009565,4009641,4010073,4010806,4010858,4010899,4011063,4011108,4011228,4011258,4011559,4011863,4012001,4012316,4012318,4012320,4012342,4012365,4012538,4012869,4013374,4013414,4013416,4013436,4013472,4013513,4013717,4013723,4013781,4013787,4013821,4013823,4013842,4013919,4013946,4013979,4014097,4014215,4014273,4014276,4014373,4014375,4014431,4014461,4014495,4014513,4014515,4014565,4014584,4014597,4014606,4014636,4014649,8300007,8500073,8500075,8500153,10200002,10200012,10200014,10200029",ei:"7UPnUruZAs3TkAW5-4HIBg"},authuser:0,ml:function(){},kHL:"en",time:function(){return(new Date).getTime()},log:function(a,b,c,h,k){var d=new Image,f=google.lc,e=google.li,g="";d.onerror=d.onload=
+        d.onabort=function(){delete f[e]};f[e]=d;c||-1!=b.search("&ei=")||(g="&ei="+google.getEI(h));c=c||"/"+(k||"gen_204")+"?atyp=i&ct="+a+"&cad="+b+g+"&zx="+google.time();a=/^http:/i;a.test(c)&&google.https()?(google.ml(Error("GLMM"),!1,{src:c}),delete f[e]):(d.src=c,google.li=e+1)},lc:[],li:0,y:{},x:function(a,b){google.y[a.id]=[a,b];return!1},load:function(a,b,c){google.x({id:a+l++},function(){google.load(a,b,c)})}};var l=0;})();
+        (function(){google.sn="webhp";google.timers={};google.startTick=function(a,b){google.timers[a]={t:{start:google.time()},bfr:!!b}};google.tick=function(a,b,g){google.timers[a]||google.startTick(a);google.timers[a].t[b]=g||google.time()};google.startTick("load",!0);
+        try{}catch(d){}})();
+        var _gjwl=location;function _gjuc(){var a=_gjwl.href.indexOf("#");if(0<=a&&(a=_gjwl.href.substring(a),0<a.indexOf("&q=")||0<=a.indexOf("#q="))&&(a=a.substring(1),-1==a.indexOf("#"))){for(var d=0;d<a.length;){var b=d;"&"==a.charAt(b)&&++b;var c=a.indexOf("&",b);-1==c&&(c=a.length);b=a.substring(b,c);if(0==b.indexOf("fp="))a=a.substring(0,d)+a.substring(c,a.length),c=d;else if("cad=h"==b)return 0;d=c}_gjwl.href="/search?"+a+"&cad=h";return 1}return 0}
+        function _gjh(){!_gjuc()&&window.google&&google.x&&google.x({id:"GJH"},function(){google.nav&&google.nav.gjh&&google.nav.gjh()})};
+        window._gjh&&_gjh();</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}</style><style>body,td,a,p,.h{font-family:arial,sans-serif}body{margin:0;overflow-y:scroll}#gog{padding:3px 8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}.h{color:#36c}.q{color:#00c}.ts td{padding:0}.ts{border-collapse:collapse}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:inline-box;display:inline-block;margin:3px 0 4px;margin-left:4px}input{font-family:inherit}a.gb1,a.gb2,a.gb3,a.gb4{color:#11c !important}body{background:#fff;color:black}a{color:#11c;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl a{color:#36c}a:visited{color:#551a8b}a.gb1,a.gb4{text-decoration:underline}a.gb3:hover{text-decoration:none}#ghead a.gb2:hover{color:#fff !important}.sblc{padding-top:5px}.sblc a{display:block;margin:2px 0;margin-left:13px;font-size:11px}.lsbb{background:#eee;border:solid 1px;border-color:#ccc #999 #999 #ccc;height:30px}.lsbb{display:block}.ftl,#fll a{display:inline-block;margin:0 12px}.lsb{background:url(/images/srpr/nav_logo80.png) 0 -258px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px arial,sans-serif;vertical-align:top}.lsb:active{background:#ccc}.lst:focus{outline:none}#addlang a{padding:0 3px}</style><script></script> </head><body bgcolor="#fff"><script>(function(){var src='/images/srpr/nav_logo80.png';var iesg=false;document.body.onload = function(){window.n && window.n();if (document.images){new Image().src=src;}
+        if (!iesg){document.f&&document.f.q.focus();document.gbqf&&document.gbqf.q.focus();}
+        }
+        })();</script><textarea id="csi" style="display:none"></textarea><div id="mngb"> <div id=gbar><nobr><b class=gb1>Search</b> <a class=gb1 href="http://www.google.com.au/imghp?hl=en&tab=wi">Images</a> <a class=gb1 href="http://maps.google.com.au/maps?hl=en&tab=wl">Maps</a> <a class=gb1 href="https://play.google.com/?hl=en&tab=w8">Play</a> <a class=gb1 href="http://www.youtube.com/?gl=AU&tab=w1">YouTube</a> <a class=gb1 href="http://news.google.com.au/nwshp?hl=en&tab=wn">News</a> <a class=gb1 href="https://mail.google.com/mail/?tab=wm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=wo">Drive</a> <a class=gb1 style="text-decoration:none" href="http://www.google.com.au/intl/en/options/"><u>More</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a href="http://www.google.com.au/history/optout?hl=en" class=gb4>Web History</a> | <a  href="/preferences?hl=en" class=gb4>Settings</a> | <a target=_top id=gb_70 href="https://accounts.google.com/ServiceLogin?hl=en&continue=http://www.google.com.au/%3Fgfe_rd%3Dctrl%26ei%3D7EPnUo26JaSN8QfamYDwAw%26gws_rd%3Dcr" class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div>  </div><center><br clear="all" id="lgpd"><div id="lga"><div style="padding:28px 0 3px"><div title="Google" align="left" id="hplogo" onload="window.lol&&lol()" style="height:110px;width:276px;background:url(/images/srpr/logo9w.png) no-repeat"><div nowrap="" style="color:#777;font-size:16px;font-weight:bold;position:relative;top:70px;left:218px">Australia</div></div></div><br></div><form action="/search" name="f"><table cellpadding="0" cellspacing="0"><tr valign="top"><td width="25%">&nbsp;</td><td align="center" nowrap=""><input name="ie" value="ISO-8859-1" type="hidden"><input value="en-AU" name="hl" type="hidden"><input name="source" type="hidden" value="hp"><div class="ds" style="height:32px;margin:4px 0"><input autocomplete="off" class="lst" value="" title="Google Search" maxlength="2048" name="q" size="57" style="color:#000;margin:0;padding:5px 8px 0 6px;vertical-align:top"></div><br style="line-height:0"><span class="ds"><span class="lsbb"><input class="lsb" value="Google Search" name="btnG" type="submit"></span></span><span class="ds"><span class="lsbb"><input class="lsb" value="I'm Feeling Lucky" name="btnI" type="submit" onclick="if(this.form.q.value)this.checked=1; else top.location='/doodles/'"></span></span></td><td class="fl sblc" align="left" nowrap="" width="25%"><a href="/advanced_search?hl=en-AU&amp;authuser=0">Advanced search</a><a href="/language_tools?hl=en-AU&amp;authuser=0">Language tools</a></td></tr></table><input type="hidden" id="gbv" name="gbv" value="1"></form><div id="gac_scont"></div><div style="font-size:83%;min-height:3.5em"><br></div><span id="footer"><div style="font-size:10pt"><div id="fll" style="margin:19px auto;text-align:center"><a href="/intl/en/ads/">Advertising&nbsp;Programmes</a><a href="/services/">Business Solutions</a><a href="https://plus.google.com/115477067087672475993" rel="publisher">+Google</a><a href="/intl/en/about.html">About Google</a><a href="http://www.google.com.au/setprefdomain?prefdom=US&amp;sig=0_6gyq91D3TjAf-wk2JjPokc091lI%3D" id="fehl">Google.com</a></div></div><p style="color:#767676;font-size:8pt">&copy; 2013 - <a href="/intl/en/policies/">Privacy & Terms</a></p></span></center><div id=xjsd></div><div id=xjsi data-jiis="bp"><script>if(google.y)google.y.first=[];(function(){function b(a){window.setTimeout(function(){var c=document.createElement("script");c.src=a;document.getElementById("xjsd").appendChild(c)},0)}google.dljp=function(a){google.xjsu=a;b(a)};google.dlj=b;})();
+        if(!google.xjs){window._=window._||{};window._._DumpException=function(e){throw e};if(google.timers&&google.timers.load.t){google.timers.load.t.xjsls=new Date().getTime();}google.dljp('/xjs/_/js/k\x3dxjs.hp.en_US.COQM22f_4fs.O/m\x3dsb_he,pcc/rt\x3dj/d\x3d1/sv\x3d1/rs\x3dAItRSTOaQvHGZVtE_e2xwQpf6CwQr206GQ');google.xjs=1;}google.pmc={"sb":{"agen":true,"cgen":true,"client":"heirloom-hp","dh":true,"ds":"","eqch":true,"fl":true,"host":"google.com.au","jsonp":true,"msgs":{"dym":"Did you mean:","lcky":"I\u0026#39;m Feeling Lucky","lml":"Learn more","oskt":"Input tools","psrc":"This search was removed from your \u003Ca href=\"/history\"\u003EWeb History\u003C/a\u003E","psrl":"Remove","sbit":"Search by image","srch":"Google Search"},"ovr":{},"pq":"","qcpw":false,"scd":10,"sce":5,"stok":"hIzhO9WBMV3VSsrXvzwV4Ou4HsA"},"hp":{},"pcc":{}};google.y.first.push(function(){if(google.med){google.med('init');google.initHistory();google.med('history');}});if(google.j&&google.j.en&&google.j.xi){window.setTimeout(google.j.xi,0);}</script></div><script>(function(){var b,c,d,e;function g(a,f){a.removeEventListener?(a.removeEventListener("load",f,!1),a.removeEventListener("error",f,!1)):(a.detachEvent("onload",f),a.detachEvent("onerror",f))}function h(a){e=(new Date).getTime();++c;a=a||window.event;a=a.target||a.srcElement;g(a,h)}var k=document.getElementsByTagName("img");b=k.length;
+        for(var l=c=0,m;l<b;++l)m=k[l],m.complete||"string"!=typeof m.src||!m.src?++c:m.addEventListener?(m.addEventListener("load",h,!1),m.addEventListener("error",h,!1)):(m.attachEvent("onload",h),m.attachEvent("onerror",h));d=b-c;
+        function n(){if(google.timers.load.t){google.timers.load.t.ol=(new Date).getTime();google.timers.load.t.iml=e;google.kCSI.imc=c;google.kCSI.imn=b;google.kCSI.imp=d;void 0!==google.stt&&(google.kCSI.stt=google.stt);google.csiReport&&google.csiReport()}}window.addEventListener?window.addEventListener("load",n,!1):window.attachEvent&&window.attachEvent("onload",n);google.timers.load.t.prt=e=(new Date).getTime();})();
+        </script></body></html>
+    http_version: 
+  recorded_at: Tue, 28 Jan 2014 05:45:17 GMT
+recorded_with: VCR 2.8.0
