@@ -14,7 +14,7 @@ describe Unwind::RedirectFollower do
   it 'should handle url with cookie requirement' do
     VCR.use_cassette('with cookie') do
       follower = Unwind::RedirectFollower.resolve('http://ow.ly/1hf37P')
-      assert_equal 200,  follower.response.status
+      assert_equal 200,  follower.response.code.to_i
       assert follower.redirected?
     end
   end
@@ -72,7 +72,7 @@ describe Unwind::RedirectFollower do
 
   it 'should not be redirected' do
     VCR.use_cassette('no redirect') do
-      follower  = Unwind::RedirectFollower.resolve('http://www.scottw.com')
+      follower  = Unwind::RedirectFollower.resolve('https://flippa.com')
       assert !follower.redirected?
     end
   end
@@ -106,7 +106,7 @@ describe Unwind::RedirectFollower do
     VCR.use_cassette('meta refresh') do
       follower = Unwind::RedirectFollower.resolve('http://www.nullrefer.com/?www.google.com')
       assert follower.redirected?
-      assert_equal 'http://www.google.com/', follower.final_url
+      assert_equal "www.google.com.au", URI(follower.final_url).host
     end
   end
 

@@ -1,5 +1,5 @@
 require "unwind/version"
-require 'faraday'
+require 'net/http'
 require 'addressable/uri'
 
 module Unwind
@@ -12,23 +12,36 @@ module Unwind
     attr_reader :final_url,  :original_url, :redirect_limit, :response, :redirects
 
     def initialize(original_url, limit=5)
-     @original_url, @redirect_limit = original_url, limit
-     @redirects = []
-     
+      @original_url, @redirect_limit = original_url, limit
+      @redirects = []
     end
 
-    def redirected? 
+    def redirected?
       !(self.final_url == self.original_url)
     end
 
     def resolve(current_url=nil, options={})
-
       ok_to_continue?
 
       current_url ||= self.original_url
       #adding this header because we really only care about resolving the url
       headers = (options || {}).merge({"accept-encoding" => "none"})
-      response = Faraday.get(current_url, {}, headers)
+
+      url = URI.parse(current_url)
+
+      request = Net::HTTP::Get.new(url)
+
+      headers.each do |header, value|
+        request.add_field(header, value)
+      end
+
+      response = Net::HTTP.start(
+        url.host,
+        url.port,
+        :use_ssl => url.scheme == 'https'
+      ) do |http|
+        http.request(request)
+      end
 
       if is_response_redirect?(response)
         handle_redirect(redirect_url(response), current_url, response, headers)
@@ -53,7 +66,7 @@ module Unwind
     end
 
     def is_response_redirect?(response)
-      [301, 302, 303].include?(response.status)
+      Net::HTTPRedirection === response
     end
 
     def handle_redirect(uri_to_redirect, url, response, headers)
@@ -63,7 +76,7 @@ module Unwind
 
     def handle_final_response(current_url, response)
       current_url = current_url.dup.to_s
-      if response.status == 200 && canonical = canonical_link?(response)
+      if Net::HTTPSuccess === response && canonical = canonical_link?(response)
         @redirects << current_url
         if Addressable::URI.parse(canonical).relative?
           @final_url = make_url_absolute(current_url, Addressable::URI.parse(canonical)).to_s
@@ -83,17 +96,17 @@ module Unwind
 
     def redirect_url(response)
       if response['location'].nil?
-        body_match = response.body.match(/<a href=\"([^>]+)\">/i)
+        body_match = (response.body || "").match(/<a href=\"([^>]+)\">/i)
         raise MissingRedirectLocation unless body_match
         Addressable::URI.parse(body_match[0])
       else
         redirect_uri = Addressable::URI.parse(response['location'])
-        redirect_uri.relative? ? Addressable::URI.parse(response.env[:url]).join(response['location']) : redirect_uri
+        redirect_uri.relative? ? Addressable::URI.parse(response.uri).join(response['location']) : redirect_uri
       end
     end
-    
+
     def meta_refresh?(current_url, response)
-      if response.status == 200
+      if Net::HTTPSuccess === response
         body_match = response.body.match(/<meta http-equiv=\"refresh\" content=\"0; URL=(.*?)\"\s*\/*>/i)
         if body_match
           uri = Addressable::URI.parse(body_match[1])
@@ -106,11 +119,11 @@ module Unwind
       body_match = response.body.match(/<link rel=[\'\"]canonical[\'\"] href=[\'\"](.*?)[\'\"]/i)
       body_match ? Addressable::URI.parse(body_match[1]).to_s : false
     end
-    
+
     def apply_cookie(response, headers)
-      if response.status == 302 && response['set-cookie']
-        headers.merge(:cookie => CookieHash.to_cookie_string(response['set-cookie']))
-      else 
+      if response.code.to_i == 302 && response['set-cookie']
+        headers.merge("cookie" => CookieHash.to_cookie_string(response['set-cookie']))
+      else
         #todo: should we delete the cookie at this point if it exists?
         headers
       end
@@ -138,9 +151,9 @@ module Unwind
   #borrowed (stolen) from HTTParty with minor updates
   #to handle all cookies existing in a single string
   class CookieHash < Hash
-    
+
     CLIENT_COOKIES = %w{path expires domain path secure httponly}
-    
+
     def add_cookies(value)
       case value
       when Hash

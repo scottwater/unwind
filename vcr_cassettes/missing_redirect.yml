@@ -7,39 +7,40 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      accept-encoding:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       - none
-      accept:
-      - ! '*/*'
-      user-agent:
+      Accept:
+      - "*/*"
+      User-Agent:
       - Ruby
-      connection:
-      - close
+      Host:
+      - tinyurl.com
   response:
     status:
       code: 301
       message: Moved Permanently
     headers:
-      x-powered-by:
-      - PHP/5.3.8
-      set-cookie:
-      - tinyUUID=f5798bfc5d7f1890ce83e465; expires=Thu, 07-Mar-2013 17:19:55 GMT;
+      X-Powered-By:
+      - PHP/5.4.23
+      Set-Cookie:
+      - tinyUUID=2e743efc83ab3ba72689041b; expires=Wed, 28-Jan-2015 05:45:14 GMT;
         path=/; domain=.tinyurl.com
-      x-tiny:
-      - cache 0.00070881843566895
-      content-type:
+      X-Tiny:
+      - cache 0.006760835647583
+      Content-Type:
       - text/html
-      content-length:
+      Content-Length:
       - '0'
-      connection:
+      Connection:
       - close
-      date:
-      - Wed, 07 Mar 2012 17:19:55 GMT
-      server:
+      Date:
+      - Tue, 28 Jan 2014 05:45:14 GMT
+      Server:
       - TinyURL/1.6
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
-    http_version: '1.1'
-  recorded_at: Wed, 07 Mar 2012 17:19:54 GMT
-recorded_with: VCR 2.0.0
+    http_version: 
+  recorded_at: Tue, 28 Jan 2014 05:45:15 GMT
+recorded_with: VCR 2.8.0
