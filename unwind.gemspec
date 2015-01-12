@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.email       = ["scottwater@gmail.com"]
   s.homepage    = "http://www.scottw.com/unwind"
   s.summary     = %q{Follows a chain redirects.}
-  s.description = <<-description 
-										Follows a chain of redirects and reports back on all the steps. 
+  s.description = <<-description
+										Follows a chain of redirects and reports back on all the steps.
 										Heavily inspired by John Nunemaker's blog post.
 										http://railstips.org/blog/archives/2009/03/04/following-redirects-with-nethttp/
 									description
@@ -27,6 +27,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "minitest"
   s.add_development_dependency "vcr", "~> 2.0.0"
   s.add_development_dependency "fakeweb"
-  s.add_runtime_dependency "faraday", '~> 0.7.0'
+  s.add_runtime_dependency "faraday", '>= 0.7.0'
   s.add_runtime_dependency "nokogiri"
 end
