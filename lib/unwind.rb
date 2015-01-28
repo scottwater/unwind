@@ -35,7 +35,7 @@ module Unwind
       headers = (options || {}).merge({"accept-encoding" => "none"})
 
       begin
-        response = Faraday.get(current_url, headers)
+        response = Faraday.get(current_url, nil, headers)
       rescue Faraday::Error::TimeoutError => e
         raise Unwind::TimeoutError, $!
       end
