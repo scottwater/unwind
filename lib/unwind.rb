@@ -112,7 +112,7 @@ module Unwind
       if canonical = doc.at('link[rel=canonical]')
         href = Addressable::URI.parse(canonical["href"])
         return unless href
-        return response.env[:url].join(href) if href.relative?
+        return Addressable::URI.join(response.env[:url].to_s, href) if href.relative?
         return href
       end
 
