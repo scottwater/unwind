@@ -27,7 +27,7 @@ module Unwind
       @response.status == 404
     end
 
-    def resolve(current_url=nil, options={})
+    def resolve(current_url=nil, options={}, &block)
 
       ok_to_continue?
 
@@ -37,14 +37,15 @@ module Unwind
 
       begin
         response = Faraday.get(current_url, nil, headers)
+        yield response if block_given?
       rescue Faraday::Error::TimeoutError => e
         raise Unwind::TimeoutError, $!
       end
 
       if is_response_redirect?(response)
-        handle_redirect(redirect_url(response), current_url, response, headers)
+        resolve(*handle_redirect(redirect_url(response), current_url, response, headers), &block)
       elsif meta_uri = meta_refresh?(response)
-        handle_redirect(meta_uri, current_url, response, headers)
+        resolve(*handle_redirect(meta_uri, current_url, response, headers), &block)
       else
         handle_final_response(current_url, response)
       end
@@ -52,8 +53,8 @@ module Unwind
       self
     end
 
-    def self.resolve(original_url, limit=5)
-      new(original_url, limit).resolve
+    def self.resolve(original_url, limit=5, &block)
+      new(original_url, limit).resolve(&block)
     end
 
   private
@@ -69,7 +70,7 @@ module Unwind
 
     def handle_redirect(uri_to_redirect, url, response, headers)
       record_redirect url
-      resolve(uri_to_redirect.normalize, apply_cookie(response, headers))
+      return uri_to_redirect.normalize, apply_cookie(response, headers)
     end
 
     def handle_final_response(current_url, response)
