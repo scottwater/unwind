@@ -1,4 +1,5 @@
 require "unwind/version"
+require 'addressable/uri'
 require 'nokogiri'
 require 'faraday'
 
@@ -93,7 +94,7 @@ module Unwind
         Addressable::URI.parse(body_match[0])
       else
         redirect_uri = Addressable::URI.parse(response['location'])
-        redirect_uri.relative? ? response.env[:url].join(response['location']) : redirect_uri
+        redirect_uri.relative? ? Addressable::URI.join(response.env[:url].to_s, response['location']) : redirect_uri
       end
     end
     
