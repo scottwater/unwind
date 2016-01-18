@@ -121,6 +121,22 @@ describe Unwind::RedirectFollower do
     end
   end
 
+  it 'should handle a meta-refresh without spacing between time and url' do
+    body = "<meta http-equiv=\"refresh\" content=\"0;url=http://www.example.com/\">"
+    FakeWeb.register_uri :get, 'http://foo.com', status: 200, body: body
+    follower = Unwind::RedirectFollower.resolve('http://foo.com')
+    assert follower.redirected?
+    assert_equal "http://www.example.com/", follower.final_url
+  end
+
+  it 'should handle a meta-refresh with url wrapped in single quotes' do
+    body = "<meta http-equiv=\"refresh\" content=\"0;url='http://www.example.com/'\">"
+    FakeWeb.register_uri :get, 'http://foo.com', status: 200, body: body
+    follower = Unwind::RedirectFollower.resolve('http://foo.com')
+    assert follower.redirected?
+    assert_equal "http://www.example.com/", follower.final_url
+  end
+
   describe 'handling 404s' do
     it "should set not_found?" do
       FakeWeb.register_uri :get, 'http://nope.com', status: 404
