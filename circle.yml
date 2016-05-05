@@ -1,0 +1,7 @@
+machine:
+  ruby:
+    version:
+      2.2.4
+notify:
+  webhooks:
+    - url: https://doxbot.herokuapp.com/circleci-notify
